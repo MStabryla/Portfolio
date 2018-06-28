@@ -1,0 +1,29 @@
+.main {
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.main-desc{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:5px;
+}
+.main-inc{
+    font-family: 'Lora';
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin:10px;
+}
+.main-inc-sec{
+    font-family: 'Cabin';
+    font-size:22px;
+    text-align: center;
+    text-transform: none;
+    display: inline-block;
+    width:100%;
+}

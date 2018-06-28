@@ -5,20 +5,24 @@
   },
   "apps": [
     {
-      "root": "src",
+      "root": "client",
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "css",
+        "html",
+        "img"
       ],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "app",
       "styles": [
-        "styles.css"
+        "css/styles.css",
+        "css/GridSheet.css",
+        "css/Zero.css"
       ],
       "scripts": [],
       "environments": {
@@ -35,8 +39,8 @@
   },
   "lint": [
     {
-      "files": "src/**/*.ts",
-      "project": "src/tsconfig.json"
+      "files": "client/**/*.ts",
+      "project": "client/tsconfig.json"
     },
     {
       "files": "e2e/**/*.ts",
