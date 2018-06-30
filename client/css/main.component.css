@@ -38,3 +38,12 @@
     margin:45px auto;
     cursor: pointer;
 }
+.main-title{
+    font-size:35px;
+    text-indent: 15px;
+    text-transform: uppercase;
+}
+.main-exp{
+    background-color:black;
+    color:white;
+}

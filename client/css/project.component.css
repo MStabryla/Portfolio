@@ -1,0 +1,40 @@
+.project {
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 5px;
+    padding:5px 0;
+    
+}
+.project-title{
+    background-color: black;
+    color:white;
+    text-align: center;
+    width:100%;
+    padding:10px 0;
+}
+.project-desc{
+    padding:10px 15px;
+    color:black; 
+    background-color: white;
+}
+.project-desc-con{
+    font-size:18px;
+    text-indent: 8px;
+    display:block;
+    min-height: 170px;
+}
+.project-desc-foot{
+    clear: both;
+    position: relative;
+}
+.project-desc-lang{
+    font-size:22px;
+}
+.project-desc-link{
+    float:right;
+    display: block;
+}
+.project-desc-link img{
+    width:30px;
+    height: 30px;
+}

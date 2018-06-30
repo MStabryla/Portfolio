@@ -9,14 +9,20 @@
 </section>
 <section class="main-exp">
     <div class="container">
-        <div class="main-desc">
+        <div class="block-1">
+
+        </div>
+        <div class="main-desc block-10">
             <div class="main-title">
                 <h3>My Projects</h3>
             </div>
-            <div class="main-pro">
-
+            <div class="main-pro" *ngFor="let item of Projs">
+                <project [data]="item" class="block-4"></project>
             </div>
         </div>
+        <div class="block-1">
+
+            </div>
     </div>
 </section>
 <section class="main-exp">
