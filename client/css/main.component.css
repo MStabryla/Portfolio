@@ -39,11 +39,15 @@
     cursor: pointer;
 }
 .main-title{
-    font-size:35px;
-    text-indent: 15px;
+    font-size:70px;
+    text-align: center;
+    padding:5px 0;
     text-transform: uppercase;
 }
 .main-exp{
     background-color:black;
     color:white;
+}
+.main-pro{
+    margin:0 5px;
 }

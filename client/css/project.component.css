@@ -1,5 +1,5 @@
 .project {
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     margin: 0 5px;
     padding:5px 0;
@@ -10,18 +10,22 @@
     color:white;
     text-align: center;
     width:100%;
+    font-size:25px;
     padding:10px 0;
+    font-family: 'Lora';
 }
 .project-desc{
     padding:10px 15px;
     color:black; 
     background-color: white;
+    font-family: 'Lora';
 }
 .project-desc-con{
     font-size:18px;
-    text-indent: 8px;
+    text-indent: 14px;
     display:block;
-    min-height: 170px;
+    min-height: 180px;
+    line-height: 30px;
 }
 .project-desc-foot{
     clear: both;
@@ -29,6 +33,9 @@
 }
 .project-desc-lang{
     font-size:22px;
+    font-weight: bold;
+    font-family: 'Cabin';
+    text-transform: uppercase;
 }
 .project-desc-link{
     float:right;
