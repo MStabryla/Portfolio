@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
     ]
 })
 export class MenuComponent {
-    Logo: string = "Mateusz Stabryła"
+    Logo: string = "Mateusz  Stabryła"
 }

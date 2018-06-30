@@ -5,6 +5,11 @@
 .head{
     background-color: black;
     padding:0px 5px;
+    position: fixed;
+    width:100%;
+    top:0;
+    right:0;
+    z-index: 1;
 }
 .head-logo{
     font-size: 26px;
