@@ -12,6 +12,7 @@ import { AdminComponent } from './admin.component';
 import { ProjectsComponent } from './projects.component';
 import { MenuComponent } from './menu.component';
 import { MainComponent } from './main.component';
+import { TechComponent } from './tech.component';
 
 import { RouterModule,Routes } from '@angular/router';
 import { FootComponent } from './foot.component';
@@ -48,7 +49,8 @@ const _routing: Routes = [
     ProjectsComponent,
     MenuComponent,
     MainComponent,
-    FootComponent
+    FootComponent,
+    TechComponent
   ],
   imports: [
     BrowserModule,

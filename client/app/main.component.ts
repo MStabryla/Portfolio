@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ProjectService } from './getproject.service';
 import { Project } from './project.component';
-import { ProjectComponent } from './project.component';
+import { ScrollService } from './scroll.service';
+import { Technology } from './tech.component';
 
 @Component({
     selector:"main-elem",
@@ -9,47 +10,23 @@ import { ProjectComponent } from './project.component';
     styleUrls:[
         "../css/main.component.css"
     ],
-    providers:[ProjectService,ProjectComponent]
+    providers:[ProjectService,ScrollService]
 })
 export class MainComponent {
-    constructor( private _pr: ProjectService) {
+    constructor( private _pr: ProjectService,private _sc: ScrollService) {
         this.getProjects();
     }
     public Projs: Project[] = [];
+    public Technologies: Technology[] = [
+        new Technology("WEB","HTML 5, CSS 3, JavaScript, JQuery","../img/tech-web.png","web"),
+        new Technology("DESKTOP","C# WPF, C# WebForms, C# UWP","../img/tech-desk.png","desk"),
+        new Technology("JS Frameworks","Node.js, Angular.js, Angular 2 , Three.js","../img/tech-js.png","js"),
+        new Technology("ASP.NET","MVC , Web API","../img/tech-dotnet.png","asp")
+    ];
     public MainIns: string = "Mateusz Stabryła";
     public Desc: string = "Full Stack .NET Developer";
     scroll(): void {
-        window.addEventListener("scroll",e => {
-            e.returnValue = false
-            e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-        })
-        let destiny = window.innerHeight,speed = 12,distanse = Math.abs(destiny - window.scrollY),distanseCounter = 0;
-        console.log("distanse",distanse);
-        let scrollInterval = setInterval(() => {
-            window.scrollBy(0,speed);
-            distanseCounter += speed;
-            if(distanseCounter >=  distanse * 0.4 && distanseCounter <= distanse * 0.6)
-            {
-                speed = 18;
-            }
-            else if(distanseCounter <  distanse * 0.3 || distanseCounter > distanse * 0.7)
-            {
-                speed = 12;
-            }
-            if(distanseCounter <  distanse * 0.2 || distanseCounter > distanse * 0.8)
-            {
-                speed = 10;
-            }
-            if(distanseCounter <  distanse * 0.1 || distanseCounter > distanse * 0.9)
-            {
-                speed = 4;
-            }
-            if(window.scrollY >= destiny)
-            {
-                clearInterval(scrollInterval);
-                window.onscroll = null;
-            }
-        },1);
+        this._sc.scrollTo(window.innerHeight);
     }
     getProjects(): void {
         this._pr.getGithubProjects("MStabryla",result => {
