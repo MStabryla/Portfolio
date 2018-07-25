@@ -29,17 +29,24 @@
                 <h3 class="main-title">Technologies</h3>
             </div>
             <div>
-                
                 <div class="main-me-tech" >
-                    <!--
-                        WEB - HTML 5 , CSS 3 , JavaScript 
-                        DESKTOP - C# WPF , C# WebForms
-                        JS Frameworks - Node.js, Angular.js, Angular 2, Three.js
-                        ASP.NET - MVC , Web API
-                    -->
                     <div *ngFor="let item of Technologies" class="block-6">
                         <tech [data]="item"></tech>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main-exp">
+    <div class="container">
+        <div class="main-desc block-12">
+            <div class="main-title">
+                <h3>My Experience</h3>
+            </div>
+            <div class="main-exp-list">
+                <div *ngFor="let item of Experiences" class="block-4" style="margin: 0 10px;">
+                    <exp [data]="item"></exp>
                 </div>
             </div>
         </div>
