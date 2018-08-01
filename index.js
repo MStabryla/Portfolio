@@ -15,4 +15,4 @@ app.get("*",(req,res) => {
     //res.sendFile(__dirname + req.url);
 })
 const server = http.createServer(app);
-server.listen(3000,() => console.log("Start"));
+server.listen(process.env.PORT | 1337,() => console.log("Start"));
