@@ -1,6 +1,6 @@
 webpackJsonp([1,4],{
 
-/***/ 151:
+/***/ 152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,9 +28,9 @@ var ProjectComponent = (function () {
     ProjectComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'project',
-            template: __webpack_require__(688),
+            template: __webpack_require__(694),
             providers: [],
-            styles: [__webpack_require__(695)]
+            styles: [__webpack_require__(701)]
         }), 
         __metadata('design:paramtypes', [])
     ], ProjectComponent);
@@ -47,7 +47,7 @@ var Project = (function () {
 
 /***/ }),
 
-/***/ 246:
+/***/ 251:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -56,12 +56,12 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 246;
+webpackEmptyContext.id = 251;
 
 
 /***/ }),
 
-/***/ 333:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88,8 +88,8 @@ var ExpComponent = (function () {
     ExpComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'exp',
-            template: __webpack_require__(684),
-            styles: [__webpack_require__(692)]
+            template: __webpack_require__(690),
+            styles: [__webpack_require__(698)]
         }), 
         __metadata('design:paramtypes', [])
     ], ExpComponent);
@@ -110,14 +110,14 @@ var Exp = (function () {
 
 /***/ }),
 
-/***/ 334:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(701);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(707);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -175,7 +175,7 @@ var ProjectService = (function () {
 
 /***/ }),
 
-/***/ 335:
+/***/ 340:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -202,8 +202,8 @@ var TechComponent = (function () {
     TechComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'tech',
-            template: __webpack_require__(690),
-            styles: [__webpack_require__(697)]
+            template: __webpack_require__(696),
+            styles: [__webpack_require__(703)]
         }), 
         __metadata('design:paramtypes', [])
     ], TechComponent);
@@ -222,22 +222,22 @@ var Technology = (function () {
 
 /***/ }),
 
-/***/ 373:
+/***/ 378:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    Experience\r\n</div>"
+module.exports = "<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-head\">My experience</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n    </div>\n</section>"
 
 /***/ }),
 
-/***/ 395:
+/***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(484);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(489);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(526);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(518);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(531);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(523);
 
 
 
@@ -250,7 +250,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 515:
+/***/ 520:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -272,7 +272,7 @@ var AboutComponent = (function () {
     AboutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(682)
+            template: __webpack_require__(688)
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);
@@ -282,7 +282,7 @@ var AboutComponent = (function () {
 
 /***/ }),
 
-/***/ 516:
+/***/ 521:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -304,7 +304,7 @@ var AdminComponent = (function () {
     AdminComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(373)
+            template: __webpack_require__(378)
         }), 
         __metadata('design:paramtypes', [])
     ], AdminComponent);
@@ -314,13 +314,13 @@ var AdminComponent = (function () {
 
 /***/ }),
 
-/***/ 517:
+/***/ 522:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -351,8 +351,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'main-elem',
-            template: __webpack_require__(683),
-            styles: [__webpack_require__(691)],
+            template: __webpack_require__(689),
+            styles: [__webpack_require__(697)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object])
@@ -364,27 +364,27 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 518:
+/***/ 523:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(475);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(517);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__project_component__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__about_component__ = __webpack_require__(515);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__experience_component__ = __webpack_require__(520);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__contact_component__ = __webpack_require__(519);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__admin_component__ = __webpack_require__(516);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__projects_component__ = __webpack_require__(524);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__menu_component__ = __webpack_require__(523);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main_component__ = __webpack_require__(522);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tech_component__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exp_component__ = __webpack_require__(333);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_router__ = __webpack_require__(504);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__foot_component__ = __webpack_require__(521);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(480);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(522);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__project_component__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__about_component__ = __webpack_require__(520);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__experience_component__ = __webpack_require__(525);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__contact_component__ = __webpack_require__(524);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__admin_component__ = __webpack_require__(521);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__projects_component__ = __webpack_require__(529);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__menu_component__ = __webpack_require__(528);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main_component__ = __webpack_require__(527);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tech_component__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exp_component__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_router__ = __webpack_require__(509);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__foot_component__ = __webpack_require__(526);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -468,7 +468,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 519:
+/***/ 524:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -490,7 +490,7 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(373)
+            template: __webpack_require__(378)
         }), 
         __metadata('design:paramtypes', [])
     ], ContactComponent);
@@ -500,7 +500,7 @@ var ContactComponent = (function () {
 
 /***/ }),
 
-/***/ 520:
+/***/ 525:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -522,8 +522,7 @@ var ExperienceComponent = (function () {
     ExperienceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            //templateUrl:"../html/experience.component.html",
-            template: "Experience"
+            template: __webpack_require__(378),
         }), 
         __metadata('design:paramtypes', [])
     ], ExperienceComponent);
@@ -533,7 +532,7 @@ var ExperienceComponent = (function () {
 
 /***/ }),
 
-/***/ 521:
+/***/ 526:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -555,7 +554,7 @@ var FootComponent = (function () {
     FootComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "foot",
-            template: __webpack_require__(685)
+            template: __webpack_require__(691)
         }), 
         __metadata('design:paramtypes', [])
     ], FootComponent);
@@ -565,16 +564,16 @@ var FootComponent = (function () {
 
 /***/ }),
 
-/***/ 522:
+/***/ 527:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scroll_service__ = __webpack_require__(525);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tech_component__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exp_component__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scroll_service__ = __webpack_require__(530);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tech_component__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exp_component__ = __webpack_require__(338);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -631,8 +630,8 @@ var MainComponent = (function () {
     MainComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main-elem",
-            template: __webpack_require__(686),
-            styles: [__webpack_require__(693)],
+            template: __webpack_require__(692),
+            styles: [__webpack_require__(699)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */], __WEBPACK_IMPORTED_MODULE_3__scroll_service__["a" /* ScrollService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__scroll_service__["a" /* ScrollService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__scroll_service__["a" /* ScrollService */]) === 'function' && _b) || Object])
@@ -644,7 +643,7 @@ var MainComponent = (function () {
 
 /***/ }),
 
-/***/ 523:
+/***/ 528:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -667,8 +666,8 @@ var MenuComponent = (function () {
     MenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "my-menu",
-            template: __webpack_require__(687),
-            styles: [__webpack_require__(694)]
+            template: __webpack_require__(693),
+            styles: [__webpack_require__(700)]
         }), 
         __metadata('design:paramtypes', [])
     ], MenuComponent);
@@ -678,7 +677,7 @@ var MenuComponent = (function () {
 
 /***/ }),
 
-/***/ 524:
+/***/ 529:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -700,8 +699,8 @@ var ProjectsComponent = (function () {
     ProjectsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(689),
-            styles: [__webpack_require__(696)]
+            template: __webpack_require__(695),
+            styles: [__webpack_require__(702)]
         }), 
         __metadata('design:paramtypes', [])
     ], ProjectsComponent);
@@ -711,7 +710,7 @@ var ProjectsComponent = (function () {
 
 /***/ }),
 
-/***/ 525:
+/***/ 530:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -750,7 +749,7 @@ var ScrollService = (function () {
 
 /***/ }),
 
-/***/ 526:
+/***/ 531:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -766,125 +765,125 @@ var environment = {
 
 /***/ }),
 
-/***/ 682:
-/***/ (function(module, exports) {
-
-module.exports = "<div>\r\n    About\r\n</div>"
-
-/***/ }),
-
-/***/ 683:
-/***/ (function(module, exports) {
-
-module.exports = "<router-outlet></router-outlet>"
-
-/***/ }),
-
-/***/ 684:
-/***/ (function(module, exports) {
-
-module.exports = "<!-- <div class=\"exp\">\r\n    <div class=\"exp-left\">\r\n            <div class=\"exp-head\">\r\n                <h4 class=\"exp-comp\">{{data.company}}</h4>\r\n                <span class=\"exp-date\">{{data.dateFrom.toLocaleDateString()}} - {{data.dateTo.toLocaleDateString()}}</span>\r\n            </div>\r\n            <div>\r\n                <span class=\"exp-sta\">{{data.standing}}</span>\r\n                <span class=\"exp-desc\">{{data.desc}}</span>\r\n            </div>\r\n    </div>\r\n    <div class=\"exp-right\">\r\n        <img class=\"exp-logo\" src=\"{{data.logoUrl}}\" alt=\"err\"/>\r\n    </div>\r\n</div> -->\r\n<div class=\"exp-elem\">\r\n    <img src=\"{{data.logoUrl}}\" alt=\"err\" />\r\n    <h4 class=\"exp-name\">{{data.company}}</h4>\r\n    <span class=\"exp-desc\">{{data.desc}}</span>\r\n</div>"
-
-/***/ }),
-
-/***/ 685:
-/***/ (function(module, exports) {
-
-module.exports = "<footer class=\"foot\">\r\n    <div class=\"sign\">Copyright © Mateusz Stabryła 2018</div>\r\n</footer>"
-
-/***/ }),
-
-/***/ 686:
-/***/ (function(module, exports) {
-
-module.exports = "<section class=\"main\">\r\n    <div class=\"container\">\r\n        <div class=\"main-desc\">\r\n            <h1 class=\"main-inc\">{{MainIns}}</h1>\r\n            <span class=\"main-inc-sec\">{{Desc}}</span>\r\n            <img src=\"../img/button.png\" class=\"main-butt\" (click)=\"scroll()\"/>\r\n        </div>\r\n    </div>\r\n</section>\r\n<section class=\"main-exp\">\r\n        <div class=\"container\">\r\n            <div class=\"main-desc block-12\">\r\n                <div class=\"main-title\">\r\n                    <h4>ABOUT ME</h4>\r\n                </div>\r\n                <div class=\"block-4\">\r\n                    <img class=\"main-me-img\" src=\"../img/mxxx.jpg\" alt=\"Err\" />\r\n                </div>\r\n                <div class=\"block-8 main-me-desc\">\r\n                    <span >I am Mateusz Stabryła and I am a beginner .NET programmer. I had an experience in working with different desktop and web technologies like JQuery,Angular and Node.js.</span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n<section class=\"main-exp\">\r\n    <div class=\"container\">\r\n        <div class=\"main-desc block-12\">\r\n            <div>\r\n                <h3 class=\"main-title\">Technologies</h3>\r\n            </div>\r\n            <div>\r\n                <div class=\"main-me-tech\" >\r\n                    <div *ngFor=\"let item of Technologies\" class=\"block-6\">\r\n                        <tech [data]=\"item\"></tech>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n<section class=\"main-exp\">\r\n    <div class=\"container\">\r\n        <div class=\"main-desc block-12\">\r\n            <div class=\"main-title\">\r\n                <h3>My Experience</h3>\r\n            </div>\r\n            <div class=\"main-exp-list\">\r\n                <div *ngFor=\"let item of Experiences\" class=\"block-4\" style=\"margin: 0 10px;\">\r\n                    <exp [data]=\"item\"></exp>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n<section class=\"main-exp\">\r\n    <div class=\"container\">\r\n        <div class=\"main-desc block-12\">\r\n            <div class=\"main-title\">\r\n                <h3>My Projects</h3>\r\n            </div>\r\n            <div class=\"main-pro block-4\" *ngFor=\"let item of Projs\">\r\n                <project [data]=\"item\"></project>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n"
-
-/***/ }),
-
-/***/ 687:
-/***/ (function(module, exports) {
-
-module.exports = "<header class=\"head\">\r\n    <div class=\"container container-small\">\r\n        <div class=\"block-2\">\r\n            <span class=\"head-logo\">{{Logo}}</span>\r\n        </div>\r\n        <div class=\"block-10\">\r\n            <nav class=\"menu\">\r\n                <a routerLink=\"/experience\" routerLinkActive=\"active\">Experience</a>\r\n                <a routerLink=\"/projects\" routerLinkActive=\"active\">Projects</a>\r\n            </nav>\r\n        </div>\r\n    </div>\r\n</header>"
-
-/***/ }),
-
 /***/ 688:
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div [ngStyle]=\"{ color : data.color }\">\r\n    <span>{{data.id}}</span>\r\n    <span>{{data.name}}</span>\r\n</div>-->\r\n<div class=\"project\">\r\n    <div class=\"project-title\">\r\n            <h4>{{data.name}}</h4>\r\n    </div>\r\n    <div class=\"project-desc\">\r\n        <span class=\"project-desc-con\">\r\n            {{data.description}}\r\n        </span>\r\n        <div class=\"project-desc-foot\">\r\n            <span class=\"project-desc-lang\" [ngStyle]=\"{ color: data.color } \">{{data.language}}</span>\r\n            <a class=\"project-desc-link\" href=\"{{data.url}}\">\r\n                <img src=\"../img/github.svg\" alt=\"err\"/>\r\n            </a>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div>\n    About\n</div>"
 
 /***/ }),
 
 /***/ 689:
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"projects-main\">\r\n    <div class=\"container\">\r\n        <h3 class=\"projects-head\">My Projects</h3>\r\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\r\n    </div>\r\n</section>"
+module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
 /***/ 690:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tech-elem\">\r\n    <img src=\"{{data.ImgUrl}}\" alt=\"err\" />\r\n    <h4 class=\"tech-name\">{{data.Name}}</h4>\r\n    <span class=\"tech-desc\">{{data.Desc}}</span>\r\n</div>"
+module.exports = "<!-- <div class=\"exp\">\n    <div class=\"exp-left\">\n            <div class=\"exp-head\">\n                <h4 class=\"exp-comp\">{{data.company}}</h4>\n                <span class=\"exp-date\">{{data.dateFrom.toLocaleDateString()}} - {{data.dateTo.toLocaleDateString()}}</span>\n            </div>\n            <div>\n                <span class=\"exp-sta\">{{data.standing}}</span>\n                <span class=\"exp-desc\">{{data.desc}}</span>\n            </div>\n    </div>\n    <div class=\"exp-right\">\n        <img class=\"exp-logo\" src=\"{{data.logoUrl}}\" alt=\"err\"/>\n    </div>\n</div> -->\n<div class=\"exp-elem\">\n    <img src=\"{{data.logoUrl}}\" alt=\"err\" />\n    <h4 class=\"exp-name\">{{data.company}}</h4>\n    <span class=\"exp-desc\">{{data.desc}}</span>\n</div>"
 
 /***/ }),
 
 /***/ 691:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<footer class=\"foot\">\n    <div class=\"sign\">Copyright © Mateusz Stabryła 2018</div>\n</footer>"
 
 /***/ }),
 
 /***/ 692:
 /***/ (function(module, exports) {
 
-module.exports = ".exp-elem{\r\n    margin: 20px 5px;\r\n}\r\n.exp-elem img{\r\n    height: 100px;\r\n    width: 100px;\r\n    margin : 0 auto;\r\n    margin-top: 15px;\r\n}\r\n.exp-desc{\r\n    font-size:16px;\r\n    font-family: 'Lora';\r\n    text-align: center;\r\n    display:block;\r\n}\r\n.exp-name{\r\n    text-align: center;\r\n    font-size: 30px;\r\n    padding:10px 0;\r\n    margin:10px 0;\r\n    font-weight: bold;\r\n}\r\n@media (max-width: 990px)\r\n{\r\n    .exp-elem img{\r\n        width: 100px;\r\n        height: 100px;\r\n        margin-top:10px;\r\n    }\r\n    .exp-desc{\r\n        font-size:16px;\r\n    }\r\n    .exp-name{\r\n        font-size: 26px;\r\n        padding:5px 0;\r\n    }\r\n}\r\n@media (max-width: 744px)\r\n{\r\n    .exp-elem img{\r\n        width: 75px;\r\n        height: 75px;\r\n    }\r\n    .exp-elem{\r\n        margin:20px 0;\r\n    }\r\n}"
+module.exports = "<section class=\"main\">\n    <div class=\"container\">\n        <div class=\"main-desc\">\n            <h1 class=\"main-inc\">{{MainIns}}</h1>\n            <span class=\"main-inc-sec\">{{Desc}}</span>\n            <img src=\"../img/button.png\" class=\"main-butt\" (click)=\"scroll()\"/>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n        <div class=\"container\">\n            <div class=\"main-desc block-12\">\n                <div class=\"main-title\">\n                    <h4>ABOUT ME</h4>\n                </div>\n                <div class=\"block-4\">\n                    <img class=\"main-me-img\" src=\"../img/mxxx.jpg\" alt=\"Err\" />\n                </div>\n                <div class=\"block-8 main-me-desc\">\n                    <span >I am Mateusz Stabryła and I am a beginner .NET programmer. I had an experience in working with different desktop and web technologies like JQuery,Angular and Node.js.</span>\n                </div>\n            </div>\n        </div>\n    </section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div>\n                <h3 class=\"main-title\">Technologies</h3>\n            </div>\n            <div>\n                <div class=\"main-me-tech\" >\n                    <div *ngFor=\"let item of Technologies\" class=\"block-6\">\n                        <tech [data]=\"item\"></tech>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Experience</h3>\n            </div>\n            <div class=\"main-exp-list\">\n                <div *ngFor=\"let item of Experiences\" class=\"block-4\" style=\"margin: 0 10px;\">\n                    <exp [data]=\"item\"></exp>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Projects</h3>\n            </div>\n            <div class=\"main-pro block-4\" *ngFor=\"let item of Projs\">\n                <project [data]=\"item\"></project>\n            </div>\n        </div>\n    </div>\n</section>\n"
 
 /***/ }),
 
 /***/ 693:
 /***/ (function(module, exports) {
 
-module.exports = ".main {\r\n    background-image: url('../img/background.png');\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    background-position-x: 50%;\r\n    background-position-y: 100%;\r\n    position: relative;\r\n    color:white;\r\n}\r\n.main-desc{\r\n    position: absolute;\r\n    top:50%;\r\n    left:50%;\r\n    transform: translate(-50%,-50%);\r\n    padding:5px;\r\n}\r\n.main-inc{\r\n    font-family: 'Cabin';\r\n    font-size: 90px;\r\n    font-weight: bold;\r\n    text-align: center;\r\n    white-space: nowrap;\r\n    text-transform: uppercase;\r\n    margin:10px;\r\n    margin-bottom:35px;\r\n}\r\n.main-inc-sec{\r\n    font-family: 'Lora';\r\n    font-size:28px;\r\n    text-align: center;\r\n    text-transform: none;\r\n    display: inline-block;\r\n    width:100%;\r\n}\r\n.main-butt{\r\n    width:80px;\r\n    height:80px;\r\n    margin:45px auto;\r\n    cursor: pointer;\r\n}\r\n.main-title{\r\n    font-size:40px;\r\n    text-align: center;\r\n    padding:5px 0;\r\n    text-transform: uppercase;\r\n    margin: 30px 0;\r\n}\r\n.main-exp{\r\n    background-color:black;\r\n    color:white;\r\n    /* test */\r\n    overflow:hidden;\r\n}\r\n.main-pro{\r\n    margin:0 5px;\r\n}\r\n.main-me-desc{\r\n    padding:15px;\r\n    text-indent: 15px;\r\n    font-size:20px;\r\n    line-height: 25px;\r\n}\r\n.main-me-img{\r\n    display: block;\r\n    width:100%;\r\n    height:auto;\r\n    border-radius:15px;\r\n    background-color:white;\r\n    box-shadow: 0 0px 8px 8px #e2e3e5;\r\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\r\n}"
+module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-2\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo\">{{Logo}}</span></a>\n        </div>\n        <div class=\"block-6 divider\"></div>\n        <div class=\"block-4 menu\">\n            <a routerLink=\"/experience\" routerLinkActive=\"active\">Experience</a>\n            <a routerLink=\"/projects\" routerLinkActive=\"active\">Projects</a>\n        </div>\n        <div class=\"hamburger\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
 
 /***/ }),
 
 /***/ 694:
 /***/ (function(module, exports) {
 
-module.exports = "*{\r\n    color:white;\r\n    text-transform: uppercase;\r\n}\r\n.head{\r\n    background-color: black;\r\n    padding:0px 5px;\r\n    position: fixed;\r\n    width:100%;\r\n    top:0;\r\n    right:0;\r\n    z-index: 1;\r\n}\r\n.head-logo{\r\n    font-size: 26px;\r\n    font-weight: bold;\r\n    min-width:250px;\r\n    padding:17px 0px;\r\n    display: inline-block;\r\n}\r\n.menu a{\r\n    display:inline-block;\r\n    height: inherit;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    cursor: pointer;\r\n    margin-left: 14px;\r\n    margin-right: 14px;\r\n    float:right;\r\n    padding: 20px 0px;\r\n    border-bottom-width: 4px;\r\n    border-bottom-style: solid;\r\n    border-color:black;\r\n}\r\n.menu a:hover{\r\n    animation-name: menu-elem;\r\n    animation-duration:  0.5s;\r\n    animation-fill-mode: forwards;\r\n    -webkit-animation-name: menu-elem;\r\n    -webkit-animation-duration: 0.5s;\r\n    -webkit-animation-fill-mode: forwards;\r\n}\r\n@keyframes menu-elem {\r\n    from{\r\n        border-color:black;\r\n    }\r\n    to{\r\n        border-color:white;\r\n    }\r\n}"
+module.exports = "<!--<div [ngStyle]=\"{ color : data.color }\">\n    <span>{{data.id}}</span>\n    <span>{{data.name}}</span>\n</div>-->\n<div class=\"project\">\n    <div class=\"project-title\">\n            <h4>{{data.name}}</h4>\n    </div>\n    <div class=\"project-desc\">\n        <span class=\"project-desc-con\">\n            {{data.description}}\n        </span>\n        <div class=\"project-desc-foot\">\n            <span class=\"project-desc-lang\" [ngStyle]=\"{ color: data.color } \">{{data.language}}</span>\n            <a class=\"project-desc-link\" href=\"{{data.url}}\">\n                <img src=\"../img/github.svg\" alt=\"err\"/>\n            </a>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
 /***/ 695:
 /***/ (function(module, exports) {
 
-module.exports = ".project {\r\n    border-radius: 20px;\r\n    overflow: hidden;\r\n    margin: 0 5px;\r\n    padding:5px 0;\r\n    \r\n}\r\n.project-title{\r\n    background-color: black;\r\n    color:white;\r\n    text-align: center;\r\n    width:100%;\r\n    font-size:25px;\r\n    padding:10px 0;\r\n    font-family: 'Lora';\r\n}\r\n.project-desc{\r\n    padding:10px 15px;\r\n    color:black; \r\n    background-color: white;\r\n    font-family: 'Lora';\r\n}\r\n.project-desc-con{\r\n    font-size:18px;\r\n    text-indent: 14px;\r\n    display:block;\r\n    min-height: 180px;\r\n    line-height: 30px;\r\n}\r\n.project-desc-foot{\r\n    clear: both;\r\n    position: relative;\r\n}\r\n.project-desc-lang{\r\n    font-size:22px;\r\n    font-weight: bold;\r\n    font-family: 'Cabin';\r\n    text-transform: uppercase;\r\n}\r\n.project-desc-link{\r\n    float:right;\r\n    display: block;\r\n}\r\n.project-desc-link img{\r\n    width:30px;\r\n    height: 30px;\r\n}"
+module.exports = "<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-head\">My Projects</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n    </div>\n</section>"
 
 /***/ }),
 
 /***/ 696:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div class=\"tech-elem\">\n    <img src=\"{{data.ImgUrl}}\" alt=\"err\" />\n    <h4 class=\"tech-name\">{{data.Name}}</h4>\n    <span class=\"tech-desc\">{{data.Desc}}</span>\n</div>"
 
 /***/ }),
 
 /***/ 697:
 /***/ (function(module, exports) {
 
-module.exports = ".tech-elem{\r\n    margin: 20px 5px;\r\n}\r\n.tech-elem img{\r\n    height: 80px;\r\n    width: 80px;\r\n    margin : 0 auto;\r\n    margin-top: 15px;\r\n}\r\n.tech-desc{\r\n    font-size:16px;\r\n    font-family: 'Lora';\r\n    text-align: center;\r\n    display:block;\r\n}\r\n.tech-name{\r\n    text-align: center;\r\n    font-size: 30px;\r\n    padding:10px 0;\r\n    margin:10px 0;\r\n    font-weight: bold;\r\n}\r\n@media (max-width: 990px)\r\n{\r\n    .tech-elem img{\r\n        width: 80px;\r\n        height: 80px;\r\n        margin-top:10px;\r\n    }\r\n    .tech-desc{\r\n        font-size:16px;\r\n    }\r\n    .tech-name{\r\n        font-size: 26px;\r\n        padding:5px 0;\r\n    }\r\n}\r\n@media (max-width: 744px)\r\n{\r\n    .tech-elem img{\r\n        width: 60px;\r\n        height: 60px;\r\n    }\r\n    .tech-elem{\r\n        margin:20px 0;\r\n    }\r\n}"
+module.exports = ""
 
 /***/ }),
 
-/***/ 731:
+/***/ 698:
+/***/ (function(module, exports) {
+
+module.exports = ".exp-elem{\n    margin: 20px 5px;\n}\n.exp-elem img{\n    height: 100px;\n    width: 100px;\n    margin : 0 auto;\n    margin-top: 15px;\n}\n.exp-desc{\n    font-size:16px;\n    font-family: 'Lora';\n    text-align: center;\n    display:block;\n}\n.exp-name{\n    text-align: center;\n    font-size: 30px;\n    padding:10px 0;\n    margin:10px 0;\n    font-weight: bold;\n}\n@media (max-width: 990px)\n{\n    .exp-elem img{\n        width: 100px;\n        height: 100px;\n        margin-top:10px;\n    }\n    .exp-desc{\n        font-size:16px;\n    }\n    .exp-name{\n        font-size: 26px;\n        padding:5px 0;\n    }\n}\n@media (max-width: 744px)\n{\n    .exp-elem img{\n        width: 75px;\n        height: 75px;\n    }\n    .exp-elem{\n        margin:20px 0;\n    }\n}"
+
+/***/ }),
+
+/***/ 699:
+/***/ (function(module, exports) {
+
+module.exports = ".main {\n    background-image: url('../img/background.png');\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position-x: 50%;\n    background-position-y: 100%;\n    background-color: black;\n    position: relative;\n    color:white;\n}\n.main-desc{\n    position: absolute;\n    top:50%;\n    left:50%;\n    transform: translate(-50%,-50%);\n    padding:5px;\n}\n.main-inc{\n    font-family: 'Cabin';\n    font-size: 90px;\n    font-weight: bold;\n    text-align: center;\n    white-space: nowrap;\n    text-transform: uppercase;\n    margin:10px;\n    margin-bottom:35px;\n}\n.main-inc-sec{\n    font-family: 'Lora';\n    font-size:28px;\n    text-align: center;\n    text-transform: none;\n    display: inline-block;\n    width:100%;\n}\n.main-butt{\n    width:80px;\n    height:80px;\n    margin:45px auto;\n    cursor: pointer;\n}\n.main-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}\n.main-exp{\n    background-color:black;\n    color:white;\n    /* test */\n    overflow:hidden;\n}\n.main-pro{\n    margin:0 5px;\n}\n.main-me-desc{\n    padding:15px;\n    text-indent: 15px;\n    font-size:20px;\n    line-height: 25px;\n}\n.main-me-img{\n    display: block;\n    width:100%;\n    height:auto;\n    border-radius:15px;\n    background-color:white;\n    box-shadow: 0 0px 8px 8px #e2e3e5;\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\n}"
+
+/***/ }),
+
+/***/ 700:
+/***/ (function(module, exports) {
+
+module.exports = "*{\n    color:white;\n    text-transform: uppercase;\n}\n.head{\n    background-color: black;\n    padding:0px 5px;\n    position: fixed;\n    width:100%;\n    top:0;\n    right:0;\n    z-index: 1;\n}\n.head-logo{\n    font-size: 26px;\n    font-weight: bold;\n    min-width:250px;\n    padding:17px 0px;\n    display: inline-block;\n}\n.menu a{\n    display:inline-block;\n    height: inherit;\n    font-size: 20px;\n    font-weight: bold;\n    cursor: pointer;\n    margin-left: 14px;\n    margin-right: 14px;\n    float:right;\n    padding: 20px 0px;\n    border-bottom-width: 4px;\n    border-bottom-style: solid;\n    border-color:black;\n}\n.menu a:hover{\n    animation-name: menu-elem;\n    animation-duration:  0.5s;\n    animation-fill-mode: forwards;\n    -webkit-animation-name: menu-elem;\n    -webkit-animation-duration: 0.5s;\n    -webkit-animation-fill-mode: forwards;\n}\n.hamburger{\n    float: right;\n    display:none;\n    height: inherit;\n    width: auto;\n    border:1px solid white;\n    border-radius: 10px;\n    margin:5px 0;\n    padding:7px;\n}\n.hamburger img{\n    height: 20px;\n    width: 20px;\n    display: inline-block;\n}\n.hamburger span{\n    font-size: 14px;\n    margin:auto 0;\n    transform: translateY(-2px);\n    display: inline-block;\n}\n@keyframes menu-elem {\n    from{\n        border-color:black;\n    }\n    to{\n        border-color:white;\n    }\n}\n@media (max-width: 990px)\n{\n    .hamburger{\n        display: block;\n    }\n    .menu{\n        display: none;\n    }\n}"
+
+/***/ }),
+
+/***/ 701:
+/***/ (function(module, exports) {
+
+module.exports = ".project {\n    border-radius: 20px;\n    overflow: hidden;\n    margin: 0 5px;\n    padding:5px 0;\n    \n}\n.project-title{\n    background-color: black;\n    color:white;\n    text-align: center;\n    width:100%;\n    font-size:25px;\n    padding:10px 0;\n    font-family: 'Lora';\n}\n.project-desc{\n    padding:10px 15px;\n    color:black; \n    background-color: white;\n    font-family: 'Lora';\n}\n.project-desc-con{\n    font-size:18px;\n    text-indent: 14px;\n    display:block;\n    min-height: 180px;\n    line-height: 30px;\n}\n.project-desc-foot{\n    clear: both;\n    position: relative;\n}\n.project-desc-lang{\n    font-size:22px;\n    font-weight: bold;\n    font-family: 'Cabin';\n    text-transform: uppercase;\n}\n.project-desc-link{\n    float:right;\n    display: block;\n}\n.project-desc-link img{\n    width:30px;\n    height: 30px;\n}"
+
+/***/ }),
+
+/***/ 702:
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ 703:
+/***/ (function(module, exports) {
+
+module.exports = ".tech-elem{\n    margin: 20px 5px;\n}\n.tech-elem img{\n    height: 80px;\n    width: 80px;\n    margin : 0 auto;\n    margin-top: 15px;\n}\n.tech-desc{\n    font-size:16px;\n    font-family: 'Lora';\n    text-align: center;\n    display:block;\n}\n.tech-name{\n    text-align: center;\n    font-size: 30px;\n    padding:10px 0;\n    margin:10px 0;\n    font-weight: bold;\n}\n@media (max-width: 990px)\n{\n    .tech-elem img{\n        width: 80px;\n        height: 80px;\n        margin-top:10px;\n    }\n    .tech-desc{\n        font-size:16px;\n    }\n    .tech-name{\n        font-size: 26px;\n        padding:5px 0;\n    }\n}\n@media (max-width: 744px)\n{\n    .tech-elem img{\n        width: 60px;\n        height: 60px;\n    }\n    .tech-elem{\n        margin:20px 0;\n    }\n}"
+
+/***/ }),
+
+/***/ 737:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(395);
+module.exports = __webpack_require__(400);
 
 
 /***/ })
 
-},[731]);
+},[737]);
 //# sourceMappingURL=main.bundle.map

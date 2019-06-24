@@ -1,6 +1,6 @@
 webpackJsonp([2,4],{
 
-/***/ 235:
+/***/ 240:
 /***/ (function(module, exports) {
 
 /*
@@ -57,7 +57,7 @@ module.exports = function() {
 
 /***/ }),
 
-/***/ 245:
+/***/ 250:
 /***/ (function(module, exports) {
 
 /*
@@ -310,16 +310,16 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 397:
+/***/ 402:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(678);
+var content = __webpack_require__(684);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(245)(content, {});
+var update = __webpack_require__(250)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -337,16 +337,16 @@ if(false) {
 
 /***/ }),
 
-/***/ 398:
+/***/ 403:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(679);
+var content = __webpack_require__(685);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(245)(content, {});
+var update = __webpack_require__(250)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -364,16 +364,16 @@ if(false) {
 
 /***/ }),
 
-/***/ 399:
+/***/ 404:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(680);
+var content = __webpack_require__(686);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(245)(content, {});
+var update = __webpack_require__(250)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -391,40 +391,40 @@ if(false) {
 
 /***/ }),
 
-/***/ 678:
+/***/ 684:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(235)();
+exports = module.exports = __webpack_require__(240)();
 // imports
 
 
 // module
-exports.push([module.i, ".container {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    max-width: calc(100% - 10px);\r\n    min-height: 100vh;\r\n    position:relative;\r\n    height:inherit;\r\n}\r\n.container-small{\r\n    min-height:inherit!important;\r\n}\r\n.container:after,.container-small:after{\r\n    content:'';\r\n    display:block;\r\n    clear:both;\r\n}\r\n.block-12{\r\n    width:calc( (100% / 12) * 12  - 20px );\r\n}\r\n.block-11 {\r\n    width: calc( (100% / 12) * 11 - 20px );\r\n}\r\n.block-10 {\r\n    width: calc( (100% / 12) * 10 - 20px );\r\n}\r\n.block-9 {\r\n    width: calc( (100% / 12) * 9 - 20px );\r\n}\r\n.block-8 {\r\n    width: calc( (100% / 12) * 8 - 20px );\r\n}\r\n.block-7 {\r\n    width: calc( (100% / 12) * 7 - 20px );\r\n}\r\n.block-6 {\r\n    width: calc( (100% / 12) * 6 - 20px );\r\n}\r\n.block-5 {\r\n    width: calc( (100% / 12) * 5 - 20px );\r\n}\r\n.block-4 {\r\n    width: calc( (100% / 12) * 4 - 20px );\r\n}\r\n.block-3 {\r\n    width: calc( (100% / 12) * 3 - 20px );\r\n}\r\n.block-2 {\r\n    width: calc( (100% / 12) * 2 - 20px );\r\n}\r\n.block-1 {\r\n    width: calc( (100% / 12) * 1 - 20px );\r\n}\r\n.block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8, .block-9, .block-10, .block-11, .block-12 {\r\n    display: block;\r\n    float: left;\r\n    position: relative;\r\n    min-height: 1px;\r\n}\r\n.block-pad {\r\n    padding: 5px 10px;\r\n}\r\n.block-mar {\r\n    margin: 0px 10px;\r\n}\r\n.row:after\r\n{\r\n    display:block;\r\n    clear:both;\r\n    content:'';\r\n}\r\n\r\n.media-element {\r\n    display:inline-block;\r\n    vertical-align: text-top;\r\n    width: 100%;\r\n    height: auto;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n.row{\r\n    display:block;\r\n    padding:2px 5px;\r\n    width:calc( 100% - 10px );\r\n}\r\n.slider{\r\n    width:100%;\r\n    height:100%;\r\n    display:block;\r\n    position:relative;\r\n    overflow:hidden;\r\n}\r\n.slider-child{\r\n    width:100%;\r\n    height:100%;\r\n    margin:0;\r\n    display:block;\r\n    position:relative;\r\n}\r\n.slider-child h3{\r\n    color:white;\r\n    font-weight:bold;\r\n    font-size:25px;\r\n    position:absolute;\r\n    bottom:25%;\r\n    left:20%;\r\n}\r\n.slider-child span\r\n{\r\n    color:white;\r\n    font-size:16px;\r\n    display:inline-block;\r\n    position:absolute;\r\n    bottom:15%;\r\n    left:25%;\r\n}\r\n.slider-child a{\r\n    color:inherit;\r\n    display:block;\r\n    position:absolute;\r\n    z-index:2;\r\n    width:100%;\r\n    height:100%;\r\n}\r\n.form{\r\n    width:inherit;\r\n    padding:4px;\r\n    position:relative;\r\n}\r\n.form-section{\r\n    display:block;\r\n    padding:3px 2px;\r\n}\r\n.form-section-header {\r\n    font-size: 26px;\r\n    font-weight: bold;\r\n    text-align:left;\r\n    text-indent:8px;\r\n    display:inline-block;\r\n    width:100%;\r\n    margin: 0 auto;\r\n    margin-bottom:8px;\r\n}\r\n.form-elem-ver,.form-elem-hor{\r\n    display:block;\r\n    width:100%;\r\n    margin:0;\r\n    float:right;\r\n    position:relative;\r\n    padding-top:10px;\r\n    padding-bottom:10px;\r\n    font-size:20px;\r\n}\r\n.form-elem-ver label,.form-elem-hor label{\r\n    font-size: 16px;\r\n}\r\n.form-elem-ver label {\r\n    display: block;\r\n    margin: 0;\r\n    margin-bottom: 15px;\r\n    width: 100%;\r\n    text-indent: 15px;\r\n}\r\n.form-elem-ver input, .form-elem-ver button, .form-elem-ver select,.form-elem-ver textarea {\r\n    border: 2px #addcff solid;\r\n    background-color: inherit;\r\n    border-radius: 5px;\r\n    padding: 4px;\r\n    font-size: 15px;\r\n    width: calc(100% - 12px);\r\n    display: block;\r\n    margin: 2px;\r\n}\r\n.form-elem-hor label {\r\n    display: inline-block;\r\n    margin: 2px;\r\n    margin-right:4px;\r\n    width: calc(40% - 10px);\r\n    text-indent: 1px;\r\n}\r\n.form-elem-hor input, .form-elem-hor button, .form-elem-hor select, .form-elem-hor textarea {\r\n    display: inline-block;\r\n    border: 2px #addcff solid;\r\n    background-color: inherit;\r\n    border-radius: 5px;\r\n    padding: 4px;\r\n    font-size: 15px;\r\n    width: calc(60% - 19px);\r\n    margin: 2px;\r\n}\r\n.form input[type=submit]\r\n{\r\n    display: block;\r\n    margin: 100px auto;\r\n    padding: 8px;\r\n    top: 30px;\r\n    position: relative;\r\n    font-size: 24px;\r\n    background-color: #ddeeff;\r\n    cursor:pointer;\r\n}\r\n.form input[type=file]{\r\n    border:none!important;\r\n}\r\n@media (max-width:445px) {\r\n    .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8, .block-9, .block-10, .block-11, .block-12 {\r\n        width: calc( (100% / 12) * 12 - 10px );\r\n        padding: 5px;\r\n        margin-top:5px;\r\n        margin-bottom:5px;\r\n    }\r\n}\r\n\r\n@media (min-width:570px) {\r\n    .container {\r\n        width: 540px;\r\n    }\r\n\r\n    .header, .footer {\r\n        min-height: 5vh;\r\n    }\r\n}\r\n\r\n@media (min-width:744px) {\r\n    .container {\r\n        width: 720px;\r\n    }\r\n}\r\n\r\n@media (min-width:990px) {\r\n    .container {\r\n        width: 960px;\r\n    }\r\n}\r\n\r\n@media (min-width:1200px) {\r\n    .container {\r\n        width: 1140px;\r\n    }\r\n}\r\n/*@media (min-width:1360px){\r\n    .container{\r\n        width:1320px;\r\n    }\r\n}\r\n@media (min-width:1500px) {\r\n    .container {\r\n        width: 1440px;\r\n    }\r\n}*/", ""]);
+exports.push([module.i, ".container {\n    margin-left: auto;\n    margin-right: auto;\n    max-width: calc(100% - 10px);\n    min-height: 100vh;\n    position:relative;\n    height:inherit;\n}\n.container-small{\n    min-height:inherit!important;\n}\n.container:after,.container-small:after{\n    content:'';\n    display:block;\n    clear:both;\n}\n.block-12{\n    width:calc( (100% / 12) * 12  - 20px );\n}\n.block-11 {\n    width: calc( (100% / 12) * 11 - 20px );\n}\n.block-10 {\n    width: calc( (100% / 12) * 10 - 20px );\n}\n.block-9 {\n    width: calc( (100% / 12) * 9 - 20px );\n}\n.block-8 {\n    width: calc( (100% / 12) * 8 - 20px );\n}\n.block-7 {\n    width: calc( (100% / 12) * 7 - 20px );\n}\n.block-6 {\n    width: calc( (100% / 12) * 6 - 20px );\n}\n.block-5 {\n    width: calc( (100% / 12) * 5 - 20px );\n}\n.block-4 {\n    width: calc( (100% / 12) * 4 - 20px );\n}\n.block-3 {\n    width: calc( (100% / 12) * 3 - 20px );\n}\n.block-2 {\n    width: calc( (100% / 12) * 2 - 20px );\n}\n.block-1 {\n    width: calc( (100% / 12) * 1 - 20px );\n}\n.block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8, .block-9, .block-10, .block-11, .block-12 {\n    display: block;\n    float: left;\n    position: relative;\n    min-height: 1px;\n}\n.block-pad {\n    padding: 5px 10px;\n}\n.block-mar {\n    margin: 0px 10px;\n}\n.row:after\n{\n    display:block;\n    clear:both;\n    content:'';\n}\n\n.media-element {\n    display:inline-block;\n    vertical-align: text-top;\n    width: 100%;\n    height: auto;\n    margin: 0;\n    padding: 0;\n}\n.row{\n    display:block;\n    padding:2px 5px;\n    width:calc( 100% - 10px );\n}\n.slider{\n    width:100%;\n    height:100%;\n    display:block;\n    position:relative;\n    overflow:hidden;\n}\n.slider-child{\n    width:100%;\n    height:100%;\n    margin:0;\n    display:block;\n    position:relative;\n}\n.slider-child h3{\n    color:white;\n    font-weight:bold;\n    font-size:25px;\n    position:absolute;\n    bottom:25%;\n    left:20%;\n}\n.slider-child span\n{\n    color:white;\n    font-size:16px;\n    display:inline-block;\n    position:absolute;\n    bottom:15%;\n    left:25%;\n}\n.slider-child a{\n    color:inherit;\n    display:block;\n    position:absolute;\n    z-index:2;\n    width:100%;\n    height:100%;\n}\n.form{\n    width:inherit;\n    padding:4px;\n    position:relative;\n}\n.form-section{\n    display:block;\n    padding:3px 2px;\n}\n.form-section-header {\n    font-size: 26px;\n    font-weight: bold;\n    text-align:left;\n    text-indent:8px;\n    display:inline-block;\n    width:100%;\n    margin: 0 auto;\n    margin-bottom:8px;\n}\n.form-elem-ver,.form-elem-hor{\n    display:block;\n    width:100%;\n    margin:0;\n    float:right;\n    position:relative;\n    padding-top:10px;\n    padding-bottom:10px;\n    font-size:20px;\n}\n.form-elem-ver label,.form-elem-hor label{\n    font-size: 16px;\n}\n.form-elem-ver label {\n    display: block;\n    margin: 0;\n    margin-bottom: 15px;\n    width: 100%;\n    text-indent: 15px;\n}\n.form-elem-ver input, .form-elem-ver button, .form-elem-ver select,.form-elem-ver textarea {\n    border: 2px #addcff solid;\n    background-color: inherit;\n    border-radius: 5px;\n    padding: 4px;\n    font-size: 15px;\n    width: calc(100% - 12px);\n    display: block;\n    margin: 2px;\n}\n.form-elem-hor label {\n    display: inline-block;\n    margin: 2px;\n    margin-right:4px;\n    width: calc(40% - 10px);\n    text-indent: 1px;\n}\n.form-elem-hor input, .form-elem-hor button, .form-elem-hor select, .form-elem-hor textarea {\n    display: inline-block;\n    border: 2px #addcff solid;\n    background-color: inherit;\n    border-radius: 5px;\n    padding: 4px;\n    font-size: 15px;\n    width: calc(60% - 19px);\n    margin: 2px;\n}\n.form input[type=submit]\n{\n    display: block;\n    margin: 100px auto;\n    padding: 8px;\n    top: 30px;\n    position: relative;\n    font-size: 24px;\n    background-color: #ddeeff;\n    cursor:pointer;\n}\n.form input[type=file]{\n    border:none!important;\n}\n@media (max-width:445px) {\n    .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8, .block-9, .block-10, .block-11, .block-12 {\n        width: calc( (100% / 12) * 12 - 10px );\n        padding: 5px;\n        margin-top:5px;\n        margin-bottom:5px;\n    }\n}\n\n@media (min-width:570px) {\n    .container {\n        width: 540px;\n    }\n\n    .header, .footer {\n        min-height: 5vh;\n    }\n}\n\n@media (min-width:744px) {\n    .container {\n        width: 720px;\n    }\n}\n\n@media (min-width:990px) {\n    .container {\n        width: 960px;\n    }\n}\n\n@media (min-width:1200px) {\n    .container {\n        width: 1140px;\n    }\n}\n/*@media (min-width:1360px){\n    .container{\n        width:1320px;\n    }\n}\n@media (min-width:1500px) {\n    .container {\n        width: 1440px;\n    }\n}*/", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 679:
+/***/ 685:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(235)();
+exports = module.exports = __webpack_require__(240)();
 // imports
 
 
 // module
-exports.push([module.i, "html,body,div,section,nav,article,figure,header,footer,ul,ol,dl,dialog,details\r\n{\r\n    padding:0;\r\n    margin:0;\r\n    font-size:100%;\r\n    border:none;\r\n    width:auto;\r\n    height:auto;\r\n}\r\na,p,code,q,blockquote,em,param,pre,b,sub,sup,span,dd,li,br,abbr,mark,figcaption\r\n{\r\n    margin:0;\r\n    padding:0;\r\n    text-decoration:none;\r\n    font-style:normal;\r\n    font-weight:normal;\r\n    color:inherit;\r\n    font-size:100%;\r\n    text-indent:unset;\r\n}\r\nscript{\r\n    display:none!important;\r\n}\r\nul,ol\r\n{\r\n    list-style-type:none;\r\n    text-indent:0;\r\n}\r\nimg\r\n{\r\n    display:block;\r\n    width:initial;\r\n    height:initial;\r\n}\r\ninput[type=text],input[type=button],input[type=password],input[type=number],input[type=color],input[type=date],input[type=submit],input[type=email],input[type=tel],textarea{\r\n    border-radius:3px;\r\n    border:1px solid #addcff;\r\n    font-family:inherit;\r\n}", ""]);
+exports.push([module.i, "html,body,div,section,nav,article,figure,header,footer,ul,ol,dl,dialog,details\n{\n    padding:0;\n    margin:0;\n    font-size:100%;\n    border:none;\n    width:auto;\n    height:auto;\n}\na,p,code,q,blockquote,em,param,pre,b,sub,sup,span,dd,li,br,abbr,mark,figcaption\n{\n    margin:0;\n    padding:0;\n    text-decoration:none;\n    font-style:normal;\n    font-weight:normal;\n    color:inherit;\n    font-size:100%;\n    text-indent:unset;\n}\nscript{\n    display:none!important;\n}\nul,ol\n{\n    list-style-type:none;\n    text-indent:0;\n}\nimg\n{\n    display:block;\n    width:initial;\n    height:initial;\n}\ninput[type=text],input[type=button],input[type=password],input[type=number],input[type=color],input[type=date],input[type=submit],input[type=email],input[type=tel],textarea{\n    border-radius:3px;\n    border:1px solid #addcff;\n    font-family:inherit;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 680:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(235)();
+exports = module.exports = __webpack_require__(240)();
 // imports
 
 
@@ -436,15 +436,15 @@ exports.push([module.i, "body {\n    font-family: 'Cabin';\n}\n.foot{\n    backg
 
 /***/ }),
 
-/***/ 730:
+/***/ 736:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(399);
-__webpack_require__(397);
-module.exports = __webpack_require__(398);
+__webpack_require__(404);
+__webpack_require__(402);
+module.exports = __webpack_require__(403);
 
 
 /***/ })
 
-},[730]);
+},[736]);
 //# sourceMappingURL=styles.bundle.map
