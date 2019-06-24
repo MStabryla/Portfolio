@@ -40,6 +40,27 @@
     -webkit-animation-duration: 0.5s;
     -webkit-animation-fill-mode: forwards;
 }
+.hamburger{
+    float: right;
+    display:none;
+    height: inherit;
+    width: auto;
+    border:1px solid white;
+    border-radius: 10px;
+    margin:5px 0;
+    padding:7px;
+}
+.hamburger img{
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+.hamburger span{
+    font-size: 14px;
+    margin:auto 0;
+    transform: translateY(-2px);
+    display: inline-block;
+}
 @keyframes menu-elem {
     from{
         border-color:black;
@@ -54,5 +75,14 @@
     }
     to{
         border-color:white;
+    }
+}
+@media (max-width: 990px)
+{
+    .hamburger{
+        display: block;
+    }
+    .menu{
+        display: none;
     }
 }
