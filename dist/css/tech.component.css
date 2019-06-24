@@ -1,0 +1,47 @@
+.tech-elem{
+    margin: 20px 5px;
+}
+.tech-elem img{
+    height: 80px;
+    width: 80px;
+    margin : 0 auto;
+    margin-top: 15px;
+}
+.tech-desc{
+    font-size:16px;
+    font-family: 'Lora';
+    text-align: center;
+    display:block;
+}
+.tech-name{
+    text-align: center;
+    font-size: 30px;
+    padding:10px 0;
+    margin:10px 0;
+    font-weight: bold;
+}
+@media (max-width: 990px)
+{
+    .tech-elem img{
+        width: 80px;
+        height: 80px;
+        margin-top:10px;
+    }
+    .tech-desc{
+        font-size:16px;
+    }
+    .tech-name{
+        font-size: 26px;
+        padding:5px 0;
+    }
+}
+@media (max-width: 744px)
+{
+    .tech-elem img{
+        width: 60px;
+        height: 60px;
+    }
+    .tech-elem{
+        margin:20px 0;
+    }
+}
