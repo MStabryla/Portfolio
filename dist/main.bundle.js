@@ -616,7 +616,6 @@ var MainComponent = (function () {
     MainComponent.prototype.getProjects = function () {
         var _this = this;
         this._pr.getGithubProjects("MStabryla", function (result) {
-            console.log(result);
             for (var i = result.length - 1; i > result.length - 4; i--) {
                 var newPr = new __WEBPACK_IMPORTED_MODULE_2__project_component__["b" /* Project */](result[i].id, result[i].name);
                 newPr.language = result[i].language;
@@ -659,19 +658,55 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+var aDuration = 500;
+var expandedTransform = "translateY(calc(100% - 2px))";
 var MenuComponent = (function () {
     function MenuComponent() {
         this.Logo = "Mateusz  Stabryła";
         this.droppedDownMenu = false;
+        this.links = ["experience", "projects"];
+        this.stateExpression = "collapsed";
     }
-    MenuComponent.prototype.openHamMenu = function (element) {
-        console.log(element);
+    MenuComponent.prototype.onResize = function (event) {
+        var menu = document.getElementById("menu");
+        if (window.innerWidth >= 990) {
+            this.stateExpression = "normal";
+        }
+        else {
+            this.stateExpression = this.droppedDownMenu ? "expanded" : "collapsed";
+        }
     };
+    MenuComponent.prototype.openHamMenu = function (element) {
+        var menu = document.getElementById("menu");
+        this.droppedDownMenu = !this.droppedDownMenu;
+        //menu.style.display = this.droppedDownMenu ? "block" : "none";
+        this.stateExpression = this.droppedDownMenu ? "expanded" : "collapsed";
+    };
+    ;
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* HostListener */])('window:resize', ['$event']), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', void 0)
+    ], MenuComponent.prototype, "onResize", null);
     MenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "my-menu",
             template: __webpack_require__(693),
-            styles: [__webpack_require__(700)]
+            styles: [__webpack_require__(700)],
+            animations: [
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* trigger */])('menuAnim', [
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* state */])("normal", __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* style */])({ transform: "translate(0%)", opacity: 1 })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* state */])("expanded", __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* style */])({ transform: expandedTransform, opacity: 1 })),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* transition */])("expanded => collapsed", [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* animate */])(500, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* style */])({ opacity: 0, transform: "translateY(0%)" }))
+                    ]),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* transition */])("collapsed => expanded", [
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* animate */])(500, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* style */])({ opacity: 1, transform: expandedTransform }))
+                    ]),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* transition */])("* => normal", __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* style */])({}))
+                ])
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], MenuComponent);
@@ -807,7 +842,7 @@ module.exports = "<section class=\"main\">\n    <div class=\"container\">\n     
 /***/ 693:
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-2 head-logo\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo-ins\">{{Logo}}</span></a>\n        </div>\n        <div class=\"block-6 divider\"></div>\n        <div class=\"block-4 menu\">\n            <a routerLink=\"/experience\" routerLinkActive=\"active\">Experience</a>\n            <a routerLink=\"/projects\" routerLinkActive=\"active\">Projects</a>\n        </div>\n        <div class=\"hamburger\" (click)=\"openHamMenu(this)\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
+module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-2 head-logo\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo-ins\">{{Logo}}</span></a>\n        </div>\n        <div id=\"menu\" [@menuAnim]=\"stateExpression\" class=\"block-10 menu\" >\n            <a *ngFor=\"let item of links\" routerLink=\"/{{item}}\" routerLinkActive=\"active\">{{item}}</a>\n        </div>\n        <div class=\"hamburger\" (click)=\"openHamMenu()\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
 
 /***/ }),
 
@@ -856,7 +891,7 @@ module.exports = ".main {\n    background-image: url('../img/background.png');\n
 /***/ 700:
 /***/ (function(module, exports) {
 
-module.exports = "*{\n    color:white;\n    text-transform: uppercase;\n}\n.head{\n    background-color: black;\n    padding:0px 5px;\n    position: fixed;\n    width:100%;\n    top:0;\n    right:0;\n    z-index: 1;\n}\n.head-logo-ins{\n    font-size: 26px;\n    font-weight: bold;\n    min-width:250px;\n    padding:17px 0px;\n    display: inline-block;\n}\n.menu a{\n    display:inline-block;\n    height: inherit;\n    font-size: 20px;\n    font-weight: bold;\n    cursor: pointer;\n    margin-left: 14px;\n    margin-right: 14px;\n    float:right;\n    padding: 20px 0px;\n    border-bottom-width: 4px;\n    border-bottom-style: solid;\n    border-color:black;\n}\n.menu a:hover{\n    animation-name: menu-elem;\n    animation-duration:  0.5s;\n    animation-fill-mode: forwards;\n    -webkit-animation-name: menu-elem;\n    -webkit-animation-duration: 0.5s;\n    -webkit-animation-fill-mode: forwards;\n}\n.hamburger{\n    float: right;\n    display:none;\n    height: inherit;\n    width: auto;\n    cursor: pointer;\n    border:1px solid white;\n    border-radius: 10px;\n    margin: 13px 0;\n    padding:7px;\n}\n.hamburger img{\n    height: 20px;\n    width: 20px;\n    display: inline-block;\n}\n.hamburger span{\n    font-size: 14px;\n    margin:auto 0;\n    transform: translateY(-2px);\n    display: inline-block;\n}\n@keyframes menu-elem {\n    from{\n        border-color:black;\n    }\n    to{\n        border-color:white;\n    }\n}\n@media (max-width: 990px)\n{\n    .hamburger{\n        display: block;\n    }\n    .menu{\n        display: none;\n    }\n    .divider{\n        display:none;\n    }\n    .head-logo{\n        width: auto;\n    }\n}\n@media (max-width: 445px)\n{\n    .head-logo{\n        margin:0 5px;\n        padding:0;\n    }\n}"
+module.exports = "*{\n    color:white;\n    text-transform: uppercase;\n}\n.head{\n    background-color: black;\n    padding:0px 5px;\n    position: fixed;\n    width:100%;\n    top:0;\n    right:0;\n    z-index: 1;\n}\n.head-logo-ins{\n    font-size: 26px;\n    font-weight: bold;\n    min-width:250px;\n    padding:17px 0px;\n    display: inline-block;\n}\n.menu a{\n    display:inline-block;\n    height: inherit;\n    font-size: 20px;\n    font-weight: bold;\n    cursor: pointer;\n    margin-left: 14px;\n    margin-right: 14px;\n    float:right;\n    padding: 20px 0px;\n    border-bottom-width: 4px;\n    border-bottom-style: solid;\n    border-color:black;\n}\n.menu a:hover{\n    animation-name: menu-elem;\n    animation-duration:  0.5s;\n    animation-fill-mode: forwards;\n    -webkit-animation-name: menu-elem;\n    -webkit-animation-duration: 0.5s;\n    -webkit-animation-fill-mode: forwards;\n}\n.hamburger{\n    float: right;\n    display:none;\n    height: inherit;\n    width: auto;\n    cursor: pointer;\n    border:1px solid white;\n    border-radius: 10px;\n    margin: 13px 0;\n    padding:7px;\n}\n.hamburger img{\n    height: 20px;\n    width: 20px;\n    display: inline-block;\n}\n.hamburger span{\n    font-size: 14px;\n    margin:auto 0;\n    transform: translateY(-2px);\n    display: inline-block;\n}\n@keyframes menu-elem {\n    from{\n        border-color:black;\n    }\n    to{\n        border-color:white;\n    }\n}\n@media (max-width: 990px)\n{\n    .hamburger{\n        display: block;\n    }\n    .menu{\n        position: absolute;\n        opacity:0;\n        width: auto;\n        right: 0;\n        z-index: -1;\n        background-color: black;\n    }\n    .divider{\n        display:none;\n    }\n    .head-logo{\n        width: auto;\n    }\n}\n@media (max-width: 445px)\n{\n    \n}"
 
 /***/ }),
 
