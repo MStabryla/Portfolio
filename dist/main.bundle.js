@@ -842,7 +842,7 @@ module.exports = "<section class=\"main\">\n    <div class=\"container\">\n     
 /***/ 693:
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-2 head-logo\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo-ins\">{{Logo}}</span></a>\n        </div>\n        <div id=\"menu\" [@menuAnim]=\"stateExpression\" class=\"block-10 menu\" >\n            <a *ngFor=\"let item of links\" routerLink=\"/{{item}}\" routerLinkActive=\"active\">{{item}}</a>\n        </div>\n        <div class=\"hamburger\" (click)=\"openHamMenu()\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
+module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-4 head-logo\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo-ins\">{{Logo}}</span></a>\n        </div>\n        <div id=\"menu\" [@menuAnim]=\"stateExpression\" class=\"block-8 menu\" >\n            <a *ngFor=\"let item of links\" routerLink=\"/{{item}}\" routerLinkActive=\"active\">{{item}}</a>\n        </div>\n        <div class=\"hamburger\" (click)=\"openHamMenu()\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
 
 /***/ }),
 
