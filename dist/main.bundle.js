@@ -47,7 +47,14 @@ var Project = (function () {
 
 /***/ }),
 
-/***/ 251:
+/***/ 241:
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-head\">My experience</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n    </div>\n</section>"
+
+/***/ }),
+
+/***/ 252:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -56,12 +63,12 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 251;
+webpackEmptyContext.id = 252;
 
 
 /***/ }),
 
-/***/ 338:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110,12 +117,12 @@ var Exp = (function () {
 
 /***/ }),
 
-/***/ 339:
+/***/ 340:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(707);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
@@ -175,7 +182,7 @@ var ProjectService = (function () {
 
 /***/ }),
 
-/***/ 340:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -219,13 +226,6 @@ var Technology = (function () {
     return Technology;
 }());
 //# sourceMappingURL=tech.component.js.map
-
-/***/ }),
-
-/***/ 378:
-/***/ (function(module, exports) {
-
-module.exports = "<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-head\">My experience</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n    </div>\n</section>"
 
 /***/ }),
 
@@ -304,7 +304,7 @@ var AdminComponent = (function () {
     AdminComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(378)
+            template: __webpack_require__(241)
         }), 
         __metadata('design:paramtypes', [])
     ], AdminComponent);
@@ -319,7 +319,7 @@ var AdminComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(340);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -371,7 +371,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(480);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(522);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__project_component__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__about_component__ = __webpack_require__(520);
@@ -381,8 +381,8 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__projects_component__ = __webpack_require__(529);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__menu_component__ = __webpack_require__(528);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main_component__ = __webpack_require__(527);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tech_component__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exp_component__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tech_component__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exp_component__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_router__ = __webpack_require__(509);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__foot_component__ = __webpack_require__(526);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -490,7 +490,7 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(378)
+            template: __webpack_require__(241)
         }), 
         __metadata('design:paramtypes', [])
     ], ContactComponent);
@@ -522,7 +522,7 @@ var ExperienceComponent = (function () {
     ExperienceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(378),
+            template: __webpack_require__(241),
         }), 
         __metadata('design:paramtypes', [])
     ], ExperienceComponent);
@@ -569,11 +569,11 @@ var FootComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(340);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scroll_service__ = __webpack_require__(530);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tech_component__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exp_component__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tech_component__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exp_component__ = __webpack_require__(339);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -662,7 +662,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var MenuComponent = (function () {
     function MenuComponent() {
         this.Logo = "Mateusz  Stabryła";
+        this.droppedDownMenu = false;
     }
+    MenuComponent.prototype.openHamMenu = function (element) {
+        console.log(element);
+    };
     MenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "my-menu",
@@ -803,7 +807,7 @@ module.exports = "<section class=\"main\">\n    <div class=\"container\">\n     
 /***/ 693:
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-2\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo\">{{Logo}}</span></a>\n        </div>\n        <div class=\"block-6 divider\"></div>\n        <div class=\"block-4 menu\">\n            <a routerLink=\"/experience\" routerLinkActive=\"active\">Experience</a>\n            <a routerLink=\"/projects\" routerLinkActive=\"active\">Projects</a>\n        </div>\n        <div class=\"hamburger\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
+module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-2 head-logo\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo-ins\">{{Logo}}</span></a>\n        </div>\n        <div class=\"block-6 divider\"></div>\n        <div class=\"block-4 menu\">\n            <a routerLink=\"/experience\" routerLinkActive=\"active\">Experience</a>\n            <a routerLink=\"/projects\" routerLinkActive=\"active\">Projects</a>\n        </div>\n        <div class=\"hamburger\" (click)=\"openHamMenu(this)\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
 
 /***/ }),
 
@@ -845,14 +849,14 @@ module.exports = ".exp-elem{\n    margin: 20px 5px;\n}\n.exp-elem img{\n    heig
 /***/ 699:
 /***/ (function(module, exports) {
 
-module.exports = ".main {\n    background-image: url('../img/background.png');\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position-x: 50%;\n    background-position-y: 100%;\n    background-color: black;\n    position: relative;\n    color:white;\n}\n.main-desc{\n    position: absolute;\n    top:50%;\n    left:50%;\n    transform: translate(-50%,-50%);\n    padding:5px;\n}\n.main-inc{\n    font-family: 'Cabin';\n    font-size: 90px;\n    font-weight: bold;\n    text-align: center;\n    white-space: nowrap;\n    text-transform: uppercase;\n    margin:10px;\n    margin-bottom:35px;\n}\n.main-inc-sec{\n    font-family: 'Lora';\n    font-size:28px;\n    text-align: center;\n    text-transform: none;\n    display: inline-block;\n    width:100%;\n}\n.main-butt{\n    width:80px;\n    height:80px;\n    margin:45px auto;\n    cursor: pointer;\n}\n.main-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}\n.main-exp{\n    background-color:black;\n    color:white;\n    /* test */\n    overflow:hidden;\n}\n.main-pro{\n    margin:0 5px;\n}\n.main-me-desc{\n    padding:15px;\n    text-indent: 15px;\n    font-size:20px;\n    line-height: 25px;\n}\n.main-me-img{\n    display: block;\n    width:100%;\n    height:auto;\n    border-radius:15px;\n    background-color:white;\n    box-shadow: 0 0px 8px 8px #e2e3e5;\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\n}"
+module.exports = ".main {\n    background-image: url('../img/background.png');\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position-x: 50%;\n    background-position-y: 100%;\n    background-color: black;\n    position: relative;\n    color:white;\n}\n.main-desc{\n    position: absolute;\n    top:50%;\n    left:50%;\n    transform: translate(-50%,-50%);\n    padding:5px;\n}\n.main-inc{\n    font-family: 'Cabin';\n    font-size: 90px;\n    font-weight: bold;\n    text-align: center;\n    white-space: nowrap;\n    text-transform: uppercase;\n    margin:10px;\n    margin-bottom:35px;\n}\n.main-inc-sec{\n    font-family: 'Lora';\n    font-size:28px;\n    text-align: center;\n    text-transform: none;\n    display: inline-block;\n    width:100%;\n}\n.main-butt{\n    width:80px;\n    height:80px;\n    margin:45px auto;\n    cursor: pointer;\n}\n.main-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}\n.main-exp{\n    background-color:black;\n    color:white;\n    /* test */\n    overflow:hidden;\n}\n.main-pro{\n    margin:0 5px;\n}\n.main-me-desc{\n    padding:15px;\n    text-indent: 15px;\n    font-size:20px;\n    line-height: 25px;\n}\n.main-me-img{\n    display: block;\n    width:100%;\n    height:auto;\n    border-radius:15px;\n    background-color:white;\n    box-shadow: 0 0px 8px 8px #e2e3e5;\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\n}\n@media (max-width: 990px){\n    .main-inc{\n        font-size: 75px;\n    }\n}\n@media (max-width: 744px){\n    .main-inc{\n        font-size: 50px;\n    }\n    .main-inc-sec{\n        font-size: 24px;\n    }\n    .main-butt{\n        width: 70px;\n        height: 70px;\n    }\n}\n@media (max-width: 570px){\n    .main-inc{\n        font-size: 40px;\n    }\n    .main-inc-sec{\n        font-size: 20px;\n    }\n    .main-butt{\n        width: 60px;\n        height: 60px;\n    }\n}\n@media (max-width: 445px){\n    .main-inc{\n        font-size: 30px;\n    }\n    .main-inc-sec{\n        font-size: 18px;\n    }\n    .main-butt{\n        width: 50px;\n        height: 50px;\n    }\n}"
 
 /***/ }),
 
 /***/ 700:
 /***/ (function(module, exports) {
 
-module.exports = "*{\n    color:white;\n    text-transform: uppercase;\n}\n.head{\n    background-color: black;\n    padding:0px 5px;\n    position: fixed;\n    width:100%;\n    top:0;\n    right:0;\n    z-index: 1;\n}\n.head-logo{\n    font-size: 26px;\n    font-weight: bold;\n    min-width:250px;\n    padding:17px 0px;\n    display: inline-block;\n}\n.menu a{\n    display:inline-block;\n    height: inherit;\n    font-size: 20px;\n    font-weight: bold;\n    cursor: pointer;\n    margin-left: 14px;\n    margin-right: 14px;\n    float:right;\n    padding: 20px 0px;\n    border-bottom-width: 4px;\n    border-bottom-style: solid;\n    border-color:black;\n}\n.menu a:hover{\n    animation-name: menu-elem;\n    animation-duration:  0.5s;\n    animation-fill-mode: forwards;\n    -webkit-animation-name: menu-elem;\n    -webkit-animation-duration: 0.5s;\n    -webkit-animation-fill-mode: forwards;\n}\n.hamburger{\n    float: right;\n    display:none;\n    height: inherit;\n    width: auto;\n    border:1px solid white;\n    border-radius: 10px;\n    margin:5px 0;\n    padding:7px;\n}\n.hamburger img{\n    height: 20px;\n    width: 20px;\n    display: inline-block;\n}\n.hamburger span{\n    font-size: 14px;\n    margin:auto 0;\n    transform: translateY(-2px);\n    display: inline-block;\n}\n@keyframes menu-elem {\n    from{\n        border-color:black;\n    }\n    to{\n        border-color:white;\n    }\n}\n@media (max-width: 990px)\n{\n    .hamburger{\n        display: block;\n    }\n    .menu{\n        display: none;\n    }\n}"
+module.exports = "*{\n    color:white;\n    text-transform: uppercase;\n}\n.head{\n    background-color: black;\n    padding:0px 5px;\n    position: fixed;\n    width:100%;\n    top:0;\n    right:0;\n    z-index: 1;\n}\n.head-logo-ins{\n    font-size: 26px;\n    font-weight: bold;\n    min-width:250px;\n    padding:17px 0px;\n    display: inline-block;\n}\n.menu a{\n    display:inline-block;\n    height: inherit;\n    font-size: 20px;\n    font-weight: bold;\n    cursor: pointer;\n    margin-left: 14px;\n    margin-right: 14px;\n    float:right;\n    padding: 20px 0px;\n    border-bottom-width: 4px;\n    border-bottom-style: solid;\n    border-color:black;\n}\n.menu a:hover{\n    animation-name: menu-elem;\n    animation-duration:  0.5s;\n    animation-fill-mode: forwards;\n    -webkit-animation-name: menu-elem;\n    -webkit-animation-duration: 0.5s;\n    -webkit-animation-fill-mode: forwards;\n}\n.hamburger{\n    float: right;\n    display:none;\n    height: inherit;\n    width: auto;\n    cursor: pointer;\n    border:1px solid white;\n    border-radius: 10px;\n    margin: 13px 0;\n    padding:7px;\n}\n.hamburger img{\n    height: 20px;\n    width: 20px;\n    display: inline-block;\n}\n.hamburger span{\n    font-size: 14px;\n    margin:auto 0;\n    transform: translateY(-2px);\n    display: inline-block;\n}\n@keyframes menu-elem {\n    from{\n        border-color:black;\n    }\n    to{\n        border-color:white;\n    }\n}\n@media (max-width: 990px)\n{\n    .hamburger{\n        display: block;\n    }\n    .menu{\n        display: none;\n    }\n    .divider{\n        display:none;\n    }\n    .head-logo{\n        width: auto;\n    }\n}\n@media (max-width: 445px)\n{\n    .head-logo{\n        margin:0 5px;\n        padding:0;\n    }\n}"
 
 /***/ }),
 

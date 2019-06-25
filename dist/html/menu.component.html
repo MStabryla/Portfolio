@@ -1,14 +1,14 @@
 <header class="head">
     <div class="container container-small">
-        <div class="block-2">
-            <a routerLink="/" routerLinkActive="active"><span class="head-logo">{{Logo}}</span></a>
+        <div class="block-2 head-logo">
+            <a routerLink="/" routerLinkActive="active"><span class="head-logo-ins">{{Logo}}</span></a>
         </div>
         <div class="block-6 divider"></div>
         <div class="block-4 menu">
             <a routerLink="/experience" routerLinkActive="active">Experience</a>
             <a routerLink="/projects" routerLinkActive="active">Projects</a>
         </div>
-        <div class="hamburger">
+        <div class="hamburger" (click)="openHamMenu(this)">
             <span>Menu</span>
             <img src="../img/hmenu.png" alt="err" />
         </div>

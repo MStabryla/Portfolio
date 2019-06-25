@@ -11,7 +11,7 @@
     right:0;
     z-index: 1;
 }
-.head-logo{
+.head-logo-ins{
     font-size: 26px;
     font-weight: bold;
     min-width:250px;
@@ -45,9 +45,10 @@
     display:none;
     height: inherit;
     width: auto;
+    cursor: pointer;
     border:1px solid white;
     border-radius: 10px;
-    margin:5px 0;
+    margin: 13px 0;
     padding:7px;
 }
 .hamburger img{
@@ -84,5 +85,18 @@
     }
     .menu{
         display: none;
+    }
+    .divider{
+        display:none;
+    }
+    .head-logo{
+        width: auto;
+    }
+}
+@media (max-width: 445px)
+{
+    .head-logo{
+        margin:0 5px;
+        padding:0;
     }
 }
