@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
     Logo: string = "Mateusz  Stabryła"
+    droppedDownMenu: boolean = false;
+    openHamMenu(element: HTMLDivElement): void {
+        console.log(element);
+    }
 }
