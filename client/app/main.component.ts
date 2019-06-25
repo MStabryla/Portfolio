@@ -36,7 +36,6 @@ export class MainComponent {
     }
     getProjects(): void {
         this._pr.getGithubProjects("MStabryla",result => {
-            console.log(result);
             for(var i=result.length-1;i>result.length-4;i--)
             {
                 let newPr = new Project(result[i].id,result[i].name);
