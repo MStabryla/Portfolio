@@ -171,6 +171,14 @@ var ProjectService = (function () {
             });
         });
     };
+    ProjectService.prototype.serializeGithubJsonObject = function (jsonResult) {
+        var newPr = new __WEBPACK_IMPORTED_MODULE_2__project_component__["b" /* Project */](jsonResult.id, jsonResult.name);
+        newPr.language = jsonResult.language;
+        newPr.color = this.LangColors[newPr.language].color;
+        newPr.description = jsonResult.description;
+        newPr.url = jsonResult.html_url;
+        return newPr;
+    };
     ProjectService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* Injectable */])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
@@ -383,8 +391,9 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main_component__ = __webpack_require__(527);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tech_component__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exp_component__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_router__ = __webpack_require__(509);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__foot_component__ = __webpack_require__(526);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__projectview_component__ = __webpack_require__(739);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_router__ = __webpack_require__(509);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__foot_component__ = __webpack_require__(526);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -395,6 +404,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -447,18 +457,19 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__projects_component__["a" /* ProjectsComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__menu_component__["a" /* MenuComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__main_component__["a" /* MainComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__foot_component__["a" /* FootComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__foot_component__["a" /* FootComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__tech_component__["a" /* TechComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__exp_component__["a" /* ExpComponent */]
+                __WEBPACK_IMPORTED_MODULE_14__exp_component__["a" /* ExpComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__projectview_component__["a" /* ProjectviewComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_15__angular_router__["a" /* RouterModule */].forRoot(_routing)
+                __WEBPACK_IMPORTED_MODULE_16__angular_router__["a" /* RouterModule */].forRoot(_routing)
             ],
             providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_11__menu_component__["a" /* MenuComponent */], __WEBPACK_IMPORTED_MODULE_16__foot_component__["a" /* FootComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_11__menu_component__["a" /* MenuComponent */], __WEBPACK_IMPORTED_MODULE_17__foot_component__["a" /* FootComponent */]]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
@@ -570,10 +581,9 @@ var FootComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scroll_service__ = __webpack_require__(530);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tech_component__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__exp_component__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scroll_service__ = __webpack_require__(530);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tech_component__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exp_component__ = __webpack_require__(339);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -589,22 +599,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var MainComponent = (function () {
     function MainComponent(_pr, _sc) {
         this._pr = _pr;
         this._sc = _sc;
         this.Projs = [];
         this.Technologies = [
-            new __WEBPACK_IMPORTED_MODULE_4__tech_component__["b" /* Technology */]("WEB", "HTML 5, CSS 3, JavaScript, JQuery", "../img/tech-web.png", "web"),
-            new __WEBPACK_IMPORTED_MODULE_4__tech_component__["b" /* Technology */]("DESKTOP", "C# WPF, C# WebForms, C# UWP", "../img/tech-desk.png", "desk"),
-            new __WEBPACK_IMPORTED_MODULE_4__tech_component__["b" /* Technology */]("JS Frameworks", "Node.js, Angular.js, Angular 2 , Three.js", "../img/tech-js.png", "js"),
-            new __WEBPACK_IMPORTED_MODULE_4__tech_component__["b" /* Technology */]("ASP.NET", "MVC , Web API", "../img/tech-dotnet.png", "asp")
+            new __WEBPACK_IMPORTED_MODULE_3__tech_component__["b" /* Technology */]("WEB", "HTML 5, CSS 3, JavaScript, JQuery", "../img/tech-web.png", "web"),
+            new __WEBPACK_IMPORTED_MODULE_3__tech_component__["b" /* Technology */]("DESKTOP", "C# WPF, C# WebForms, C# UWP", "../img/tech-desk.png", "desk"),
+            new __WEBPACK_IMPORTED_MODULE_3__tech_component__["b" /* Technology */]("JS Frameworks", "Node.js, Angular.js, Angular 2 , Three.js", "../img/tech-js.png", "js"),
+            new __WEBPACK_IMPORTED_MODULE_3__tech_component__["b" /* Technology */]("ASP.NET", "MVC , Web API", "../img/tech-dotnet.png", "asp")
         ];
         this.Experiences = [
-            new __WEBPACK_IMPORTED_MODULE_5__exp_component__["b" /* Exp */]("Cogworks", new Date(2017, 4, 24, 0, 0, 0, 0), new Date(2017, 5, 24, 0, 0, 0, 0), "Umbraco Developer Apprentice", "Umbraco CMS managment, ASP.NET developing", "../img/cog.png"),
-            new __WEBPACK_IMPORTED_MODULE_5__exp_component__["b" /* Exp */]("Petroinform", new Date(2017, 7, 3, 0, 0, 0, 0), new Date(2017, 7, 29, 0, 0, 0, 0), "Fiber optic network fitter", "fitting fiber optic network, router and network managment", "../img/pet.png"),
-            new __WEBPACK_IMPORTED_MODULE_5__exp_component__["b" /* Exp */]("MedApp", new Date(2018, 7, 2, 0, 0, 0, 0), new Date(2018, 8, 31, 0, 0, 0, 0), "UWP Developer Apprentice", "Developing UWP application", "../img/med.png")
+            new __WEBPACK_IMPORTED_MODULE_4__exp_component__["b" /* Exp */]("Cogworks", new Date(2017, 4, 24, 0, 0, 0, 0), new Date(2017, 5, 24, 0, 0, 0, 0), "Umbraco Developer Apprentice", "Umbraco CMS managment, ASP.NET developing", "../img/cog.png"),
+            new __WEBPACK_IMPORTED_MODULE_4__exp_component__["b" /* Exp */]("Petroinform", new Date(2017, 7, 3, 0, 0, 0, 0), new Date(2017, 7, 29, 0, 0, 0, 0), "Fiber optic network fitter", "fitting fiber optic network, router and network managment", "../img/pet.png"),
+            new __WEBPACK_IMPORTED_MODULE_4__exp_component__["b" /* Exp */]("MedApp", new Date(2018, 7, 2, 0, 0, 0, 0), new Date(2018, 8, 31, 0, 0, 0, 0), "UWP Developer Apprentice", "Developing UWP application", "../img/med.png")
         ];
         this.MainIns = "Mateusz Stabryła";
         this.Desc = "Full Stack .NET Developer";
@@ -617,12 +626,7 @@ var MainComponent = (function () {
         var _this = this;
         this._pr.getGithubProjects("MStabryla", function (result) {
             for (var i = result.length - 1; i > result.length - 4; i--) {
-                var newPr = new __WEBPACK_IMPORTED_MODULE_2__project_component__["b" /* Project */](result[i].id, result[i].name);
-                newPr.language = result[i].language;
-                newPr.color = _this._pr.LangColors[newPr.language].color;
-                newPr.description = result[i].description;
-                newPr.url = result[i].html_url;
-                _this.Projs.push(newPr);
+                _this.Projs.push(_this._pr.serializeGithubJsonObject(result[i]));
             }
         });
     };
@@ -631,9 +635,9 @@ var MainComponent = (function () {
             selector: "main-elem",
             template: __webpack_require__(692),
             styles: [__webpack_require__(699)],
-            providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */], __WEBPACK_IMPORTED_MODULE_3__scroll_service__["a" /* ScrollService */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */], __WEBPACK_IMPORTED_MODULE_2__scroll_service__["a" /* ScrollService */]]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__scroll_service__["a" /* ScrollService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__scroll_service__["a" /* ScrollService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__scroll_service__["a" /* ScrollService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__scroll_service__["a" /* ScrollService */]) === 'function' && _b) || Object])
     ], MainComponent);
     return MainComponent;
     var _a, _b;
@@ -721,6 +725,7 @@ var MenuComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(340);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -732,18 +737,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ProjectsComponent = (function () {
-    function ProjectsComponent() {
+    function ProjectsComponent(_prService) {
+        var _this = this;
+        this._prService = _prService;
+        this.projects = [];
+        this._prService.getGithubProjects("MStabryla", function (result) {
+            for (var i = result.length - 1; i >= 0; i--)
+                _this.projects.push(_this._prService.serializeGithubJsonObject(result[i]));
+        });
     }
     ProjectsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
             template: __webpack_require__(695),
-            styles: [__webpack_require__(702)]
+            styles: [__webpack_require__(702)],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object])
     ], ProjectsComponent);
     return ProjectsComponent;
+    var _a;
 }());
 //# sourceMappingURL=projects.component.js.map
 
@@ -828,14 +843,14 @@ module.exports = "<!-- <div class=\"exp\">\n    <div class=\"exp-left\">\n      
 /***/ 691:
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"foot\">\n    <div class=\"sign\">Copyright © Mateusz Stabryła 2018</div>\n</footer>"
+module.exports = "<footer class=\"foot\">\n    <div class=\"sign\">Copyright © Mateusz Stabryła 2019</div>\n</footer>"
 
 /***/ }),
 
 /***/ 692:
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"main\">\n    <div class=\"container\">\n        <div class=\"main-desc\">\n            <h1 class=\"main-inc\">{{MainIns}}</h1>\n            <span class=\"main-inc-sec\">{{Desc}}</span>\n            <img src=\"../img/button.png\" class=\"main-butt\" (click)=\"scroll()\"/>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n        <div class=\"container\">\n            <div class=\"main-desc block-12\">\n                <div class=\"main-title\">\n                    <h4>ABOUT ME</h4>\n                </div>\n                <div class=\"block-4\">\n                    <img class=\"main-me-img\" src=\"../img/mxxx.jpg\" alt=\"Err\" />\n                </div>\n                <div class=\"block-8 main-me-desc\">\n                    <span >I am Mateusz Stabryła and I am a beginner .NET programmer. I had an experience in working with different desktop and web technologies like JQuery,Angular and Node.js.</span>\n                </div>\n            </div>\n        </div>\n    </section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div>\n                <h3 class=\"main-title\">Technologies</h3>\n            </div>\n            <div>\n                <div class=\"main-me-tech\" >\n                    <div *ngFor=\"let item of Technologies\" class=\"block-6\">\n                        <tech [data]=\"item\"></tech>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Experience</h3>\n            </div>\n            <div class=\"main-exp-list\">\n                <div *ngFor=\"let item of Experiences\" class=\"block-4\" style=\"margin: 0 10px;\">\n                    <exp [data]=\"item\"></exp>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Projects</h3>\n            </div>\n            <div class=\"main-pro block-4\" *ngFor=\"let item of Projs\">\n                <project [data]=\"item\"></project>\n            </div>\n        </div>\n    </div>\n</section>\n"
+module.exports = "<section class=\"main\">\n    <div class=\"container\">\n        <div class=\"main-desc\">\n            <h1 class=\"main-inc\">{{MainIns}}</h1>\n            <span class=\"main-inc-sec\">{{Desc}}</span>\n            <img src=\"../img/button.png\" class=\"main-butt\" (click)=\"scroll()\"/>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n        <div class=\"container\">\n            <div class=\"main-desc block-12\">\n                <div class=\"main-title\">\n                    <h4>ABOUT ME</h4>\n                </div>\n                <div class=\"block-12\">\n                    <img class=\"main-me-img\" src=\"../img/me.jpg\" alt=\"Err\" />\n                </div>\n                <div class=\"block-12 main-me-desc\">\n                    <span >I am Mateusz Stabryła and I am a beginner .NET programmer. I had an experience in working with different desktop and web technologies like JQuery,Angular and Node.js.</span>\n                </div>\n            </div>\n        </div>\n    </section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div>\n                <h3 class=\"main-title\">Technologies</h3>\n            </div>\n            <div>\n                <div class=\"main-me-tech\" >\n                    <div *ngFor=\"let item of Technologies\" class=\"block-6\">\n                        <tech [data]=\"item\"></tech>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Experience</h3>\n            </div>\n            <div class=\"main-exp-list\">\n                <div *ngFor=\"let item of Experiences\" class=\"block-4\" style=\"margin: 0 10px;\">\n                    <exp [data]=\"item\"></exp>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Projects</h3>\n            </div>\n            <div class=\"main-pro block-4\" *ngFor=\"let item of Projs\">\n                <project [data]=\"item\"></project>\n            </div>\n        </div>\n    </div>\n</section>\n"
 
 /***/ }),
 
@@ -856,7 +871,7 @@ module.exports = "<!--<div [ngStyle]=\"{ color : data.color }\">\n    <span>{{da
 /***/ 695:
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-head\">My Projects</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n    </div>\n</section>"
+module.exports = "<div class=\"head-space\"></div>\n<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-title\">My Projects</h3>\n        <projectview *ngFor=\"let item of projects\"></projectview>\n    </div>\n</section>"
 
 /***/ }),
 
@@ -884,7 +899,7 @@ module.exports = ".exp-elem{\n    margin: 20px 5px;\n}\n.exp-elem img{\n    heig
 /***/ 699:
 /***/ (function(module, exports) {
 
-module.exports = ".main {\n    background-image: url('../img/background.png');\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position-x: 50%;\n    background-position-y: 100%;\n    background-color: black;\n    position: relative;\n    color:white;\n}\n.main-desc{\n    position: absolute;\n    top:50%;\n    left:50%;\n    transform: translate(-50%,-50%);\n    padding:5px;\n}\n.main-inc{\n    font-family: 'Cabin';\n    font-size: 90px;\n    font-weight: bold;\n    text-align: center;\n    white-space: nowrap;\n    text-transform: uppercase;\n    margin:10px;\n    margin-bottom:35px;\n}\n.main-inc-sec{\n    font-family: 'Lora';\n    font-size:28px;\n    text-align: center;\n    text-transform: none;\n    display: inline-block;\n    width:100%;\n}\n.main-butt{\n    width:80px;\n    height:80px;\n    margin:45px auto;\n    cursor: pointer;\n}\n.main-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}\n.main-exp{\n    background-color:black;\n    color:white;\n    /* test */\n    overflow:hidden;\n}\n.main-pro{\n    margin:0 5px;\n}\n.main-me-desc{\n    padding:15px;\n    text-indent: 15px;\n    font-size:20px;\n    line-height: 25px;\n}\n.main-me-img{\n    display: block;\n    width:100%;\n    height:auto;\n    border-radius:15px;\n    background-color:white;\n    box-shadow: 0 0px 8px 8px #e2e3e5;\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\n}\n@media (max-width: 990px){\n    .main-inc{\n        font-size: 75px;\n    }\n}\n@media (max-width: 744px){\n    .main-inc{\n        font-size: 50px;\n    }\n    .main-inc-sec{\n        font-size: 24px;\n    }\n    .main-butt{\n        width: 70px;\n        height: 70px;\n    }\n}\n@media (max-width: 570px){\n    .main-inc{\n        font-size: 40px;\n    }\n    .main-inc-sec{\n        font-size: 20px;\n    }\n    .main-butt{\n        width: 60px;\n        height: 60px;\n    }\n}\n@media (max-width: 445px){\n    .main-inc{\n        font-size: 30px;\n    }\n    .main-inc-sec{\n        font-size: 18px;\n    }\n    .main-butt{\n        width: 50px;\n        height: 50px;\n    }\n}"
+module.exports = ".main {\n    background-image: url('../img/background.png');\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position-x: 50%;\n    background-position-y: 100%;\n    background-color: black;\n    position: relative;\n    color:white;\n}\n.main-desc{\n    position: absolute;\n    top:50%;\n    left:50%;\n    transform: translate(-50%,-50%);\n    padding:5px;\n}\n.main-inc{\n    font-family: 'Cabin';\n    font-size: 90px;\n    font-weight: bold;\n    text-align: center;\n    white-space: nowrap;\n    text-transform: uppercase;\n    margin:10px;\n    margin-bottom:35px;\n}\n.main-inc-sec{\n    font-family: 'Lora';\n    font-size:28px;\n    text-align: center;\n    text-transform: none;\n    display: inline-block;\n    width:100%;\n}\n.main-butt{\n    width:80px;\n    height:80px;\n    margin:45px auto;\n    cursor: pointer;\n}\n.main-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}\n.main-exp{\n    background-color:black;\n    color:white;\n    /* test */\n    overflow:hidden;\n}\n.main-pro{\n    margin:0 5px;\n}\n.main-me-desc{\n    padding:15px;\n    text-indent: 15px;\n    font-size:20px;\n    line-height: 25px;\n}\n.main-me-img{\n    display: block;\n    width:300px;\n    margin: auto;\n    height:auto;\n    border-radius:15px;\n    background-color:white;\n    box-shadow: 0 0px 8px 8px #e2e3e5;\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\n}\n@media (max-width: 990px){\n    .main-inc{\n        font-size: 75px;\n    }\n    .main-me-img{\n        width:300px;\n    }\n}\n@media (max-width: 744px){\n    .main-inc{\n        font-size: 50px;\n    }\n    .main-inc-sec{\n        font-size: 24px;\n    }\n    .main-butt{\n        width: 70px;\n        height: 70px;\n    }\n    .main-me-img{\n        width:250px;\n    }\n}\n@media (max-width: 570px){\n    .main-inc{\n        font-size: 40px;\n    }\n    .main-inc-sec{\n        font-size: 20px;\n    }\n    .main-butt{\n        width: 60px;\n        height: 60px;\n    }\n    .main-me-img{\n        width:200px;\n    }\n}\n@media (max-width: 445px){\n    .main-inc{\n        font-size: 30px;\n    }\n    .main-inc-sec{\n        font-size: 18px;\n    }\n    .main-butt{\n        width: 50px;\n        height: 50px;\n    }\n    .main-me-img{\n        width:150px;\n    }\n}\n"
 
 /***/ }),
 
@@ -905,7 +920,7 @@ module.exports = ".project {\n    border-radius: 20px;\n    overflow: hidden;\n 
 /***/ 702:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".head-space{\n    height:66px;\n}\n.projects-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}"
 
 /***/ }),
 
@@ -921,6 +936,61 @@ module.exports = ".tech-elem{\n    margin: 20px 5px;\n}\n.tech-elem img{\n    he
 
 module.exports = __webpack_require__(400);
 
+
+/***/ }),
+
+/***/ 739:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project_component__ = __webpack_require__(152);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectviewComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProjectviewComponent = (function () {
+    function ProjectviewComponent() {
+        this.projectData = new __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */](0, "");
+    }
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Input */])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */]) === 'function' && _a) || Object)
+    ], ProjectviewComponent.prototype, "projectData", void 0);
+    ProjectviewComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
+            selector: 'projectview',
+            template: __webpack_require__(740),
+            styles: [__webpack_require__(741)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ProjectviewComponent);
+    return ProjectviewComponent;
+    var _a;
+}());
+//# sourceMappingURL=projectview.component.js.map
+
+/***/ }),
+
+/***/ 740:
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ 741:
+/***/ (function(module, exports) {
+
+module.exports = ""
 
 /***/ })
 
