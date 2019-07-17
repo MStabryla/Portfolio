@@ -14,6 +14,7 @@ import { MenuComponent } from './menu.component';
 import { MainComponent } from './main.component';
 import { TechComponent } from './tech.component';
 import { ExpComponent } from './exp.component';
+import { ProjectviewComponent } from './projectview.component';
 
 import { RouterModule,Routes } from '@angular/router';
 import { FootComponent } from './foot.component';
@@ -52,7 +53,8 @@ const _routing: Routes = [
     MainComponent,
     FootComponent,
     TechComponent,
-    ExpComponent
+    ExpComponent,
+    ProjectviewComponent
   ],
   imports: [
     BrowserModule,
