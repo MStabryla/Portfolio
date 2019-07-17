@@ -35,5 +35,13 @@ export class ProjectService{
             })
         });
     }
+    serializeGithubJsonObject(jsonResult: any): Project{
+        let newPr = new Project(jsonResult.id,jsonResult.name);
+        newPr.language = jsonResult.language;
+        newPr.color = this.LangColors[newPr.language].color;
+        newPr.description = jsonResult.description;
+        newPr.url = jsonResult.html_url;
+        return newPr;
+    }
     LangColors: any;
 }
