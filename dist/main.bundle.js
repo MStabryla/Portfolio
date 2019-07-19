@@ -28,9 +28,9 @@ var ProjectComponent = (function () {
     ProjectComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'project',
-            template: __webpack_require__(694),
+            template: __webpack_require__(695),
             providers: [],
-            styles: [__webpack_require__(701)]
+            styles: [__webpack_require__(703)]
         }), 
         __metadata('design:paramtypes', [])
     ], ProjectComponent);
@@ -47,84 +47,14 @@ var Project = (function () {
 
 /***/ }),
 
-/***/ 241:
-/***/ (function(module, exports) {
-
-module.exports = "<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-head\">My experience</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n    </div>\n</section>"
-
-/***/ }),
-
-/***/ 252:
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 252;
-
-
-/***/ }),
-
-/***/ 339:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Exp; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ExpComponent = (function () {
-    function ExpComponent() {
-    }
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Input */])(), 
-        __metadata('design:type', Exp)
-    ], ExpComponent.prototype, "data", void 0);
-    ExpComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-            selector: 'exp',
-            template: __webpack_require__(690),
-            styles: [__webpack_require__(698)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ExpComponent);
-    return ExpComponent;
-}());
-var Exp = (function () {
-    function Exp(company, dateFrom, dateTo, standing, desc, logoUrl) {
-        this.company = company;
-        this.dateFrom = dateFrom;
-        this.dateTo = dateTo;
-        this.standing = standing;
-        this.desc = desc;
-        this.logoUrl = logoUrl;
-    }
-    return Exp;
-}());
-//# sourceMappingURL=exp.component.js.map
-
-/***/ }),
-
-/***/ 340:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(707);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(710);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -190,6 +120,76 @@ var ProjectService = (function () {
 
 /***/ }),
 
+/***/ 242:
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-head\">My experience</h3>\n        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\n    </div>\n</section>"
+
+/***/ }),
+
+/***/ 253:
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 253;
+
+
+/***/ }),
+
+/***/ 340:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Exp; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ExpComponent = (function () {
+    function ExpComponent() {
+    }
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Input */])(), 
+        __metadata('design:type', Exp)
+    ], ExpComponent.prototype, "data", void 0);
+    ExpComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
+            selector: 'exp',
+            template: __webpack_require__(691),
+            styles: [__webpack_require__(700)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ExpComponent);
+    return ExpComponent;
+}());
+var Exp = (function () {
+    function Exp(company, dateFrom, dateTo, standing, desc, logoUrl) {
+        this.company = company;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.standing = standing;
+        this.desc = desc;
+        this.logoUrl = logoUrl;
+    }
+    return Exp;
+}());
+//# sourceMappingURL=exp.component.js.map
+
+/***/ }),
+
 /***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -217,8 +217,8 @@ var TechComponent = (function () {
     TechComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'tech',
-            template: __webpack_require__(696),
-            styles: [__webpack_require__(703)]
+            template: __webpack_require__(698),
+            styles: [__webpack_require__(706)]
         }), 
         __metadata('design:paramtypes', [])
     ], TechComponent);
@@ -244,7 +244,7 @@ var Technology = (function () {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(489);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(531);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(532);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(523);
 
 
@@ -280,7 +280,7 @@ var AboutComponent = (function () {
     AboutComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(688)
+            template: __webpack_require__(689)
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);
@@ -312,7 +312,7 @@ var AdminComponent = (function () {
     AdminComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(241)
+            template: __webpack_require__(242)
         }), 
         __metadata('design:paramtypes', [])
     ], AdminComponent);
@@ -327,7 +327,7 @@ var AdminComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__project_component__ = __webpack_require__(152);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -359,8 +359,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'main-elem',
-            template: __webpack_require__(689),
-            styles: [__webpack_require__(697)],
+            template: __webpack_require__(690),
+            styles: [__webpack_require__(699)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object])
@@ -379,7 +379,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(480);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(522);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__project_component__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__about_component__ = __webpack_require__(520);
@@ -390,8 +390,8 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__menu_component__ = __webpack_require__(528);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__main_component__ = __webpack_require__(527);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tech_component__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exp_component__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__projectview_component__ = __webpack_require__(739);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__exp_component__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__projectview_component__ = __webpack_require__(530);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_router__ = __webpack_require__(509);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__foot_component__ = __webpack_require__(526);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -501,7 +501,7 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(241)
+            template: __webpack_require__(242)
         }), 
         __metadata('design:paramtypes', [])
     ], ContactComponent);
@@ -533,7 +533,7 @@ var ExperienceComponent = (function () {
     ExperienceComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(241),
+            template: __webpack_require__(242),
         }), 
         __metadata('design:paramtypes', [])
     ], ExperienceComponent);
@@ -565,7 +565,7 @@ var FootComponent = (function () {
     FootComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "foot",
-            template: __webpack_require__(691)
+            template: __webpack_require__(692)
         }), 
         __metadata('design:paramtypes', [])
     ], FootComponent);
@@ -580,10 +580,10 @@ var FootComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scroll_service__ = __webpack_require__(530);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scroll_service__ = __webpack_require__(531);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tech_component__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exp_component__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__exp_component__ = __webpack_require__(340);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -633,8 +633,8 @@ var MainComponent = (function () {
     MainComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main-elem",
-            template: __webpack_require__(692),
-            styles: [__webpack_require__(699)],
+            template: __webpack_require__(693),
+            styles: [__webpack_require__(701)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */], __WEBPACK_IMPORTED_MODULE_2__scroll_service__["a" /* ScrollService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__scroll_service__["a" /* ScrollService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__scroll_service__["a" /* ScrollService */]) === 'function' && _b) || Object])
@@ -696,8 +696,8 @@ var MenuComponent = (function () {
     MenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "my-menu",
-            template: __webpack_require__(693),
-            styles: [__webpack_require__(700)],
+            template: __webpack_require__(694),
+            styles: [__webpack_require__(702)],
             animations: [
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* trigger */])('menuAnim', [
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* state */])("normal", __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* style */])({ transform: "translate(0%)", opacity: 1 })),
@@ -725,7 +725,7 @@ var MenuComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getproject_service__ = __webpack_require__(220);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -751,8 +751,8 @@ var ProjectsComponent = (function () {
     ProjectsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: "main",
-            template: __webpack_require__(695),
-            styles: [__webpack_require__(702)],
+            template: __webpack_require__(696),
+            styles: [__webpack_require__(704)],
             providers: [__WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__getproject_service__["a" /* ProjectService */]) === 'function' && _a) || Object])
@@ -765,6 +765,47 @@ var ProjectsComponent = (function () {
 /***/ }),
 
 /***/ 530:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project_component__ = __webpack_require__(152);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectviewComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProjectviewComponent = (function () {
+    function ProjectviewComponent() {
+        this.projectData = new __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */](0, "");
+    }
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Input */])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */]) === 'function' && _a) || Object)
+    ], ProjectviewComponent.prototype, "projectData", void 0);
+    ProjectviewComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
+            selector: 'projectview',
+            template: __webpack_require__(697),
+            styles: [__webpack_require__(705)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ProjectviewComponent);
+    return ProjectviewComponent;
+    var _a;
+}());
+//# sourceMappingURL=projectview.component.js.map
+
+/***/ }),
+
+/***/ 531:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -803,7 +844,7 @@ var ScrollService = (function () {
 
 /***/ }),
 
-/***/ 531:
+/***/ 532:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -819,180 +860,139 @@ var environment = {
 
 /***/ }),
 
-/***/ 688:
+/***/ 689:
 /***/ (function(module, exports) {
 
 module.exports = "<div>\n    About\n</div>"
 
 /***/ }),
 
-/***/ 689:
+/***/ 690:
 /***/ (function(module, exports) {
 
 module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
-/***/ 690:
+/***/ 691:
 /***/ (function(module, exports) {
 
 module.exports = "<!-- <div class=\"exp\">\n    <div class=\"exp-left\">\n            <div class=\"exp-head\">\n                <h4 class=\"exp-comp\">{{data.company}}</h4>\n                <span class=\"exp-date\">{{data.dateFrom.toLocaleDateString()}} - {{data.dateTo.toLocaleDateString()}}</span>\n            </div>\n            <div>\n                <span class=\"exp-sta\">{{data.standing}}</span>\n                <span class=\"exp-desc\">{{data.desc}}</span>\n            </div>\n    </div>\n    <div class=\"exp-right\">\n        <img class=\"exp-logo\" src=\"{{data.logoUrl}}\" alt=\"err\"/>\n    </div>\n</div> -->\n<div class=\"exp-elem\">\n    <img src=\"{{data.logoUrl}}\" alt=\"err\" />\n    <h4 class=\"exp-name\">{{data.company}}</h4>\n    <span class=\"exp-desc\">{{data.desc}}</span>\n</div>"
 
 /***/ }),
 
-/***/ 691:
+/***/ 692:
 /***/ (function(module, exports) {
 
 module.exports = "<footer class=\"foot\">\n    <div class=\"sign\">Copyright © Mateusz Stabryła 2019</div>\n</footer>"
 
 /***/ }),
 
-/***/ 692:
+/***/ 693:
 /***/ (function(module, exports) {
 
 module.exports = "<section class=\"main\">\n    <div class=\"container\">\n        <div class=\"main-desc\">\n            <h1 class=\"main-inc\">{{MainIns}}</h1>\n            <span class=\"main-inc-sec\">{{Desc}}</span>\n            <img src=\"../img/button.png\" class=\"main-butt\" (click)=\"scroll()\"/>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n        <div class=\"container\">\n            <div class=\"main-desc block-12\">\n                <div class=\"main-title\">\n                    <h4>ABOUT ME</h4>\n                </div>\n                <div class=\"block-12\">\n                    <img class=\"main-me-img\" src=\"../img/me.jpg\" alt=\"Err\" />\n                </div>\n                <div class=\"block-12 main-me-desc\">\n                    <span >I am Mateusz Stabryła and I am a beginner .NET programmer. I had an experience in working with different desktop and web technologies like JQuery,Angular and Node.js.</span>\n                </div>\n            </div>\n        </div>\n    </section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div>\n                <h3 class=\"main-title\">Technologies</h3>\n            </div>\n            <div>\n                <div class=\"main-me-tech\" >\n                    <div *ngFor=\"let item of Technologies\" class=\"block-6\">\n                        <tech [data]=\"item\"></tech>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Experience</h3>\n            </div>\n            <div class=\"main-exp-list\">\n                <div *ngFor=\"let item of Experiences\" class=\"block-4\" style=\"margin: 0 10px;\">\n                    <exp [data]=\"item\"></exp>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"main-exp\">\n    <div class=\"container\">\n        <div class=\"main-desc block-12\">\n            <div class=\"main-title\">\n                <h3>My Projects</h3>\n            </div>\n            <div class=\"main-pro block-4\" *ngFor=\"let item of Projs\">\n                <project [data]=\"item\"></project>\n            </div>\n        </div>\n    </div>\n</section>\n"
 
 /***/ }),
 
-/***/ 693:
+/***/ 694:
 /***/ (function(module, exports) {
 
 module.exports = "<header class=\"head\">\n    <div class=\"container container-small\">\n        <div class=\"block-4 head-logo\">\n            <a routerLink=\"/\" routerLinkActive=\"active\"><span class=\"head-logo-ins\">{{Logo}}</span></a>\n        </div>\n        <div id=\"menu\" [@menuAnim]=\"stateExpression\" class=\"block-8 menu\" >\n            <a *ngFor=\"let item of links\" routerLink=\"/{{item}}\" routerLinkActive=\"active\">{{item}}</a>\n        </div>\n        <div class=\"hamburger\" (click)=\"openHamMenu()\">\n            <span>Menu</span>\n            <img src=\"../img/hmenu.png\" alt=\"err\" />\n        </div>\n    </div>\n</header>"
 
 /***/ }),
 
-/***/ 694:
+/***/ 695:
 /***/ (function(module, exports) {
 
 module.exports = "<!--<div [ngStyle]=\"{ color : data.color }\">\n    <span>{{data.id}}</span>\n    <span>{{data.name}}</span>\n</div>-->\n<div class=\"project\">\n    <div class=\"project-title\">\n            <h4>{{data.name}}</h4>\n    </div>\n    <div class=\"project-desc\">\n        <span class=\"project-desc-con\">\n            {{data.description}}\n        </span>\n        <div class=\"project-desc-foot\">\n            <span class=\"project-desc-lang\" [ngStyle]=\"{ color: data.color } \">{{data.language}}</span>\n            <a class=\"project-desc-link\" href=\"{{data.url}}\">\n                <img src=\"../img/github.svg\" alt=\"err\"/>\n            </a>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
-/***/ 695:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"head-space\"></div>\n<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-title\">My Projects</h3>\n        <projectview *ngFor=\"let item of projects\"></projectview>\n    </div>\n</section>"
-
-/***/ }),
-
 /***/ 696:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tech-elem\">\n    <img src=\"{{data.ImgUrl}}\" alt=\"err\" />\n    <h4 class=\"tech-name\">{{data.Name}}</h4>\n    <span class=\"tech-desc\">{{data.Desc}}</span>\n</div>"
+module.exports = "<div class=\"head-space\"></div>\n<section class=\"projects-main\">\n    <div class=\"container\">\n        <h3 class=\"projects-title\">My Projects</h3>\n        <projectview *ngFor=\"let item of projects\" [projectData]=\"item\"></projectview>\n    </div>\n</section>"
 
 /***/ }),
 
 /***/ 697:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div class=\"project container container-small\">\n    <h5 class=\"project-title\">{{projectData.name}}</h5>\n    <div class=\"block-12\">\n        <div class=\"project-image block-3\">\n            <img src=\"{{projectData.imageUrl}}\" alt=\"err\"/>\n        </div>\n        <div class=\"project-main-section block-9\">\n            <a class=\"project-link\" href=\"{{projectData.url}}\">Go to Github <img src=\"../img/github.svg\" alt=\"err\"/>\n            </a>\n            <span class=\"project-desc\">{{projectData.description}}</span>\n            <div>\n                <img class=\"project-exp-col\" src=\"../img/arrow-expand.png\"/>\n            </div>\n        </div>\n        \n    </div>\n</div>"
 
 /***/ }),
 
 /***/ 698:
 /***/ (function(module, exports) {
 
-module.exports = ".exp-elem{\n    margin: 20px 5px;\n}\n.exp-elem img{\n    height: 100px;\n    width: 100px;\n    margin : 0 auto;\n    margin-top: 15px;\n}\n.exp-desc{\n    font-size:16px;\n    font-family: 'Lora';\n    text-align: center;\n    display:block;\n}\n.exp-name{\n    text-align: center;\n    font-size: 30px;\n    padding:10px 0;\n    margin:10px 0;\n    font-weight: bold;\n}\n@media (max-width: 990px)\n{\n    .exp-elem img{\n        width: 100px;\n        height: 100px;\n        margin-top:10px;\n    }\n    .exp-desc{\n        font-size:16px;\n    }\n    .exp-name{\n        font-size: 26px;\n        padding:5px 0;\n    }\n}\n@media (max-width: 744px)\n{\n    .exp-elem img{\n        width: 75px;\n        height: 75px;\n    }\n    .exp-elem{\n        margin:20px 0;\n    }\n}"
+module.exports = "<div class=\"tech-elem\">\n    <img src=\"{{data.ImgUrl}}\" alt=\"err\" />\n    <h4 class=\"tech-name\">{{data.Name}}</h4>\n    <span class=\"tech-desc\">{{data.Desc}}</span>\n</div>"
 
 /***/ }),
 
 /***/ 699:
 /***/ (function(module, exports) {
 
-module.exports = ".main {\n    background-image: url('../img/background.png');\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position-x: 50%;\n    background-position-y: 100%;\n    background-color: black;\n    position: relative;\n    color:white;\n}\n.main-desc{\n    position: absolute;\n    top:50%;\n    left:50%;\n    transform: translate(-50%,-50%);\n    padding:5px;\n}\n.main-inc{\n    font-family: 'Cabin';\n    font-size: 90px;\n    font-weight: bold;\n    text-align: center;\n    white-space: nowrap;\n    text-transform: uppercase;\n    margin:10px;\n    margin-bottom:35px;\n}\n.main-inc-sec{\n    font-family: 'Lora';\n    font-size:28px;\n    text-align: center;\n    text-transform: none;\n    display: inline-block;\n    width:100%;\n}\n.main-butt{\n    width:80px;\n    height:80px;\n    margin:45px auto;\n    cursor: pointer;\n}\n.main-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}\n.main-exp{\n    background-color:black;\n    color:white;\n    /* test */\n    overflow:hidden;\n}\n.main-pro{\n    margin:0 5px;\n}\n.main-me-desc{\n    padding:15px;\n    text-indent: 15px;\n    font-size:20px;\n    line-height: 25px;\n}\n.main-me-img{\n    display: block;\n    width:300px;\n    margin: auto;\n    height:auto;\n    border-radius:15px;\n    background-color:white;\n    box-shadow: 0 0px 8px 8px #e2e3e5;\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\n}\n@media (max-width: 990px){\n    .main-inc{\n        font-size: 75px;\n    }\n    .main-me-img{\n        width:300px;\n    }\n}\n@media (max-width: 744px){\n    .main-inc{\n        font-size: 50px;\n    }\n    .main-inc-sec{\n        font-size: 24px;\n    }\n    .main-butt{\n        width: 70px;\n        height: 70px;\n    }\n    .main-me-img{\n        width:250px;\n    }\n}\n@media (max-width: 570px){\n    .main-inc{\n        font-size: 40px;\n    }\n    .main-inc-sec{\n        font-size: 20px;\n    }\n    .main-butt{\n        width: 60px;\n        height: 60px;\n    }\n    .main-me-img{\n        width:200px;\n    }\n}\n@media (max-width: 445px){\n    .main-inc{\n        font-size: 30px;\n    }\n    .main-inc-sec{\n        font-size: 18px;\n    }\n    .main-butt{\n        width: 50px;\n        height: 50px;\n    }\n    .main-me-img{\n        width:150px;\n    }\n}\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 700:
 /***/ (function(module, exports) {
 
-module.exports = "*{\n    color:white;\n    text-transform: uppercase;\n}\n.head{\n    background-color: black;\n    padding:0px 5px;\n    position: fixed;\n    width:100%;\n    top:0;\n    right:0;\n    z-index: 1;\n}\n.head-logo-ins{\n    font-size: 26px;\n    font-weight: bold;\n    min-width:250px;\n    padding:17px 0px;\n    display: inline-block;\n}\n.menu a{\n    display:inline-block;\n    height: inherit;\n    font-size: 20px;\n    font-weight: bold;\n    cursor: pointer;\n    margin-left: 14px;\n    margin-right: 14px;\n    float:right;\n    padding: 20px 0px;\n    border-bottom-width: 4px;\n    border-bottom-style: solid;\n    border-color:black;\n}\n.menu a:hover{\n    animation-name: menu-elem;\n    animation-duration:  0.5s;\n    animation-fill-mode: forwards;\n    -webkit-animation-name: menu-elem;\n    -webkit-animation-duration: 0.5s;\n    -webkit-animation-fill-mode: forwards;\n}\n.hamburger{\n    float: right;\n    display:none;\n    height: inherit;\n    width: auto;\n    cursor: pointer;\n    border:1px solid white;\n    border-radius: 10px;\n    margin: 13px 0;\n    padding:7px;\n}\n.hamburger img{\n    height: 20px;\n    width: 20px;\n    display: inline-block;\n}\n.hamburger span{\n    font-size: 14px;\n    margin:auto 0;\n    transform: translateY(-2px);\n    display: inline-block;\n}\n@keyframes menu-elem {\n    from{\n        border-color:black;\n    }\n    to{\n        border-color:white;\n    }\n}\n@media (max-width: 990px)\n{\n    .hamburger{\n        display: block;\n    }\n    .menu{\n        position: absolute;\n        opacity:0;\n        width: auto;\n        right: 0;\n        z-index: -1;\n        background-color: black;\n    }\n    .divider{\n        display:none;\n    }\n    .head-logo{\n        width: auto;\n    }\n}\n@media (max-width: 445px)\n{\n    \n}"
+module.exports = ".exp-elem{\n    margin: 20px 5px;\n}\n.exp-elem img{\n    height: 100px;\n    width: 100px;\n    margin : 0 auto;\n    margin-top: 15px;\n}\n.exp-desc{\n    font-size:16px;\n    font-family: 'Lora';\n    text-align: center;\n    display:block;\n}\n.exp-name{\n    text-align: center;\n    font-size: 30px;\n    padding:10px 0;\n    margin:10px 0;\n    font-weight: bold;\n}\n@media (max-width: 990px)\n{\n    .exp-elem img{\n        width: 100px;\n        height: 100px;\n        margin-top:10px;\n    }\n    .exp-desc{\n        font-size:16px;\n    }\n    .exp-name{\n        font-size: 26px;\n        padding:5px 0;\n    }\n}\n@media (max-width: 744px)\n{\n    .exp-elem img{\n        width: 75px;\n        height: 75px;\n    }\n    .exp-elem{\n        margin:20px 0;\n    }\n}"
 
 /***/ }),
 
 /***/ 701:
 /***/ (function(module, exports) {
 
-module.exports = ".project {\n    border-radius: 20px;\n    overflow: hidden;\n    margin: 0 5px;\n    padding:5px 0;\n    \n}\n.project-title{\n    background-color: black;\n    color:white;\n    text-align: center;\n    width:100%;\n    font-size:25px;\n    padding:10px 0;\n    font-family: 'Lora';\n}\n.project-desc{\n    padding:10px 15px;\n    color:black; \n    background-color: white;\n    font-family: 'Lora';\n}\n.project-desc-con{\n    font-size:18px;\n    text-indent: 14px;\n    display:block;\n    min-height: 180px;\n    line-height: 30px;\n}\n.project-desc-foot{\n    clear: both;\n    position: relative;\n}\n.project-desc-lang{\n    font-size:22px;\n    font-weight: bold;\n    font-family: 'Cabin';\n    text-transform: uppercase;\n}\n.project-desc-link{\n    float:right;\n    display: block;\n}\n.project-desc-link img{\n    width:30px;\n    height: 30px;\n}"
+module.exports = ".main {\n    background-image: url('../img/background.png');\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position-x: 50%;\n    background-position-y: 100%;\n    background-color: black;\n    position: relative;\n    color:white;\n}\n.main-desc{\n    position: absolute;\n    top:50%;\n    left:50%;\n    transform: translate(-50%,-50%);\n    padding:5px;\n}\n.main-inc{\n    font-family: 'Cabin';\n    font-size: 90px;\n    font-weight: bold;\n    text-align: center;\n    white-space: nowrap;\n    text-transform: uppercase;\n    margin:10px;\n    margin-bottom:35px;\n}\n.main-inc-sec{\n    font-family: 'Lora';\n    font-size:28px;\n    text-align: center;\n    text-transform: none;\n    display: inline-block;\n    width:100%;\n}\n.main-butt{\n    width:80px;\n    height:80px;\n    margin:45px auto;\n    cursor: pointer;\n}\n.main-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}\n.main-exp{\n    background-color:black;\n    color:white;\n    /* test */\n    overflow:hidden;\n}\n.main-pro{\n    margin:0 5px;\n}\n.main-me-desc{\n    padding:15px;\n    text-indent: 15px;\n    font-size:20px;\n    line-height: 25px;\n}\n.main-me-img{\n    display: block;\n    width:300px;\n    margin: auto;\n    height:auto;\n    border-radius:15px;\n    background-color:white;\n    box-shadow: 0 0px 8px 8px #e2e3e5;\n    box-shadow:0 -4px 10px -1px #e2e3e5, 4px 0 10px -1px #e2e3e5, 0 4px 10px -1px #20213d, -4px 0 10px -1px #e2e3e5;\n}\n@media (max-width: 990px){\n    .main-inc{\n        font-size: 75px;\n    }\n    .main-me-img{\n        width:300px;\n    }\n}\n@media (max-width: 744px){\n    .main-inc{\n        font-size: 50px;\n    }\n    .main-inc-sec{\n        font-size: 24px;\n    }\n    .main-butt{\n        width: 70px;\n        height: 70px;\n    }\n    .main-me-img{\n        width:250px;\n    }\n}\n@media (max-width: 570px){\n    .main-inc{\n        font-size: 40px;\n    }\n    .main-inc-sec{\n        font-size: 20px;\n    }\n    .main-butt{\n        width: 60px;\n        height: 60px;\n    }\n    .main-me-img{\n        width:200px;\n    }\n}\n@media (max-width: 445px){\n    .main-inc{\n        font-size: 30px;\n    }\n    .main-inc-sec{\n        font-size: 18px;\n    }\n    .main-butt{\n        width: 50px;\n        height: 50px;\n    }\n    .main-me-img{\n        width:150px;\n    }\n}\n"
 
 /***/ }),
 
 /***/ 702:
 /***/ (function(module, exports) {
 
-module.exports = ".head-space{\n    height:66px;\n}\n.projects-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}"
+module.exports = "*{\n    color:white;\n    text-transform: uppercase;\n}\n.head{\n    background-color: black;\n    padding:0px 5px;\n    position: fixed;\n    width:100%;\n    top:0;\n    right:0;\n    z-index: 1;\n}\n.head-logo-ins{\n    font-size: 26px;\n    font-weight: bold;\n    min-width:250px;\n    padding:17px 0px;\n    display: inline-block;\n}\n.menu a{\n    display:inline-block;\n    height: inherit;\n    font-size: 20px;\n    font-weight: bold;\n    cursor: pointer;\n    margin-left: 14px;\n    margin-right: 14px;\n    float:right;\n    padding: 20px 0px;\n    border-bottom-width: 4px;\n    border-bottom-style: solid;\n    border-color:black;\n}\n.menu a:hover{\n    animation-name: menu-elem;\n    animation-duration:  0.5s;\n    animation-fill-mode: forwards;\n    -webkit-animation-name: menu-elem;\n    -webkit-animation-duration: 0.5s;\n    -webkit-animation-fill-mode: forwards;\n}\n.hamburger{\n    float: right;\n    display:none;\n    height: inherit;\n    width: auto;\n    cursor: pointer;\n    border:1px solid white;\n    border-radius: 10px;\n    margin: 13px 0;\n    padding:7px;\n}\n.hamburger img{\n    height: 20px;\n    width: 20px;\n    display: inline-block;\n}\n.hamburger span{\n    font-size: 14px;\n    margin:auto 0;\n    transform: translateY(-2px);\n    display: inline-block;\n}\n@keyframes menu-elem {\n    from{\n        border-color:black;\n    }\n    to{\n        border-color:white;\n    }\n}\n@media (max-width: 990px)\n{\n    .hamburger{\n        display: block;\n    }\n    .menu{\n        position: absolute;\n        opacity:0;\n        width: auto;\n        right: 0;\n        z-index: -1;\n        background-color: black;\n    }\n    .divider{\n        display:none;\n    }\n    .head-logo{\n        width: auto;\n    }\n}\n@media (max-width: 445px)\n{\n    \n}"
 
 /***/ }),
 
 /***/ 703:
 /***/ (function(module, exports) {
 
+module.exports = ".project {\n    border-radius: 20px;\n    overflow: hidden;\n    margin: 0 5px;\n    padding:5px 0;\n    \n}\n.project-title{\n    background-color: black;\n    color:white;\n    text-align: center;\n    width:100%;\n    font-size:25px;\n    padding:10px 0;\n    font-family: 'Lora';\n}\n.project-desc{\n    padding:10px 15px;\n    color:black; \n    background-color: white;\n    font-family: 'Lora';\n}\n.project-desc-con{\n    font-size:18px;\n    text-indent: 14px;\n    display:block;\n    min-height: 180px;\n    line-height: 30px;\n}\n.project-desc-foot{\n    clear: both;\n    position: relative;\n}\n.project-desc-lang{\n    font-size:22px;\n    font-weight: bold;\n    font-family: 'Cabin';\n    text-transform: uppercase;\n}\n.project-desc-link{\n    float:right;\n    display: block;\n}\n.project-desc-link img{\n    width:30px;\n    height: 30px;\n}"
+
+/***/ }),
+
+/***/ 704:
+/***/ (function(module, exports) {
+
+module.exports = ".head-space{\n    height:66px;\n}\n.projects-title{\n    font-size:40px;\n    text-align: center;\n    padding:5px 0;\n    text-transform: uppercase;\n    margin: 30px 0;\n}"
+
+/***/ }),
+
+/***/ 705:
+/***/ (function(module, exports) {
+
+module.exports = ".project{\n    max-height: 300px;\n    margin:25px auto;\n}\n.project-title{\n    font-size:30px;\n    text-indent: 5px;\n    margin-bottom: 15px;\n}\n.project-image img{\n    max-width: 100px;\n    max-height: 100px;\n}\n.project-main-section a,span {\n    display: block;\n}\n.project-desc{\n    min-height: 100px;\n    margin:15px 0;\n}\n.project-link{\n    font-weight: bold;\n    cursor: pointer;\n    text-align: right;\n}\n.project-link *{\n    display: inline;\n}\n.project-link img {\n    width: 18px;\n    height: 18px;\n}\n.project-exp-col{\n    float:right;\n    width:25px;\n    height:25px;\n    cursor:pointer;\n}"
+
+/***/ }),
+
+/***/ 706:
+/***/ (function(module, exports) {
+
 module.exports = ".tech-elem{\n    margin: 20px 5px;\n}\n.tech-elem img{\n    height: 80px;\n    width: 80px;\n    margin : 0 auto;\n    margin-top: 15px;\n}\n.tech-desc{\n    font-size:16px;\n    font-family: 'Lora';\n    text-align: center;\n    display:block;\n}\n.tech-name{\n    text-align: center;\n    font-size: 30px;\n    padding:10px 0;\n    margin:10px 0;\n    font-weight: bold;\n}\n@media (max-width: 990px)\n{\n    .tech-elem img{\n        width: 80px;\n        height: 80px;\n        margin-top:10px;\n    }\n    .tech-desc{\n        font-size:16px;\n    }\n    .tech-name{\n        font-size: 26px;\n        padding:5px 0;\n    }\n}\n@media (max-width: 744px)\n{\n    .tech-elem img{\n        width: 60px;\n        height: 60px;\n    }\n    .tech-elem{\n        margin:20px 0;\n    }\n}"
 
 /***/ }),
 
-/***/ 737:
+/***/ 740:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(400);
 
 
-/***/ }),
-
-/***/ 739:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project_component__ = __webpack_require__(152);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectviewComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ProjectviewComponent = (function () {
-    function ProjectviewComponent() {
-        this.projectData = new __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */](0, "");
-    }
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Input */])(), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__project_component__["b" /* Project */]) === 'function' && _a) || Object)
-    ], ProjectviewComponent.prototype, "projectData", void 0);
-    ProjectviewComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-            selector: 'projectview',
-            template: __webpack_require__(740),
-            styles: [__webpack_require__(741)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ProjectviewComponent);
-    return ProjectviewComponent;
-    var _a;
-}());
-//# sourceMappingURL=projectview.component.js.map
-
-/***/ }),
-
-/***/ 740:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 741:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
 /***/ })
 
-},[737]);
+},[740]);
 //# sourceMappingURL=main.bundle.map
