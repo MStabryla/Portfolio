@@ -1,6 +1,6 @@
 webpackJsonp([2,4],{
 
-/***/ 240:
+/***/ 241:
 /***/ (function(module, exports) {
 
 /*
@@ -57,7 +57,7 @@ module.exports = function() {
 
 /***/ }),
 
-/***/ 251:
+/***/ 252:
 /***/ (function(module, exports) {
 
 /*
@@ -316,10 +316,10 @@ function updateLink(linkElement, obj) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(684);
+var content = __webpack_require__(685);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(251)(content, {});
+var update = __webpack_require__(252)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -343,10 +343,10 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(685);
+var content = __webpack_require__(686);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(251)(content, {});
+var update = __webpack_require__(252)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -370,10 +370,10 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(686);
+var content = __webpack_require__(687);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(251)(content, {});
+var update = __webpack_require__(252)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -391,10 +391,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 684:
+/***/ 685:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(240)();
+exports = module.exports = __webpack_require__(241)();
 // imports
 
 
@@ -406,10 +406,10 @@ exports.push([module.i, ".container {\n    margin-left: auto;\n    margin-right:
 
 /***/ }),
 
-/***/ 685:
+/***/ 686:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(240)();
+exports = module.exports = __webpack_require__(241)();
 // imports
 
 
@@ -421,10 +421,10 @@ exports.push([module.i, "html,body,div,section,nav,article,figure,header,footer,
 
 /***/ }),
 
-/***/ 686:
+/***/ 687:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(240)();
+exports = module.exports = __webpack_require__(241)();
 // imports
 
 
@@ -436,7 +436,7 @@ exports.push([module.i, "body {\n    font-family: 'Cabin';\n}\n.foot{\n    backg
 
 /***/ }),
 
-/***/ 736:
+/***/ 739:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(404);
@@ -446,5 +446,5 @@ module.exports = __webpack_require__(403);
 
 /***/ })
 
-},[736]);
+},[739]);
 //# sourceMappingURL=styles.bundle.map

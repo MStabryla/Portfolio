@@ -38,12 +38,7 @@ export class MainComponent {
         this._pr.getGithubProjects("MStabryla",result => {
             for(var i=result.length-1;i>result.length-4;i--)
             {
-                let newPr = new Project(result[i].id,result[i].name);
-                newPr.language = result[i].language;
-                newPr.color = this._pr.LangColors[newPr.language].color;
-                newPr.description = result[i].description;
-                newPr.url = result[i].html_url;
-                this.Projs.push(newPr);
+                this.Projs.push(this._pr.serializeGithubJsonObject(result[i]));
             }
         });
     }

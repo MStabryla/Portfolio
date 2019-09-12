@@ -5,11 +5,8 @@ const data = require("./data");
 router.get("/",(req,res) => {
     res.send("api works");
 })
-router.get("/project",(req,res) =>{
-    res.json({"ID":1,"Title":"Standard"});
-})
-router.get("/projects",(req,res) =>{
-    res.json(data);
+router.get("/experience",(req,res) => {
+    res.send(__dirname + "/experience.json");
 })
 router.get("/colors",(req,res) => {
     res.sendFile(__dirname + "/colors.json");
