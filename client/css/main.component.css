@@ -9,11 +9,11 @@
     color:white;
 }
 .main-desc{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    margin: calc((100vh - 100%) / 2) 0;
     padding:5px;
+}
+.main .main-desc{
+    margin: 66px 0;
 }
 .main-inc{
     font-family: 'Cabin';
@@ -122,5 +122,8 @@
     }
     .main-me-img{
         width:150px;
+    }
+    .main .main-desc{
+        margin: 86px 0;
     }
 }
