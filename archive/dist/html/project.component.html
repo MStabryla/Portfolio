@@ -1,0 +1,20 @@
+<!--<div [ngStyle]="{ color : data.color }">
+    <span>{{data.id}}</span>
+    <span>{{data.name}}</span>
+</div>-->
+<div class="project">
+    <div class="project-title">
+            <h4>{{data.name}}</h4>
+    </div>
+    <div class="project-desc">
+        <span class="project-desc-con">
+            {{data.description}}
+        </span>
+        <div class="project-desc-foot">
+            <span class="project-desc-lang" [ngStyle]="{ color: data.color } ">{{data.language}}</span>
+            <a class="project-desc-link" href="{{data.url}}">
+                <img src="../img/github.svg" alt="err"/>
+            </a>
+        </div>
+    </div>
+</div>

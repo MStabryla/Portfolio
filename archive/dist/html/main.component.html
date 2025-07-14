@@ -1,0 +1,66 @@
+<section class="main">
+    <div class="container">
+        <div class="main-desc block-12">
+            <h1 class="main-inc">{{MainIns}}</h1>
+            <span class="main-inc-sec">{{Desc}}</span>
+            <img src="../img/button.png" class="main-butt" (click)="scroll()"/>
+        </div>
+    </div>
+</section>
+<section class="main-exp">
+        <div class="container">
+            <div class="main-desc block-12">
+                <div class="main-title">
+                    <h4>ABOUT ME</h4>
+                </div>
+                <div class="block-12">
+                    <img class="main-me-img" src="../img/me.jpg" alt="Err" />
+                </div>
+                <div class="block-12 main-me-desc">
+                    <span >I am Mateusz Stabryła and I am a beginner .NET programmer. I had an experience in working with different desktop and web technologies like JQuery,Angular and Node.js.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="main-exp">
+    <div class="container">
+        <div class="main-desc block-12">
+            <div>
+                <h3 class="main-title">Technologies</h3>
+            </div>
+            <div>
+                <div class="main-me-tech" >
+                    <div *ngFor="let item of Technologies" class="block-6">
+                        <tech [data]="item"></tech>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main-exp">
+    <div class="container">
+        <div class="main-desc block-12">
+            <div class="main-title">
+                <h3>My Experience</h3>
+            </div>
+            <div class="main-exp-list">
+                <div *ngFor="let item of Experiences" class="block-4" style="margin: 0 10px;">
+                    <exp [data]="item"></exp>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main-exp">
+    <div class="container">
+        <div class="main-desc block-12">
+            <div class="main-title">
+                <h3>My Projects</h3>
+            </div>
+            <div class="main-pro block-4" *ngFor="let item of Projs">
+                <project [data]="item"></project>
+            </div>
+        </div>
+    </div>
+</section>

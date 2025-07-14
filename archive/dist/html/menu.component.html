@@ -1,0 +1,14 @@
+<header class="head">
+    <div class="container container-small">
+        <div class="block-4 head-logo">
+            <a routerLink="/" routerLinkActive="active"><span class="head-logo-ins">{{Logo}}</span></a>
+        </div>
+        <div id="menu" [@menuAnim]="stateExpression" class="block-8 menu" >
+            <a *ngFor="let item of links" routerLink="/{{item}}" routerLinkActive="active">{{item}}</a>
+        </div>
+        <div class="hamburger" (click)="openHamMenu()">
+            <span>Menu</span>
+            <img src="../img/hmenu.png" alt="err" />
+        </div>
+    </div>
+</header>
