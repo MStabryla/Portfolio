@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "spa-proxy": "^1.0.7",
+    "spa-proxy": "^1.0.8",
     "vue": "^3.5.22"
   },
   "devDependencies": {
