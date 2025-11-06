@@ -1,18 +1,53 @@
-<script setup>
+<script>
 import { ref } from 'vue'
 
-defineProps({
-  msg: String,
-})
+// defineProps({
+//   msg: String,
+// })
 
 const count = ref(0)
+
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  },
+  data(){
+    return {
+      count: 0,
+      prevMessage: this.msg
+    }
+  },
+  watch:{
+    calculatedVariable(newVal, oldVal){
+      console.log(`DEBUG: calculatedVariable ${oldVal} -> ${newVal}`)
+    }
+  },
+  computed:{
+    calculatedVariable(){
+      const time = new Date()
+      return this.count + time.getSeconds();
+    }
+  },
+  methods:{
+    methodToExecute(){
+      setInterval(() => {
+        this.count = this.calculatedVariable;
+      }, 1000);
+    }
+  },
+  
+  mounted(){
+    this.methodToExecute();
+  }
+}
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="calculatedVariable = calculatedVariable">count is {{ calculatedVariable }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR

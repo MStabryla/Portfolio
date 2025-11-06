@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.AspNetCore.Builder;
+using VueCliMiddleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,12 +15,6 @@ int spaPort = builder.Configuration.GetSection("environmentVariables").GetValue<
 spaPort = spaPort > 0 ? spaPort : 3001;
 
 builder.Services.AddControllers();
-
-builder.Services.AddSpaStaticFiles(options =>
-{
-    // Serve built files from PortfolioClient/dist in production
-    options.RootPath = Path.Combine(".", "PortfolioClient", "dist");
-});
 
 var app = builder.Build();
 
@@ -37,77 +33,43 @@ else
     app.UseDeveloperExceptionPage();
 }
 
-app.Map("/client", clientApp =>
-{
-    // Serve static files from PortfolioClient/dist inside the /client branch
-    clientApp.UseSpaStaticFiles();
-
-    if (!app.Environment.IsDevelopment())
+app.UseWhen(context => !context.Request.Path.StartsWithSegments("/api"),
+    uwApp =>
     {
-        clientApp.UseSpa(spabuilder =>
+        if (!app.Environment.IsDevelopment())
         {
-            spabuilder.Options.SourcePath = Path.Combine(".", "PortfolioClient", "dist");
-        });
-        app.UseStaticFiles(new StaticFileOptions
-        {
-            FileProvider = new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), "PortfolioClient", "dist", "assets")),
-            RequestPath = $"/assets"
-        });
-    }
-    else
-    {
-        Console.WriteLine($"SPA PORT: {spaPort}");
-        clientApp.UseSpa(spabuilder =>
-        {
-            // spabuilder.Options.SourcePath = Path.Combine(".", "PortfolioClient");
-            // spabuilder.Options.DevServerPort = spaPort;
-            // spabuilder.Options.PackageManagerCommand = $"$Env:VITE_PORT={spaPort};npm run dev";
-            // spabuilder.Options.SourcePath = Path.Combine(".", "PortfolioClient");
-            spabuilder.UseProxyToSpaDevelopmentServer($"http://localhost:{spaPort}");
-        });
-        app.MapStaticAssets(spaPort);
-    }
-});
-
-app.MapControllers();
-app.UseRouting();
-
-
-app.Run();
-
-
-static class SpaStaticFileExtensions
-{
-    private static void MapOneStaticAsset(this WebApplication app, string folderPath, int spaPort)
-    {
-        if (app.Environment.IsDevelopment())
-        {
-            app.Map($"/{folderPath}", clientApp =>
+            uwApp.UseSpa(spabuilder =>
             {
-                clientApp.UseSpa(spabuilder =>
-                {
-                    spabuilder.UseProxyToSpaDevelopmentServer($"http://localhost:{spaPort}/{folderPath}");
-                });
+                spabuilder.Options.SourcePath = Path.Combine(".", "PortfolioClient", "dist");
             });
         }
         else
         {
-            app.UseStaticFiles(new StaticFileOptions
+            Console.WriteLine($"SPA PORT: {spaPort}");
+            uwApp.UseSpa(spabuilder =>
             {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "PortfolioClient", "dist", folderPath)),
-                RequestPath = $"/{folderPath}"
+                spabuilder.Options.SourcePath = Path.Combine(".", "PortfolioClient");
+                spabuilder.UseVueCli(npmScript: "dev", port: spaPort, forceKill: true, regex: "ready in", https: false);
+                spabuilder.Options.StartupTimeout = TimeSpan.FromSeconds(12);
+
             });
         }
-
     }
-    private static readonly string[] _AssetFolders = ["src", "assets", "node_modules", "@vite"];
-    public static void MapStaticAssets(this WebApplication app,int spaPort = 3001)
+);
+app.UseWhen(context => context.Request.Path.StartsWithSegments("/api"),
+    uwApp =>
     {
-        foreach (var folderPath in _AssetFolders)
+        uwApp.Map("/api", mapApp =>
         {
-            app.MapOneStaticAsset(folderPath,spaPort);
-        }
+            mapApp.UseRouting();
+            mapApp.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        });
     }
-}
+);
+
+
+app.Run();
+

@@ -8,7 +8,8 @@ export default ({mode}) => {
   return defineConfig({
     plugins: [vue()],
     server: {
-      port: parseInt(process.env.VITE_PORT) ?? 3001
+      port: parseInt(process.env.VITE_PORT) ?? 3001,
+      host: '127.0.0.1'
     }
   });
 }
