@@ -38,7 +38,7 @@ export default {
   },
   
   mounted(){
-    this.methodToExecute();
+    //this.methodToExecute();
   }
 }
 </script>

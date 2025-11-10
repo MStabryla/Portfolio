@@ -18,10 +18,6 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-// Mount the SPA only under the /client path. This creates a branch so any request
-// to /client/* is handled by the SPA middleware (static files in production,
-// proxy to dev server in development).
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");

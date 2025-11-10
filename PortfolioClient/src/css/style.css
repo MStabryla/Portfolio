@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --primary-font-family: 'Atkinson Hyperlegible', sans-serif;
+  --secondary-font-family: 'Inter', sans-serif;
+
+  --primary-blue-bg-color: #003c64;
+  --secondary-blue-bg-color: #5bd8f4;
+  --primary-text-color: #003c64;
+  --secondary-front-text-color: #ffffff;
+  --main-text-color:#000000;
+  --link-text-color: #cbfaf5;
+
+  --image-scale: 0.25;
+  --image-size-width: 800px;
+  --image-size-height: 1200px;
+
+  font-family: var(--primary-font-family);
+  line-height: 1.5;
+  font-weight: 400;
+
+  text-rendering: optimizeLegibility;
+
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: var(--link-text-color);
+  text-decoration-line: underline;
+  text-decoration-color: var(--link-text-color);
+  text-decoration-thickness: 0.3em;
+}

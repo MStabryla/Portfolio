@@ -1,0 +1,5 @@
+My name is Mateusz Stabryła and I'm a .NET developer with four years of experience. I've
+worked on projects using technologies such as UWP, ASP.NET, and ASP.NET MVC. I've
+programmed languages like C# and Visual Basic. I've also been responsible for developing
+web-based graphical user interfaces using JavaScript and the Vue.js platform. Also, I was
+responsible for managing and administering Windows Server systems (Windows Server 2016).
