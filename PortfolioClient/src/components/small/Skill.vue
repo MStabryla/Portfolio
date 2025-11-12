@@ -28,7 +28,7 @@ export default {
 
 <style>
 .skill, .skill-shadow {
-    padding: 0.5em 1.5em;
+    padding: 0.3em 1em;
     margin: 0.5em;
     background-color: var(--secondary-blue-bg-color);
     border-radius: 3em;
@@ -59,10 +59,47 @@ export default {
 
 .skill-name {
     color: var(--primary-text-color);
-    font-family: var(--secondary-front-text-color);
-    font-weight: 100;
-    font-size: 2em;
+    font-family: var(--secondary-font-family);
+    font-weight: 600;
+    font-size: calc(2em * var(--skill-text-scale));
     text-align: center;
     padding: auto auto;
 }
+
+@media (min-width: 794px) {
+
+    .skill, .skill-shadow {
+        padding: 0.3em 0.8em;
+        margin: 0.3em;
+    }
+}
+
+@media (min-width: 992px) {
+    .skill, .skill-shadow {
+        padding: 0.3em 1.0em;
+    }
+    .skill-name {
+        font-weight: 100;
+    }
+}
+
+@media (min-width: 1068px) {
+    .skill, .skill-shadow {
+        padding: 0.5em 1.5em;
+    }
+    
+}
+
+/* @media (min-width: 1200px) {
+    .skill, .skill-shadow {
+        padding: 0.5em 1.5em;
+    }
+}
+
+@media (min-width: 1400px) {
+    .skill, .skill-shadow {
+        padding: 0.5em 1.5em;
+    }
+} */
+
 </style>

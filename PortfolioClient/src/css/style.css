@@ -1,5 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('assets/fonts/AtkinsonHyperlegible-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter.ttf');
+}
+
+@font-face {
+    font-family: 'Inter', 'italic';
+    src: url('assets/fonts/Inter-Italic.ttf');
+}
+
 
 :root {
   --primary-font-family: 'Atkinson Hyperlegible', sans-serif;
@@ -12,9 +29,11 @@
   --main-text-color:#000000;
   --link-text-color: #cbfaf5;
 
-  --image-scale: 0.25;
+  --image-scale: 0.5;
   --image-size-width: 800px;
   --image-size-height: 1200px;
+
+  --text-scale: 0.5;
 
   font-family: var(--primary-font-family);
   line-height: 1.5;
@@ -35,4 +54,13 @@ a{
   text-decoration-line: underline;
   text-decoration-color: var(--link-text-color);
   text-decoration-thickness: 0.3em;
+}
+
+b{
+  font-weight: 600;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
 }
