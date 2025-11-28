@@ -9,7 +9,7 @@ export default {
     name: 'Front',
     components: {
         Skill,
-        Contact
+        Contact,
     },
     props: {
         
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <section class="front-main-block">
+    <section class="block front-main-block">
         <div class="container" v-show="width >= switchToMobileWidth">
             <div class="row">
                 <div class="front-photo col-4">
