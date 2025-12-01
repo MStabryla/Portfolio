@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.Routing;
 using VueCliMiddleware;
+using System.Net;
+using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +36,13 @@ if (!string.IsNullOrEmpty(applicationUrl))
     builder.WebHost.UseUrls(applicationUrl.Split(';', System.StringSplitOptions.RemoveEmptyEntries).Select(u => u.Trim()).ToArray());
 }
 
+//For localhost reverse proxy
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    // options.KnownProxies.Add(IPAddress.Parse("127.0.0.1"));
+    options.KnownProxies.Add(IPAddress.Any);
+});
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -46,6 +55,11 @@ else
 {
     app.UseDeveloperExceptionPage();
 }
+
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 
 app.UseWhen(context => !context.Request.Path.StartsWithSegments("/api"),
     uwApp =>

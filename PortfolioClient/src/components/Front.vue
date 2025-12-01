@@ -40,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <section class="block front-main-block">
+    <section class="block main-block front-main-block">
         <div class="container" v-show="width >= switchToMobileWidth">
             <div class="row">
                 <div class="front-photo col-4">
@@ -86,9 +86,10 @@ export default {
 
 <style>
 
-
+.main-block {
+    padding: 5em 0;
+}
 .front-main-block {
-    padding: 5em;
     background-color: var(--primary-blue-bg-color);
 }
 .front-photo {

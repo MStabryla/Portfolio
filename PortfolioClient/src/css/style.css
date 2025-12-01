@@ -4,17 +4,17 @@
 
 @font-face {
     font-family: 'Atkinson Hyperlegible';
-    src: url('assets/fonts/AtkinsonHyperlegible-Regular.ttf');
+    src: url('src/assets/fonts/AtkinsonHyperlegible-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('assets/fonts/Inter.ttf');
+    src: url('src/assets/fonts/Inter.ttf');
 }
 
 @font-face {
     font-family: 'Inter', 'italic';
-    src: url('assets/fonts/Inter-Italic.ttf');
+    src: url('src/assets/fonts/Inter-Italic.ttf');
 }
 
 
