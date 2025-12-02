@@ -1,5 +1,5 @@
 export default class ExpData { 
-    constructor(eName,cName,eDesc,sDate,eDate) {
+    constructor(eName,cName,eDesc,sDate,eDate,photo = "") {
         if(!sDate instanceof Date || !eDate instanceof Date) {
             throw new Error("Invalid date(s) provided");
         }
@@ -12,6 +12,7 @@ export default class ExpData {
         this.experienceDesc = eDesc;
         this.startDate = sDate;
         this.endDate = eDate;
+        this.photo = photo;
     }
     get ExperienceName() {
         return this.experienceName;
@@ -27,5 +28,8 @@ export default class ExpData {
     }
     get EndDate() {
         return this.endDate;
+    }
+    get Photo() {
+        return this.photo;
     }
 }

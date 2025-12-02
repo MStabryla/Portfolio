@@ -13,21 +13,33 @@ export default {
     },
     data(){
         return {
-           templateExperience: []
+           templateExperience: [],
+           lang: 'pl'
         }
     },
     watch:{
         
     },
+    computed:{
+        workExperienceTitle(){
+            if(this.lang === 'pl'){
+                return "Doświadczenie zawodowe";
+            } else {
+                return "Work Experience";
+            }
+        }
+    },
     methods:{  
         async fetchExperience(){
-            const tempExperience = await axios.get("/api/experience/work");
+            const tempExperience = await axios.get("/api/experience/work/pl");
+            console.log(tempExperience);
             this.templateExperience = tempExperience.data.map(exp => new ExpData(
                 exp.experienceName,
                 exp.companyName,
                 exp.experienceDesc,
                 exp.startDate,
-                exp.endDate
+                exp.endDate,
+                exp.photo
             ));
         }
     },
@@ -40,7 +52,7 @@ export default {
 <template>
     <div class="block main-block">
         <div class="container work-experience-block">
-            <h1 class="section-title">Work Experience</h1>
+            <h1 class="section-title">{{this.workExperienceTitle}}</h1>
             <div class="row" :class="{ 'left': i % 2 == 0, 'right': i % 2 !=  0 }" v-for="(experience,i) in this.templateExperience" :key="i">
                 <ExpPart v-bind:experience="experience" >
                 </ExpPart>
@@ -60,14 +72,13 @@ export default {
 }
 .work-experience-block .row{
     display:flex;
-    flex-direction: column;
 }
 .left{
-    align-items: flex-start;
+    flex-direction: row;
     text-align: left;
 }
 .right{
-    align-items: flex-end;
+    flex-direction: row-reverse;
     text-align: right;
 }
 </style>

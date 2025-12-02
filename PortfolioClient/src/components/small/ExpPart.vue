@@ -28,11 +28,13 @@ export default {
         </div>
         <p class="exp-desc" v-html="this.experience.ExperienceDesc"></p>
     </div>
-    
+    <div class="experience-photo">
+        <img :src="'src/assets/photos/' + this.experience.Photo" alt=""/>
+    </div>
 </template>
 
 <style>
-.experience{
+.experience, .experience-photo{
     width:50%;
     padding: 1em 0;
 }
@@ -56,5 +58,15 @@ export default {
 .exp-desc a{
     color: var(--primary-blue-bg-color);
     font-weight: 600;
+}
+.experience-photo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.experience-photo img{
+    height: 80%;
+    max-width: var(--experience-image-size-width);
+    max-height: var(--experience-image-size-height);
 }
 </style>
