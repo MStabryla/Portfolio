@@ -78,16 +78,12 @@ export default {
     .skill, .skill-shadow {
         padding: 0.3em 1.0em;
     }
-    .skill-name {
-        font-weight: 100;
-    }
 }
 
 @media (min-width: 1068px) {
     .skill, .skill-shadow {
         padding: 0.5em 1.5em;
     }
-    
 }
 
 /* @media (min-width: 1200px) {

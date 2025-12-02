@@ -16,19 +16,19 @@ namespace Portfolio
             WorkExperience[] workExperienceTemplateData =
             [
                 new WorkExperience(
-                    "Junior SysOps / .NET Programmer", "Webedia Polska S.A.", "- Developing and maintaining the gry-online.pl website and\nsubpages written in .NET technologies (ASP, Visual Basic)\n- Developing web applications using JavaScript and the Vue.js\nplatform for internal and editorial use\n- Creating and implementing a tool using C#, Windows Forms and\nASP.NET Core with access to the REST API to communicate with\nexternal clients\n- Creating complex SQL queries within few applications. Managing\nand maintaining an MS SQL database\n- Implementation of SysOps and DevOps tools such as PRTG,\nBitbucket, Git, and DeployHQ\n- Administration of test and production environments based on\nWindows Server",new DateOnly(2021, 9, 1), new DateOnly(2025, 6, 30)
+                    "Junior SysOps / .NET Programmer", "Webedia Polska S.A.", "- Developing and maintaining the gry-online.pl website and subpages written in <b>.NET</b> technologies (<b>ASP</b>, <b>Visual Basic</b>)<br/>- Developing web applications using <b>JavaScript</b> and the <b>Vue.js</b> platform for internal and editorial use<br/>- Creating and implementing a tool using <b>C#</b>, <b>Windows Forms</b> and <b>ASP.NET Core</b> with access to the <b>REST API</b> to communicate with external clients<br/>- Creating complex <b>SQL</b> queries within few applications. Managing and maintaining an <b>MS SQL</b> database<br/>- Implementation of SysOps and DevOps tools such as <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b>, and <b>DeployHQ</b><br/>- Administration of test and production environments based on <b>Windows Server</b>",new DateOnly(2021, 9, 1), new DateOnly(2025, 6, 30)
                 ),
                 new WorkExperience(
                     "Unity Programmer",
                     "Apteka Janicki Gallery",
-                    "- Creating 2D games in the Unity graphics engine designed for\ntouchscreen monitors\n- More details:\nhttps://web.archive.org/web/20210126050110/https:/wawel.krako\nw.pl/centrum-multimedialne",
+                    "- Creating <b>2D games</b> in the Unity graphics engine designed for <b>touchscreen monitors</b><br/>- More details:<br/><a href='https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne' target='_blank'>https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne</a>",
                     new DateOnly(2019, 2, 1),
                     new DateOnly(2019, 6, 1)
                 ),
                 new WorkExperience(
                     "IT Internship",
                     "MedApp S.A.",
-                    "- Developing and modifying a mobile application (intended for\ntablets) using Windows UWP technology on the .NET platform\nand C# language\n- Developing WPF applications",
+                    "- Developing and modifying a mobile application (intended for tablets) using <b>Windows UWP</b> technology on the .NET platform and <b>C#</b> language<br/>- Developing <b>WPF</b> applications",
                     new DateOnly(2018, 7, 1),
                     new DateOnly(2018, 8, 31)
                 )

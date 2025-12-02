@@ -21,7 +21,7 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables();
 
-Console.WriteLine($"Config files: appsettings.{builder.Environment.EnvironmentName}.json");
+//Console.WriteLine($"Config files: appsettings.{builder.Environment.EnvironmentName}.json");
 
 int spaPort = builder.Configuration.GetSection("environmentVariables").GetValue<int>("VITE_PORT");
 spaPort = spaPort > 0 ? spaPort : 3001;
@@ -30,7 +30,6 @@ builder.Services.AddControllers();
 
 // Configure Kestrel to use applicationUrl from appsettings
 var applicationUrl = builder.Configuration.GetValue<string>("applicationUrl");
-Console.WriteLine($"Application URL from config: {applicationUrl}");
 if (!string.IsNullOrEmpty(applicationUrl))
 {
     builder.WebHost.UseUrls(applicationUrl.Split(';', System.StringSplitOptions.RemoveEmptyEntries).Select(u => u.Trim()).ToArray());
@@ -84,7 +83,6 @@ app.UseWhen(context => !context.Request.Path.StartsWithSegments("/api"),
         #else
         if (!app.Environment.IsDevelopment())
         {
-            Console.WriteLine("DEBUG: SPA PRODUCTION MODE");
             var spaDistPath = Path.Combine(Directory.GetCurrentDirectory(), "PortfolioClient", "dist");
             var fileProvider = new PhysicalFileProvider(spaDistPath);
             

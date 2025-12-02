@@ -88,6 +88,8 @@ export default {
 
 .main-block {
     padding: 5em 0;
+    display: flex;
+    align-items: center;
 }
 .front-main-block {
     background-color: var(--primary-blue-bg-color);
@@ -128,6 +130,19 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
 }
+.section-title{
+    width:100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: calc(4em * var(--text-scale));
+    margin-bottom: var(--header-space);
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+}
+
+
 @media (max-width: 794px) {
     .front-photo {
         margin: auto;
