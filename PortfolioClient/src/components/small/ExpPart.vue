@@ -20,7 +20,6 @@ export default {
         }
     },
     data(){
-        console.log(this.experience.companyName,this.experience.companyLink);
         return {
             
         }

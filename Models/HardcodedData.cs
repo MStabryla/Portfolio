@@ -7,7 +7,7 @@ public static class HardcodedData
         return 
         [
             new WorkExperience(
-                "Junior SysOps / .NET Programmer", "Webedia Polska S.A.", "- Developing and maintaining the gry-online.pl website and subpages written in <b>.NET</b> technologies (<b>ASP</b>, <b>Visual Basic</b>)<br/>- Developing web applications using <b>JavaScript</b> and the <b>Vue.js</b> platform for internal and editorial use<br/>- Creating and implementing a tool using <b>C#</b>, <b>Windows Forms</b> and <b>ASP.NET Core</b> with access to the <b>REST API</b> to communicate with external clients<br/>- Creating complex <b>SQL</b> queries within few applications. Managing and maintaining an <b>MS SQL</b> database<br/>- Implementation of SysOps and DevOps tools such as <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b>, and <b>DeployHQ</b><br/>- Administration of test and production environments based on <b>Windows Server</b>",
+                "Junior SysOps / .NET Programmer", "Webedia Polska S.A.", "- Developing and maintaining the gry-online.pl website and subpages written in <b>.NET</b> technologies (<b>ASP</b>, <b>Visual Basic</b>)<br/>- Developing web applications using <b>JavaScript</b> and the <b>Vue.js</b> platform for internal and editorial use<br/>- Creating and implementing a tool using <b>C#</b>, <b>Windows Forms</b> and <b>ASP.NET Core</b> with access to the <b>REST API</b> to communicate with external clients<br/>- Creating complex <b>SQL</b> queries within few applications. Managing and maintaining an <b>MS SQL</b> database<br/>- Implementation of SysOps and DevOps tools such as <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b>, and <b>DeployHQ</b><br/>- Administration of development and production environments based on <b>Windows Server</b>",
                 new DateOnly(2021, 9, 1), 
                 new DateOnly(2025, 6, 30),
                 "gol.jpg",
@@ -16,7 +16,7 @@ public static class HardcodedData
             new WorkExperience(
                 "Unity Programmer",
                 "Apteka Janicki Gallery",
-                "- Creating <b>2D games</b> in the Unity graphics engine designed for <b>touchscreen monitors</b><br/>- More details:<br/><a href='https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne' target='_blank'>https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne</a>",
+                "- Creating <b>2D games</b> in the Unity graphics engine designed for <b>touchscreen monitors</b><br/>- More details:<br/><a href='https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne' target='_blank'>https:/wawel.krakow.pl/centrum-multimedialne</a>",
                 new DateOnly(2019, 2, 1),
                 new DateOnly(2019, 6, 1),
                 "wawel.jpg"
@@ -55,7 +55,7 @@ public static class HardcodedData
         return 
         [
             new WorkExperience(
-                "Junior SysOps / Programista .NET", "Webedia Polska S.A.", "- Implementacja narzędzi SysOps oraz DevOps, takich jak <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b> i <b>DeployHQ</b>.<br/>- Administracja środowiskiem testowym i produkcyjnym opartymna systemie z rodziny <b>Windows Server</b>.<br/>- Tworzenie złożonych zapytań <b>SQL</b> wykorzystywanych przezaplikacje. Zarządzanie i utrzymanie bazy <b>MS SQL</b>.<br/>- Rozwijanie i utrzymywanie strony internetowej gry-online.pl oraz podstron napisanych w technologiach <b>.NET</b> (<b>ASP</b>, <b>Visual Basic</b>)<br/>- Rozwijanie aplikacji webowych z użyciem <b>JavaScript</b> i platformy <b>Vue.js</b> na potrzeby redakcyjne<br/>- Tworzenie i implementacja narzędzi wewnętrznych zwykorzystaniem <b>C#</b>, <b>Windows Forms</b> i <b>ASP.NET Core</b> w konwencji <b>REST API</b>.",
+                "Junior SysOps / Programista .NET", "Webedia Polska S.A.", "- Implementacja narzędzi SysOps oraz DevOps, takich jak <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b> i <b>DeployHQ</b>.<br/>- Administracja środowiskiem testowym i produkcyjnym opartymna systemie z rodziny <b>Windows Server</b>.<br/>- Tworzenie złożonych zapytań <b>SQL</b> wykorzystywanych przezaplikacje. Zarządzanie i utrzymanie bazy <b>MS SQL</b>.<br/>- Rozwijanie i utrzymywanie strony internetowej gry-online.pl oraz podstron napisanych w technologiach <b>.NET</b> (<b>ASP</b>, <b>Visual Basic</b>)<br/>- Rozwijanie aplikacji webowych z użyciem <b>JavaScript</b> i platformy <b>Vue.js</b> na potrzeby redakcyjne<br/>- Tworzenie i implementacja narzędzi wewnętrznych z wykorzystaniem <b>C#</b>, <b>Windows Forms</b> i <b>ASP.NET Core</b> w konwencji <b>REST API</b>.",
                 new DateOnly(2021, 9, 1), 
                 new DateOnly(2025, 6, 30), 
                 "gol.jpg",
@@ -64,7 +64,7 @@ public static class HardcodedData
             new WorkExperience(
                 "Programista aplikacji Unity",
                 "Apteka Janicki Gallery",
-                "- Tworzenie <b>gier 2D</b> w silniku graficznym <b>Unity</b> przeznaczonych dla monitorów z interfejsem dotykowym.<br/>- Więcej szczegółów:<br/><a href='https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne' target='_blank'>https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne</a>",
+                "- Tworzenie <b>gier 2D</b> w silniku graficznym <b>Unity</b> przeznaczonych dla monitorów z interfejsem dotykowym.<br/>- Więcej szczegółów:<br/><a href='https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne' target='_blank'>https:/wawel.krakow.pl/centrum-multimedialne</a>",
                 new DateOnly(2019, 2, 1),
                 new DateOnly(2019, 6, 1),
                 "wawel.jpg",
@@ -96,6 +96,49 @@ public static class HardcodedData
                 new DateOnly(2017, 5, 31),
                 "cogworks.jpg",
                 new Uri("https://www.wearecogworks.com/")
+            )
+        ];
+    }
+
+    public static Education[] GetEducationPl()
+    {
+        return [
+            new Education(
+                "Magister Inżynier - Informatyka Stosowana",
+                "Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie",
+                "- Tytuł uzyskany na Wydziale Inżynierii Metali i Informatyki Przemysłowej WIMIIP<br/>- Projekt inżynierski oraz magisterski polegał na stworzeniu i oprogramowaniu samo jeżdżącego robota na platformie <b>Arduino</b>",
+                new DateOnly(2018, 10, 1),
+                new DateOnly(2023, 10, 23),
+                "agh.jpg"
+            ),
+            new Education(
+                "Technik Informatyk",
+                "Zespół Szkół Łączności im. Obrońców Poczty Polskiej w Gdańsku w Krakowie",
+                "Tytuł obejmuje umiejętności:<br/>- Korzystania i administrowania systemami operacyjnymi z rodziny <b>Windows</b> oraz <b>Linux (Debian)</b><br/>- Obsługę serwerowych systemów operacyjnych z rodziny <b>Windows Server</b><br/>- Tworzenia stron internetowych w <b>HTML</b>, <b>CSS</b> i <b>JavaScript</b><br/>- Zarządzania bazą <b>MySQL</b> i tworzenia prostych zapytań <b>SQL</b>",
+                new DateOnly(2014, 9, 1),
+                new DateOnly(2018, 4, 27),
+                "zsl.jpg"
+            )
+        ];
+    }
+    public static Education[] GetEducationEn()
+    {
+        return [
+            new Education(
+                "Master Engineer Degree of Computer Science",
+                "AGH University of Science and Technology",
+                "- Degree earned at the Faculty of Metals Engineering and Industrial Computer Science, WIMIIP<br/>- The engineering and master's project involved creating and programming a self-driving robot using the <b>Arduino</b> platform.",
+                new DateOnly(2018, 10, 1),
+                new DateOnly(2023, 10, 23),
+                "agh.jpg"
+            ),
+            new Education(
+                "IT technician",
+                "ZSŁ Upper Secondary School of Communications",
+                "This title includes skills like:<br/>- Using and administering <b>Windows</b> and <b>Linux (Debian)</b> operating systems<br/>- Supporting and managing <b>Windows Server</b> operating systems<br/>- Creating websites with <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b><br/>- Managing a <b>MySQL</b> database and creating simple <b>SQL</b> queries",
+                new DateOnly(2014, 9, 1),
+                new DateOnly(2018, 4, 27),
+                "zsl.jpg"
             )
         ];
     }

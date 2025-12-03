@@ -32,7 +32,6 @@ export default {
     methods:{  
         async fetchExperience(){
             const tempExperience = await axios.get("/api/experience/work/pl");
-            console.log(tempExperience);
             this.templateExperience = tempExperience.data.map(exp => new ExpData(
                 exp.experienceName,
                 exp.companyName,
