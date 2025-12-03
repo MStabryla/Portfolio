@@ -13,8 +13,7 @@ export default {
     },
     data(){
         return {
-           templateEducation: [],
-           lang: 'pl'
+           templateEducation: []
         }
     },
     watch:{
@@ -31,8 +30,7 @@ export default {
     },
     methods:{  
         async fetchEducation(){
-            const tempEducation = await axios.get("/api/education/pl");
-            console.log(tempEducation);
+            const tempEducation = await axios.get("/api/education/" + this.lang);
             this.templateEducation = tempEducation.data.map(exp => new EduData(
                 exp.educationTitle,
                 exp.school,

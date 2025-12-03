@@ -1,6 +1,21 @@
 import { createApp } from 'vue'
 import './css/style.css'
-import * as bootstrap from 'bootstrap'
 import App from './App.vue'
+import router from './router.js'
 
-const main = createApp(App).mount('#app');
+const main = createApp(App)
+main.mixin({
+    data() {
+        return {
+            lang: 'pl'
+        }
+    },
+    created(){
+        this.lang = this.$route.meta.lang ?? 'pl';
+    },
+    updated(){
+        this.lang = this.$route.meta.lang ?? 'pl';
+    }
+})
+main.use(router)
+main.mount('#app');

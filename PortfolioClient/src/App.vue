@@ -1,18 +1,10 @@
 <script setup>
-import Front from './components/Front.vue';
-import WorkExperience from './components/WorkExperience.vue';
-import Education from './components/Education.vue';
-import AddExperience from './components/AddExperience.vue';
-import Contact from './components/Contact.vue';
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
   <div id="app">
-    <Front/>
-    <WorkExperience/>
-    <Education/>
-    <AddExperience/>
-    <Contact/>
+    <router-view></router-view>
   </div>
 </template>
 

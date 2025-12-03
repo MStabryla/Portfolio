@@ -17,7 +17,6 @@ export default {
     data(){
         return {
             skills: ['.NET Developer', 'C#', 'ASP.NET Developer', 'SQL', 'Windows Server', 'MS SQL', 'JavaScript', 'Vue.js' ],
-            ENMode: false,
             width: window.innerWidth,
             switchToMobileWidth: 794
         }
@@ -30,7 +29,7 @@ export default {
     },
     computed:{
         desc() {
-            return this.ENMode ? DescEN : DescPL;
+            return this.lang === 'pl' ? DescPL : DescEN;
         }
     },
     mounted(){ 

@@ -172,7 +172,7 @@ public static class HardcodedData
                 "School of Computer Science and Economics of Kraków (WSEI)",
                 "- Assistance in conducting classes on the basic C# language at the School of Computer Science and Economics.<br/>- This course was intended for high school students who were just starting their programming career.",
                 new DateOnly(2016, 10, 1),
-                new DateOnly(2017, 4, 31),
+                new DateOnly(2017, 4, 30),
                 "junior-wsei.jpg"
             ),
             new AdditionalExperience(

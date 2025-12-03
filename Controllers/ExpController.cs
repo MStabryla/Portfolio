@@ -9,7 +9,7 @@ namespace Portfolio
     public class ExpController : ControllerBase
     {
         [HttpGet]
-        [Route("work")]
+        [Route("work/en")]
         public WorkExperience[] GetExperienceEn()
         {
             return HardcodedData.GetWorkExperienceEn();
@@ -23,7 +23,7 @@ namespace Portfolio
         }
 
         [HttpGet]
-        [Route("additional")]
+        [Route("additional/en")]
         public AdditionalExperience[] GetAddExperienceEn()
         {
             return HardcodedData.GetAdditionalExperienceEn();

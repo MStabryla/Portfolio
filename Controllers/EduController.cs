@@ -9,7 +9,7 @@ namespace Portfolio
     public class EduController : ControllerBase
     {
         [HttpGet]
-        [Route("")]
+        [Route("en")]
         public Education[] GetExperienceEn()
         {
             return HardcodedData.GetEducationEn();

@@ -13,8 +13,7 @@ export default {
     },
     data(){
         return {
-           templateExperience: [],
-           lang: 'pl'
+           templateExperience: []
         }
     },
     watch:{
@@ -31,7 +30,7 @@ export default {
     },
     methods:{  
         async fetchExperience(){
-            const tempExperience = await axios.get("/api/experience/additional/pl");
+            const tempExperience = await axios.get("/api/experience/additional/" + this.lang);
             this.templateExperience = tempExperience.data.map(exp => new AddExpData(
                 exp.experienceName,
                 exp.organizationName,
