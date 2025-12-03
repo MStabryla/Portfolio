@@ -49,17 +49,15 @@ export default {
 </script>
 
 <template>
-    <div class="block main-block">
+    <section class="block main-block">
         <div class="container add-experience-block">
             <h1 class="section-title">{{this.addExperienceTitle}}</h1>
             <div class="row" :class="{ 'left': i % 2 == 0, 'right': i % 2 !=  0 }" v-for="(experience,i) in this.templateExperience" :key="i">
                 <AddExpPart v-bind:experience="experience" >
                 </AddExpPart>
             </div>
-            
         </div>
-        
-    </div>
+    </section>
 </template>
 
 <style>

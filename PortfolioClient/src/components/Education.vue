@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-    <div class="block main-block">
+    <section class="block main-block">
         <div class="container education-block">
             <h1 class="section-title">{{this.educationTitle}}</h1>
             <div class="row" :class="{ 'left': i % 2 == 0, 'right': i % 2 !=  0 }" v-for="(education,i) in this.templateEducation" :key="i">
@@ -61,7 +61,7 @@ export default {
             
         </div>
         
-    </div>
+    </section>
 </template>
 
 <style>

@@ -40,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <section class="block main-block front-main-block">
+    <header class="block main-block front-main-block">
         <div class="container" v-show="width >= switchToMobileWidth">
             <div class="row">
                 <div class="front-photo col-4">
@@ -60,8 +60,6 @@ export default {
                 </div>
                 
             </div>
-            
-            <Contact></Contact>
         </div>
         <div class="container" v-show="width < switchToMobileWidth">
             <div class="row front-photo">
@@ -79,9 +77,8 @@ export default {
                 </div>
                 
             </div>
-            <Contact></Contact>
         </div>
-    </section>
+    </header>
 </template>
 
 <style>
