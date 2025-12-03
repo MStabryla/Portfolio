@@ -34,19 +34,27 @@ jobs:
           cd PortfolioClient
           npm install
 
-      - name: Vue.js - Build
+      - name: Vue.js - Build & Deploy
         run: | 
           cd PortfolioClient
-          npm run --silent build
-
-      - name: Publish vue.js
-        run: |
-          cd PortfolioClient
+          npm run build
+          ls
           cp dist "${{env.DOTNET_ROOT}}/myapp"
+          cp -verbose src/assets dist
           echo "Dist folder copied!"
           cp -verbose src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
           echo "Assets folder copied!"
           ls "${{env.DOTNET_ROOT}}/myapp/dist"
+
+      # - name: Publish vue.js
+      #   run: |
+      #     cd PortfolioClient
+      #     ls dist
+      #     cp dist "${{env.DOTNET_ROOT}}/myapp"
+      #     echo "Dist folder copied!"
+      #     cp -verbose src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
+      #     echo "Assets folder copied!"
+      #     ls "${{env.DOTNET_ROOT}}/myapp/dist"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
