@@ -51,7 +51,7 @@ export default {
 <template>
     <section class="block main-block">
         <div class="container work-experience-block">
-            <h1 class="section-title">{{this.workExperienceTitle}}</h1>
+            <h1 class="section-title"><div src="../assets/icons/work-experience.svg" class="work-experience-icon"/>{{this.workExperienceTitle}}</h1>
             <div class="row" :class="{ 'left': i % 2 == 0, 'right': i % 2 !=  0 }" v-for="(experience,i) in this.templateExperience" :key="i">
                 <ExpPart v-bind:experience="experience" >
                 </ExpPart>
@@ -72,6 +72,17 @@ export default {
 .work-experience-block .row{
     display:flex;
     margin:2em auto;
+}
+.work-experience-icon{
+    mask-image: url(../assets/icons/work-experience.svg);
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: calc(var(--head-icon-image-size) * var(--text-scale));
+    height: calc(var(--head-icon-image-size) * var(--text-scale));
+    background-color: var(--primary-text-color);
+    margin-right: calc(0.3em * var(--text-scale));
 }
 .left{
     flex-direction: row;

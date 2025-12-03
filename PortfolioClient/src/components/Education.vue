@@ -51,7 +51,7 @@ export default {
 <template>
     <section class="block main-block">
         <div class="container education-block">
-            <h1 class="section-title">{{this.educationTitle}}</h1>
+            <h1 class="section-title"><div class="education-icon"></div>{{this.educationTitle}}</h1>
             <div class="row" :class="{ 'left': i % 2 == 0, 'right': i % 2 !=  0 }" v-for="(education,i) in this.templateEducation" :key="i">
                 <EduPart v-bind:education="education" >
                 </EduPart>
@@ -72,6 +72,17 @@ export default {
 .education-block .row{
     display:flex;
     margin:2em auto;
+}
+.education-icon{
+    mask-image: url(../assets/icons/education.svg);
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: calc(var(--head-icon-image-size) * var(--text-scale));
+    height: calc(var(--head-icon-image-size) * var(--text-scale));
+    background-color: var(--primary-text-color);
+    margin-right: calc(0.3em * var(--text-scale));
 }
 .left{
     flex-direction: row;
