@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./dist/publish/Portfolio
+cd dist/publish
+./Portfolio

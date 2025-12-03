@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.SpaServices.Extensions;
 using VueCliMiddleware;
 using System.Net;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -21,7 +22,6 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables();
 
-//Console.WriteLine($"Config files: appsettings.{builder.Environment.EnvironmentName}.json");
 
 int spaPort = builder.Configuration.GetSection("environmentVariables").GetValue<int>("VITE_PORT");
 spaPort = spaPort > 0 ? spaPort : 3001;
@@ -30,17 +30,11 @@ builder.Services.AddControllers();
 
 // Configure Kestrel to use applicationUrl from appsettings
 var applicationUrl = builder.Configuration.GetValue<string>("applicationUrl");
+Console.WriteLine($"Application URL from config: {applicationUrl}");
 if (!string.IsNullOrEmpty(applicationUrl))
 {
     builder.WebHost.UseUrls(applicationUrl.Split(';', System.StringSplitOptions.RemoveEmptyEntries).Select(u => u.Trim()).ToArray());
 }
-
-//For localhost reverse proxy
-builder.Services.Configure<ForwardedHeadersOptions>(options =>
-{
-    // options.KnownProxies.Add(IPAddress.Parse("127.0.0.1"));
-    options.KnownProxies.Add(IPAddress.Any);
-});
 
 var app = builder.Build();
 
@@ -70,9 +64,9 @@ app.UseWhen(context => !context.Request.Path.StartsWithSegments("/api"),
             var spaDistPath = Path.Combine(Directory.GetCurrentDirectory(), "PortfolioClient", "dist");
             var fileProvider = new PhysicalFileProvider(spaDistPath);
             
-            var defaultFilesOptions = new DefaultFilesOptions { FileProvider = fileProvider };
-            defaultFilesOptions.DefaultFileNames.Add("index.html");
-            uwApp.UseDefaultFiles(defaultFilesOptions);
+            // Rewrite any non-file path to index.html FIRST
+            var rewriteOptions = new RewriteOptions().AddRewrite("^(?!.*\\.).*$", "/index.html", skipRemainingRules: true);
+            uwApp.UseRewriter(rewriteOptions);
             
             uwApp.UseSpaStaticFiles(new StaticFileOptions
             {
@@ -83,12 +77,13 @@ app.UseWhen(context => !context.Request.Path.StartsWithSegments("/api"),
         #else
         if (!app.Environment.IsDevelopment())
         {
+            Console.WriteLine("DEBUG: SPA PRODUCTION MODE");
             var spaDistPath = Path.Combine(Directory.GetCurrentDirectory(), "PortfolioClient", "dist");
             var fileProvider = new PhysicalFileProvider(spaDistPath);
             
-            var defaultFilesOptions = new DefaultFilesOptions { FileProvider = fileProvider };
-            defaultFilesOptions.DefaultFileNames.Add("index.html");
-            uwApp.UseDefaultFiles(defaultFilesOptions);
+            // Rewrite any non-file path to index.html FIRST
+            var rewriteOptions = new RewriteOptions().AddRewrite("^(?!.*\\.).*$", "/index.html", skipRemainingRules: true);
+            uwApp.UseRewriter(rewriteOptions);
             
             uwApp.UseSpaStaticFiles(new StaticFileOptions
             {
