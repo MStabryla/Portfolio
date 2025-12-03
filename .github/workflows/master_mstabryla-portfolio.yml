@@ -38,11 +38,10 @@ jobs:
         run: | 
           cd PortfolioClient
           npm run build
-          ls
-          Copy-Item -Verbose -Force dist "${{env.DOTNET_ROOT}}/myapp"
-          Copy-Item -Verbose -Force src/assets dist
+          ls dist
+          Copy-Item -Verbose -Force -Recurse dist "${{env.DOTNET_ROOT}}/myapp"
           echo "Dist folder copied!"
-          Copy-Item -Verbose -Force src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
+          Copy-Item -Verbose -Force -Recurse src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
           echo "Assets folder copied!"
           ls "${{env.DOTNET_ROOT}}/myapp/dist"
 
@@ -74,8 +73,7 @@ jobs:
         
       - name: Show deploy location
         run: |
-          Get-Location
-          ls
+          ls ${{env.DOTNET_ROOT}}/myapp
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
