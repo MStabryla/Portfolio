@@ -43,7 +43,7 @@ jobs:
           echo "Dist folder copied!"
           Copy-Item -Verbose -Force -Recurse src/assets "${{env.DOTNET_ROOT}}/myapp/PortfolioClient/dist"
           echo "Assets folder copied!"
-          ls "${{env.DOTNET_ROOT}}/myapp/dist"
+          ls "${{env.DOTNET_ROOT}}/myapp/PortfolioClient/dist"
 
       # - name: Publish vue.js
       #   run: |
