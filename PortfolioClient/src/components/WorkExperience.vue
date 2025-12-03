@@ -4,7 +4,7 @@ import ExpPart from './small/ExpPart.vue';
 import axios from 'axios';
 
 export default {
-    name: 'Front',
+    name: 'WorkExperience',
     components: {
         ExpPart
     },
@@ -39,7 +39,8 @@ export default {
                 exp.experienceDesc,
                 exp.startDate,
                 exp.endDate,
-                exp.photo
+                exp.photo,
+                exp.companyLink
             ));
         }
     },
@@ -72,13 +73,12 @@ export default {
 }
 .work-experience-block .row{
     display:flex;
+    margin:2em auto;
 }
 .left{
     flex-direction: row;
-    text-align: left;
 }
 .right{
     flex-direction: row-reverse;
-    text-align: right;
 }
 </style>

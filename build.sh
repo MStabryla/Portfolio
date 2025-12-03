@@ -5,4 +5,5 @@ dotnet publish -c Release --property:OutputPath=./dist/
 cd PortfolioClient
 npm run --silent build
 cp -r dist ../../Portfolio/dist/publish/PortfolioClient/
+cp -r src/assets ../../Portfolio/dist/publish/PortfolioClient/dist
 cd ..
