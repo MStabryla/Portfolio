@@ -42,8 +42,11 @@ jobs:
       - name: Publish vue.js
         run: |
           cd PortfolioClient
-          cp -verbose dist "${{env.DOTNET_ROOT}}/myapp"
+          cp dist "${{env.DOTNET_ROOT}}/myapp"
+          echo "Dist folder copied!"
           cp -verbose src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
+          echo "Assets folder copied!"
+          ls "${{env.DOTNET_ROOT}}/myapp/dist"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -60,7 +63,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: .net-app
-      
+        
+      - name: Show deploy location
+        run: |
+          Get-Location
+          ls
+
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
