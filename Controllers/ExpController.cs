@@ -21,5 +21,19 @@ namespace Portfolio
         {
             return HardcodedData.GetWorkExperiencePl();
         }
+
+        [HttpGet]
+        [Route("additional")]
+        public AdditionalExperience[] GetAddExperienceEn()
+        {
+            return HardcodedData.GetAdditionalExperienceEn();
+        }
+
+        [HttpGet]
+        [Route("additional/pl")]
+        public AdditionalExperience[] GetAddExperiencePl()
+        {
+            return HardcodedData.GetAdditionalExperiencePl();
+        }
     }
 }

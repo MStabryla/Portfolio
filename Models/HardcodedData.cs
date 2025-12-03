@@ -134,11 +134,54 @@ public static class HardcodedData
             ),
             new Education(
                 "IT technician",
-                "ZSŁ Upper Secondary School of Communications",
+                "ZSŁ Upper Secondary School of Communications in Cracow",
                 "This title includes skills like:<br/>- Using and administering <b>Windows</b> and <b>Linux (Debian)</b> operating systems<br/>- Supporting and managing <b>Windows Server</b> operating systems<br/>- Creating websites with <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b><br/>- Managing a <b>MySQL</b> database and creating simple <b>SQL</b> queries",
                 new DateOnly(2014, 9, 1),
                 new DateOnly(2018, 4, 27),
                 "zsl.jpg"
+            )
+        ];
+    }
+
+    public static AdditionalExperience[] GetAdditionalExperiencePl()
+    {
+        return [
+            new AdditionalExperience(
+                "Nauczyciel w JUNIOR WSEI.NET",
+                "Wyższa Szkoła Ekonomii i Informatyki (WSEI) w Krakowie",
+                "- Pomoc w prowadzeniu zajęć z podstaw języka <b>C#</b> na <b>Wyższej Szkole Ekonomii i Informatyki w Krakowie</b><br/>- Zajęcia były przeznaczone dla uczniów szkół średnich, którzy zaczynali swoją przygodę z programowaniem.",
+                new DateOnly(2016, 10, 1),
+                new DateOnly(2017, 4, 30),
+                "junior-wsei.jpg"
+            ),
+            new AdditionalExperience(
+                "Członek Koła Promocji Szkoły",
+                "Zespół Szkół Łączności im. Obrońców Poczty Polskiej w Gdańsku w Krakowie",
+                "- Promocja kierunków technicznych na targach szkół średnich w Krakowie i okolicach<br/>- Prezentacja szkoły podczas Dni Otwartych<br/>- Rozmowa z potencjalnymi kandydatami i ich rodzicami na temat szkoły i zalet wybrania danego kierunku<br/>- Regularne spotkania przygotowujące członków koła do pracy z ludźmi.",
+                new DateOnly(2014, 10, 1),
+                new DateOnly(2018, 4, 27),
+                "kolo-promocji.jpg"
+            )
+        ];
+    }
+    public static AdditionalExperience[] GetAdditionalExperienceEn()
+    {
+        return [
+            new AdditionalExperience(
+                "JUNIOR WSEI.NET Teacher",
+                "School of Computer Science and Economics of Kraków (WSEI)",
+                "- Assistance in conducting classes on the basic C# language at the School of Computer Science and Economics.<br/>- This course was intended for high school students who were just starting their programming career.",
+                new DateOnly(2016, 10, 1),
+                new DateOnly(2017, 4, 31),
+                "junior-wsei.jpg"
+            ),
+            new AdditionalExperience(
+                "Member of the School Promotion Circle",
+                "ZSŁ Upper Secondary School of Communications in Cracow",
+                "- Promotion of technical programs at high school fairs in Krakow and the surrounding area.<br/>- Presentation of the school during Open House Days.<br/>- Discussions with potential candidates and their parents about the school and the advantages of choosing a given program.<br/>- Regular meetings prepare organisation members for working with people.",
+                new DateOnly(2014, 10, 1),
+                new DateOnly(2018, 4, 27),
+                "kolo-promocji.jpg"
             )
         ];
     }

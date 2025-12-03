@@ -2,6 +2,7 @@
 import Front from './components/Front.vue';
 import WorkExperience from './components/WorkExperience.vue';
 import Education from './components/Education.vue';
+import AddExperience from './components/AddExperience.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Education from './components/Education.vue';
     <Front/>
     <WorkExperience/>
     <Education/>
+    <AddExperience/>
   </div>
 </template>
 
