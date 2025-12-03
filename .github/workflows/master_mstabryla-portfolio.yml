@@ -39,10 +39,10 @@ jobs:
           cd PortfolioClient
           npm run build
           ls
-          cp dist "${{env.DOTNET_ROOT}}/myapp"
-          cp -verbose src/assets dist
+          Copy-Item -Verbose -Force dist "${{env.DOTNET_ROOT}}/myapp"
+          Copy-Item -Verbose -Force src/assets dist
           echo "Dist folder copied!"
-          cp -verbose src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
+          Copy-Item -Verbose -Force src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
           echo "Assets folder copied!"
           ls "${{env.DOTNET_ROOT}}/myapp/dist"
 
