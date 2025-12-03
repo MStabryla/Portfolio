@@ -90,4 +90,10 @@ export default {
 .right{
     flex-direction: row-reverse;
 }
+
+@media (max-width: 794px) {
+    .education-block .row{
+        flex-direction: column-reverse;
+    }
+}
 </style>

@@ -98,4 +98,10 @@ export default {
     max-width: var(--education-image-size-width);
     max-height: var(--education-image-size-height);
 }
+
+@media (max-width: 794px) {
+    .education, .education-photo,.education-photo img{
+        width:100%;
+    }
+}
 </style>

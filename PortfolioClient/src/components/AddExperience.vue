@@ -87,4 +87,10 @@ export default {
 .right{
     flex-direction: row-reverse;
 }
+
+@media (max-width: 794px) {
+    .add-experience-block .row{
+        flex-direction: column-reverse;
+    }
+}
 </style>

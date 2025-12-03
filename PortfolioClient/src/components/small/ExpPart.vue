@@ -34,7 +34,7 @@ export default {
             <h3 v-if="this.experience.companyLink == null || this.experience.companyLink == '' || this.experience.companyLink == 'https://not-found.com/'" class="exp-company">{{ this.experience.CompanyName }}</h3>
             <h3 v-else class="exp-company"><a :href="this.experience.companyLink" target="_blank">{{ this.experience.CompanyName }}</a></h3>
             <div class="exp-date">
-                <span class="exp-start-date">{{ this.expDate(this.experience.startDate) }}</span>&nbsp;&nbsp;-&nbsp;&nbsp;<span class="exp-end-date">{{ this.expDate(this.experience.endDate) }}</span>
+                <span class="exp-start-date">{{ this.expDate(this.experience.startDate) }}</span><span class="exp-date-dash"><&nbsp;&nbsp;-&nbsp;&nbsp;</span><span class="exp-end-date">{{ this.expDate(this.experience.endDate) }}</span>
             </div>
         </div>
         <p class="exp-desc" v-html="this.experience.ExperienceDesc"></p>
@@ -100,5 +100,34 @@ export default {
     width:66%;
     max-width: var(--experience-image-size-width);
     max-height: var(--experience-image-size-height);
+}
+
+@media (max-width: 794px) {
+    .experience, .experience-photo, .experience-photo img{
+        width:100%;
+    }
+    .exp-second-info{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .exp-name{
+        margin-bottom: 0.5em;
+    }
+    .exp-date, .exp-company{
+        width:100%;
+        margin-bottom: 1em;
+    }
+    .exp-date{
+        display:flex;
+        justify-content: space-between;
+    }
+    .exp-company a{
+        width:100%;
+        text-align: center;
+    }
+    .exp-date-dash{
+        display:none;
+    }
 }
 </style>

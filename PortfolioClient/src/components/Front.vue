@@ -140,19 +140,31 @@ export default {
 
 
 @media (max-width: 794px) {
+    .front-main-block{
+        padding: 2em 0;}
     .front-photo {
         margin: auto;
     }
     .front-photo img {
-        max-width: calc(var(--image-scale)*var(--image-size-width));
+        width: 60vw;
+        height: auto;
+    }
+    .front-title{
+        margin: 1em 0;
     }
     .front-title h1{
         text-align: center;
         margin-bottom: 0;
-        min-width: 480px;
+        max-width: calc(100vw - var(--bs-gutter-x));
+        /* font-size: calc(3em * var(--text-scale)); */
+        min-width: unset;
     }
     .front-skills{
         margin-top: 0;
+        max-width: calc(100vw - var(--bs-gutter-x));
+    }
+    .front-desc{
+        max-width: calc(100vw - 1em - var(--bs-gutter-x));
     }
     :root{
         --text-scale: 0.7;
@@ -161,20 +173,21 @@ export default {
 
 @media (min-width: 794px) {
     :root{
-        --image-scale: 0.27;
-        --skill-text-scale: 0.45;
-        --text-scale: 0.5;
+        --image-scale: 0.3;
+        --skill-text-scale: 0.4;
+        --text-scale: 0.57;
     }
     .front-title h1{
         font-size: calc(5em * var(--text-scale));
     }
+
 }
 
 @media (min-width: 992px) {
     :root{
         --image-scale: 0.35;
         --skill-text-scale: 0.5;
-        --text-scale: 0.6;
+        --text-scale: 0.75;
     }
 }
 
@@ -182,7 +195,7 @@ export default {
     :root{
         --image-scale: 0.4;
         --skill-text-scale: 0.6;
-        --text-scale: 0.65;
+        --text-scale: 0.75;
     }
 }
 
@@ -190,7 +203,7 @@ export default {
     :root{
         --image-scale: 0.45;
         --skill-text-scale: 0.8;
-        --text-scale: 0.75;
+        --text-scale: 0.85;
     }
 }
 

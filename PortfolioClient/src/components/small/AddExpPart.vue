@@ -85,4 +85,10 @@ export default {
     max-width: var(--experience-image-size-width);
     max-height: var(--experience-image-size-height);
 }
+
+@media (max-width: 794px) {
+    .add-experience, .add-experience-photo, .add-experience-photo img{
+        width:100%;
+    }
+}
 </style>

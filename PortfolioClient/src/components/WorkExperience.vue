@@ -90,4 +90,25 @@ export default {
 .right{
     flex-direction: row-reverse;
 }
+
+@media (max-width: 794px) {
+    .main-block{
+        padding: 2em 0;
+    }
+    .section-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: calc(2em * var(--text-scale));
+    }
+    .work-experience-block .row{
+        flex-direction: column-reverse;
+    }
+    .work-experience-icon{
+        width: var(--head-icon-image-size);
+        height: var(--head-icon-image-size);
+        margin-bottom: 0.5em;
+    }
+
+}
 </style>

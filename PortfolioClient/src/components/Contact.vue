@@ -102,4 +102,25 @@ export default {
     font-weight: 600;
     padding-top: 0.4em;
 }
+
+@media (max-width: 794px) {
+    .contact-title{
+        font-size: calc(3em * var(--text-scale));
+    }
+    .contact-subtitle{
+        font-size: calc(2em * var(--text-scale));
+    }
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
+    .contact-part{
+        width: 100%;
+    }
+    .contact-part-title{
+        font-size: calc(1.5em * var(--text-scale));
+    }
+}
 </style>
