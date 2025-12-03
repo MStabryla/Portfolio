@@ -39,9 +39,9 @@ jobs:
           cd PortfolioClient
           npm run build
           ls dist
-          Copy-Item -Verbose -Force -Recurse dist "${{env.DOTNET_ROOT}}/myapp"
+          Copy-Item -Verbose -Force -Recurse dist "${{env.DOTNET_ROOT}}/myapp/PortfolioClient"
           echo "Dist folder copied!"
-          Copy-Item -Verbose -Force -Recurse src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
+          Copy-Item -Verbose -Force -Recurse src/assets "${{env.DOTNET_ROOT}}/myapp/PortfolioClient/dist"
           echo "Assets folder copied!"
           ls "${{env.DOTNET_ROOT}}/myapp/dist"
 
