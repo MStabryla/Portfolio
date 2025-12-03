@@ -42,8 +42,8 @@ jobs:
       - name: Publish vue.js
         run: |
           cd PortfolioClient
-          cp dist "${{env.DOTNET_ROOT}}/myapp"
-          cp src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
+          cp -v dist "${{env.DOTNET_ROOT}}/myapp"
+          cp -v src/assets "${{env.DOTNET_ROOT}}/myapp/dist"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
