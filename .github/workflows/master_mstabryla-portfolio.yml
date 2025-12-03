@@ -73,7 +73,7 @@ jobs:
         
       - name: Show deploy location
         run: |
-          ls ${{env.DOTNET_ROOT}}/myapp
+          ls "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
