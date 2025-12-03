@@ -34,7 +34,7 @@ export default {
             <h3 v-if="this.experience.companyLink == null || this.experience.companyLink == '' || this.experience.companyLink == 'https://not-found.com/'" class="exp-company">{{ this.experience.CompanyName }}</h3>
             <h3 v-else class="exp-company"><a :href="this.experience.companyLink" target="_blank">{{ this.experience.CompanyName }}</a></h3>
             <div class="exp-date">
-                <span class="exp-start-date">{{ this.expDate(this.experience.startDate) }}</span><span class="exp-date-dash"><&nbsp;&nbsp;-&nbsp;&nbsp;</span><span class="exp-end-date">{{ this.expDate(this.experience.endDate) }}</span>
+                <span class="exp-start-date">{{ this.expDate(this.experience.startDate) }}</span><span class="exp-date-dash">&nbsp;&nbsp;-&nbsp;&nbsp;</span><span class="exp-end-date">{{ this.expDate(this.experience.endDate) }}</span>
             </div>
         </div>
         <p class="exp-desc" v-html="this.experience.ExperienceDesc"></p>
