@@ -66,7 +66,10 @@ export default {
             <h3 v-if="this.experience.companyLink == null || this.experience.companyLink == '' || this.experience.companyLink == 'https://not-found.com/'" class="exp-company">{{ this.experience.CompanyName }}</h3>
             <h3 v-else class="exp-company"><a :href="this.experience.companyLink" target="_blank">{{ this.experience.CompanyName }}</a></h3>
             <div class="exp-date">
-                <span class="exp-start-date">{{ this.expDate(this.experience.startDate) }}</span><span class="exp-date-dash">&nbsp;&nbsp;-&nbsp;&nbsp;</span><span class="exp-end-date">{{ this.expDate(this.experience.endDate) }}</span>
+                <span class="exp-start-date">{{ this.expDate(this.experience.startDate) }}</span>
+                <span class="exp-date-dash-normal">&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+                <span class="exp-date-dash-small">&nbsp;-&nbsp;</span>
+                <span class="exp-end-date">{{ this.expDate(this.experience.endDate) }}</span>
             </div>
         </div>
         <p class="exp-desc" v-html="this.experience.ExperienceDesc"></p>
@@ -91,6 +94,7 @@ export default {
 }
 .exp-name{
     text-align: center;
+    font-weight: 600;
     font-size: calc(2em * var(--text-scale));
     margin-bottom: 1em;
 }
@@ -153,6 +157,7 @@ export default {
     }
     .exp-name{
         margin-bottom: 0.5em;
+        font-size: calc(2.5em * var(--text-scale));
     }
     .exp-date, .exp-company{
         width:100%;
@@ -166,7 +171,23 @@ export default {
         width:100%;
         text-align: center;
     }
-    .exp-date-dash{
+    .exp-date-dash-normal{
+        display:none;
+    }
+}
+@media (min-width: 768px) {
+    .exp-date-dash-small{
+        display:inline;
+    }
+    .exp-date-dash-normal{
+        display:none;
+    }
+}
+@media (min-width: 992px) {
+    .exp-date-dash-normal{
+        display:inline;
+    }
+    .exp-date-dash-small{
         display:none;
     }
 }

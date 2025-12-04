@@ -85,6 +85,7 @@ export default {
 }
 .add-exp-name{
     text-align: center;
+    font-weight: 600;
     font-size: calc(2em * var(--text-scale));
     margin-bottom: 1em;
 }
@@ -126,6 +127,9 @@ export default {
 @media (max-width: 794px) {
     .add-experience, .add-experience-photo, .add-experience-photo img{
         width:100%;
+    }
+    .add-exp-name{
+        font-size: calc(2.5em * var(--text-scale));
     }
 }
 </style>

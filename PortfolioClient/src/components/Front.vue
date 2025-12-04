@@ -18,21 +18,39 @@ export default {
         return {
             skills: ['.NET Developer', 'C#', 'ASP.NET Developer', 'SQL', 'Windows Server', 'MS SQL', 'JavaScript', 'Vue.js' ],
             width: window.innerWidth,
-            switchToMobileWidth: 794
+            frontDisplayMode: 1,
+            switchToMobileWidth: 794,
+            switchToSmallWidth: 992
         }
     },
     watch:{
-        
+        width(){
+            if(this.width > this.switchToSmallWidth)
+                this.frontDisplayMode = 1;
+            else if(this.switchToSmallWidth >= this.width && this.width > this.switchToMobileWidth)
+                this.frontDisplayMode = 2;
+            else if(this.switchToMobileWidth >= this.width)
+                this.frontDisplayMode = 3;
+        }
     },
     methods:{  
-
+        initFrontDisplayMode(){
+            this.width = window.innerWidth;
+            if(this.width > this.switchToSmallWidth)
+                this.frontDisplayMode = 1;
+            else if(this.switchToSmallWidth >= this.width && this.width > this.switchToMobileWidth)
+                this.frontDisplayMode = 2;
+            else if(this.switchToMobileWidth >= this.width)
+                this.frontDisplayMode = 3;
+        }
     },
     computed:{
         desc() {
             return this.lang === 'pl' ? DescPL : DescEN;
         }
     },
-    mounted(){ 
+    beforeMount() { 
+        this.initFrontDisplayMode();
         window.addEventListener('resize', () => this.width = window.innerWidth);
     }
 }
@@ -40,7 +58,7 @@ export default {
 
 <template>
     <header class="block main-block front-main-block">
-        <div class="container" v-show="width >= switchToMobileWidth">
+        <div class="container" v-show="frontDisplayMode == 1">
             <div class="row">
                 <div class="front-photo col-4">
                     <img src="../assets/main-photo.jpg" alt="My Photo" />
@@ -60,7 +78,27 @@ export default {
                 
             </div>
         </div>
-        <div class="container" v-show="width < switchToMobileWidth">
+        <div class="container" v-show="frontDisplayMode == 2">
+            <div class="row">
+                <div class="front-title col-12">
+                    <h1>Mateusz Stabryła</h1>
+                </div>
+                <div class="front-photo col-4">
+                    <img src="../assets/main-photo.jpg" alt="My Photo" />
+                </div>
+                <div class="col">
+                    <div class="front-skills">
+                        <Skill v-for="skill in skills" v-bind:skillname="skill"></Skill>
+                    </div>
+                    <div class="front-desc">
+                        <p v-html="desc"></p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="container" v-show="frontDisplayMode == 3">
             <div class="row front-photo">
                 <img src="../assets/main-photo.jpg" alt="My Photo" />
             </div>
@@ -156,7 +194,7 @@ export default {
         text-align: center;
         margin-bottom: 0;
         max-width: calc(100vw - var(--bs-gutter-x));
-        /* font-size: calc(3em * var(--text-scale)); */
+        font-size: calc(3em * var(--text-scale));
         min-width: unset;
     }
     .front-skills{
@@ -169,13 +207,19 @@ export default {
     :root{
         --text-scale: 0.7;
     }
+    .section-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: calc(3em * var(--text-scale));
+    }
 }
 
 @media (min-width: 794px) {
     :root{
         --image-scale: 0.3;
         --skill-text-scale: 0.4;
-        --text-scale: 0.57;
+        --text-scale: 0.6;
     }
     .front-title h1{
         font-size: calc(5em * var(--text-scale));

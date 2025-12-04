@@ -97,12 +97,7 @@ export default {
     .main-block{
         padding: 2em 0;
     }
-    .section-title{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: calc(2em * var(--text-scale));
-    }
+
     .work-experience-block .row{
         flex-direction: column-reverse;
     }
