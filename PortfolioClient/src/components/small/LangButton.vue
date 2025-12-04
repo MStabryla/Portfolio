@@ -15,7 +15,6 @@ export default {
                 this.$router.push("/en");
             else
                 this.$router.push("/");
-            this.$root.$forceUpdate();
         }
     },
     computed:{

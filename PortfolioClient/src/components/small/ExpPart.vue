@@ -22,9 +22,7 @@ export default {
             return new URL("../../assets/photos/" + this.experience.Photo, import.meta.url).href;
         },
         offSetMode() {
-            if(this.isMobileMode)
-                return 'mobileOffScreen'
-            else if(this.align == 'left')
+            if(this.align == 'left')
                 return 'offScreenLeft'
             else
                 return'offScreenRight'
@@ -43,16 +41,13 @@ export default {
                     opacity: 1,
                     x: 0
                 },
-                mobileOffScreen:{
-                    opacity: 0.0,
-                },
                 offScreenLeft:{
                     opacity: 0.0,
-                    x: -100
+                    x: 100
                 },
                 offScreenRight:{
                     opacity: 0.0,
-                    x: 100
+                    x: -100
                 },
             },
             imgTraintition: {
@@ -142,7 +137,7 @@ export default {
     align-items: center;
 }
 .experience-photo img{
-    width:66%;
+    width:80%;
     max-width: var(--experience-image-size-width);
     max-height: var(--experience-image-size-height);
 }
@@ -174,19 +169,5 @@ export default {
     .exp-date-dash{
         display:none;
     }
-}
-
-.img-transition-enter-active{
-    transition: all 0.5s ease;
-}
-
-.img-transition-enter-from{
-    opacity:0%;
-    transform: translateX(-3em);
-}
-
-.img-transition-enter-to{
-    opacity:100%;
-    transform: none;
 }
 </style>

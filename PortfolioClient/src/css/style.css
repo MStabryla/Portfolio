@@ -77,3 +77,6 @@ b{
 .block{
   min-height: 100vh;
 }
+.row{
+  overflow:hidden;
+}

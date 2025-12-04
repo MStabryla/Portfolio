@@ -22,9 +22,7 @@ export default {
             return new URL("../../assets/photos/" + this.education.Photo, import.meta.url).href;
         },
         offSetMode() {
-            if(this.isMobileMode)
-                return 'mobileOffScreen'
-            else if(this.align == 'left')
+            if(this.align == 'left')
                 return 'offScreenLeft'
             else
                 return'offScreenRight'
@@ -42,9 +40,6 @@ export default {
                 onScreen:{
                     opacity: 1,
                     x: 0
-                },
-                mobileOffScreen:{
-                    opacity: 0.0,
                 },
                 offScreenLeft:{
                     opacity: 0.0,
@@ -77,14 +72,15 @@ export default {
         <p class="edu-desc" v-html="this.education.EducationDesc"></p>
     </div>
     <motion.div
-        :initial="this.offSetMode"
-        whileInView="onScreen"
         class="education-photo"
+        :initial="this.offSetMode"
         :variants="this.imgVariants"
         :transition="this.imgTraintition"
+        whileInView="onScreen"
         >
         <img :src="this.eduImagePath" alt=""/>
     </motion.div>
+    
 </template>
 
 <style>
@@ -136,7 +132,7 @@ export default {
     align-items: center;
 }
 .education-photo img{
-    width:66%;
+    width:80%;
     max-width: var(--education-image-size-width);
     max-height: var(--education-image-size-height);
 }

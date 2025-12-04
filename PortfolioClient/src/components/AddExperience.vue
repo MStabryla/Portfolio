@@ -17,7 +17,9 @@ export default {
         }
     },
     watch:{
-        
+        '$route'() {
+            this.fetchExperience();
+        }
     },
     computed:{
         addExperienceTitle(){
