@@ -16,7 +16,7 @@ export default {
     },
     data(){
         return {
-            skills: ['.NET Developer', 'C#', 'ASP.NET Developer', 'SQL', 'Windows Server', 'MS SQL', 'JavaScript', 'Vue.js' ],
+            skills: ['.NET Developer', 'C#', 'ASP.NET Developer', 'SQL', 'Windows Server', 'MS SQL', 'JavaScript', 'Vue.js', 'Linux' ],
             width: window.innerWidth,
             frontDisplayMode: 1,
             switchToMobileWidth: 794,
