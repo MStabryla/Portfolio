@@ -10,7 +10,6 @@ export default {
     },
     methods:{
         switchLang(){
-            console.log(this.$router);
             if(this.lang === 'pl')
                 this.$router.push("/en");
             else
