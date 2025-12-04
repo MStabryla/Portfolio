@@ -53,7 +53,7 @@ export default {
         <div class="container education-block">
             <h1 class="section-title"><div class="education-icon"></div>{{this.educationTitle}}</h1>
             <div class="row" :class="{ 'left': i % 2 == 0, 'right': i % 2 !=  0 }" v-for="(education,i) in this.templateEducation" :key="i">
-                <EduPart v-bind:education="education" >
+                <EduPart v-bind:education="education" v-bind:align="i % 2 == 0 ? 'left' : 'right'" >
                 </EduPart>
             </div>
             

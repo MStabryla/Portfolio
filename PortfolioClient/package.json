@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
+    "motion-v": "^1.7.4",
     "requirejs": "^2.3.8",
     "vue": "^3.5.24",
     "vue-router": "^4.6.3"

@@ -17,6 +17,11 @@ main.mixin({
         '$route'() {
             this.lang = this.$route.meta.lang ?? 'pl';
         }
+    },
+    computed:{
+        isMobileMode(){
+            return window.innerWidth < 794;
+        }
     }
 })
 main.use(router)

@@ -1,17 +1,33 @@
 <script>
 import EduData from '../../classes/EduData.js';
+import { motion } from 'motion-v'
 
 export default {
     name: 'EduPart',
+    components: {
+        'motion.div' : motion.div
+    },
     props: {
         education: {
             type: EduData,
             required: true
         },
+        align: {
+            type:String,
+            required: false
+        }
     },
     computed:{
         eduImagePath() {
             return new URL("../../assets/photos/" + this.education.Photo, import.meta.url).href;
+        },
+        offSetMode() {
+            if(this.isMobileMode)
+                return 'mobileOffScreen'
+            else if(this.align == 'left')
+                return 'offScreenLeft'
+            else
+                return'offScreenRight'
         }
     },
     methods:{
@@ -22,7 +38,27 @@ export default {
     data(){
         
         return {
-            
+            imgVariants:{
+                onScreen:{
+                    opacity: 1,
+                    x: 0
+                },
+                mobileOffScreen:{
+                    opacity: 0.0,
+                },
+                offScreenLeft:{
+                    opacity: 0.0,
+                    x: 100
+                },
+                offScreenRight:{
+                    opacity: 0.0,
+                    x: -100
+                },
+            },
+            imgTraintition: {
+                type: 'ease',
+                duration: 0.5
+            }
         }
     }
 }
@@ -40,9 +76,15 @@ export default {
         </div>
         <p class="edu-desc" v-html="this.education.EducationDesc"></p>
     </div>
-    <div class="education-photo">
+    <motion.div
+        :initial="this.offSetMode"
+        whileInView="onScreen"
+        class="education-photo"
+        :variants="this.imgVariants"
+        :transition="this.imgTraintition"
+        >
         <img :src="this.eduImagePath" alt=""/>
-    </div>
+    </motion.div>
 </template>
 
 <style>

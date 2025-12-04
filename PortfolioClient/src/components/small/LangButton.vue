@@ -22,9 +22,6 @@ export default {
         langImagePath(){
             return new URL('../../assets/icons/' + (this.lang == 'pl' ? 'en' : 'pl') + ".png", import.meta.url).href;
         }
-    },
-    mounted() {
-        console.log(this.$router);
     }
 }
 </script>
