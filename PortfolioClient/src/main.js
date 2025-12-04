@@ -13,8 +13,10 @@ main.mixin({
     created(){
         this.lang = this.$route.meta.lang ?? 'pl';
     },
-    updated(){
-        this.lang = this.$route.meta.lang ?? 'pl';
+    watch: {
+        '$route'() {
+            this.lang = this.$route.meta.lang ?? 'pl';
+        }
     }
 })
 main.use(router)
