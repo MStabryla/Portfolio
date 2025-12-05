@@ -28,7 +28,7 @@ public static class HardcodedData
                 new DateOnly(2018, 7, 1),
                 new DateOnly(2018, 8, 31),
                 "medapp.jpg",
-                new Uri("https://medapp.pl/en/")
+                new Uri("https://medapp.pl/en/kluczowa-dzialalnosc/")
             ),
             new WorkExperience(
                 "IT Internship",
@@ -77,7 +77,7 @@ public static class HardcodedData
                 new DateOnly(2018, 7, 1),
                 new DateOnly(2018, 8, 31),
                 "medapp.jpg",
-                new Uri("https://medapp.pl/")
+                new Uri("https://medapp.pl/kluczowa-dzialalnosc/")
             ),
             new WorkExperience(
                 "Praktyka",
