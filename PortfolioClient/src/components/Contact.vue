@@ -28,6 +28,13 @@ export default {
             } else {
                 return "call or send mail";
             }
+        },
+        contactResource(){
+            if(this.lang === 'pl'){
+                return "Źródło strony: ";
+            } else {
+                return "Page repository: ";
+            }
         }
     },
     mounted(){ 
@@ -58,6 +65,7 @@ export default {
                 <span class="contact-part-title">LinkedIn</span>
             </a>
         </div>
+        <p class="contact-source">{{ this.contactResource }} <a href="https://github.com/MStabryla/Portfolio" target="_blank">MStabryla/Portfolio</a></p>
     </footer>
 </template>
 
@@ -101,6 +109,10 @@ export default {
     text-align: center;
     font-weight: 600;
     padding-top: 0.4em;
+}
+.contact-source{
+    margin-top:2em;
+    font-size: calc(1.5em * var(--text-scale));
 }
 
 @media (max-width: 794px) {
