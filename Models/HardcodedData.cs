@@ -62,7 +62,7 @@ public static class HardcodedData
                 new Uri("https://firma.gry-online.pl/")
             ),
             new WorkExperience(
-                "Programista aplikacji Unity",
+                "Programista gier Unity",
                 "Apteka Janicki Gallery",
                 "- Tworzenie <b>gier 2D</b> w silniku graficznym <b>Unity</b> przeznaczonych dla monitorów z interfejsem dotykowym.<br/>- Więcej szczegółów:<br/><a href='https://web.archive.org/web/20210126050110/https:/wawel.krakow.pl/centrum-multimedialne' target='_blank'>https:/wawel.krakow.pl/centrum-multimedialne</a>",
                 new DateOnly(2019, 2, 1),
