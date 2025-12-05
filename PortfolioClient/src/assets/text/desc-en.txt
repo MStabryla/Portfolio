@@ -1,5 +1,5 @@
-My name is Mateusz Stabryła and I'm a <b>.NET developer</b> with four years of experience. I've
-worked on projects using technologies such as <b>ASP.NET WebAPI</b>, <b>ASP.NET MVC</b>, and <b>UWP</b>. I've
-programmed in languages like <b>C#</b>, <b>JavaScript</b> and <b>Visual Basic</b>. I've also been responsible for developing
-web-based graphical user interfaces using <b>JS</b> and the <b>Vue.js</b> framework. Also, I was
-responsible for managing and administering <b>Windows Server</b> systems (Windows Server 2016).
+My name is Mateusz Stabryła and I'm a <b>.NET developer</b> with <b>4 years of experience</b>. I've
+worked on projects using technologies such as <b>ASP.NET WebAPI</b>, <b>ASP.NET MVC</b>, and <b>UWP</b>. I have
+been programming in languages like <b>C#</b>, <b>JavaScript</b> and <b>Visual Basic</b>. I was also responsible for developing
+web-based graphical user interfaces using <b>JS</b> and the <b>Vue.js</b> framework. Additionaly, I used to
+managing and administering <b>Windows Server</b> systems (Windows Server 2016). Also I use <b>Linux</b> (AlmaLinux) system for personal use.

@@ -24,9 +24,9 @@ export default {
     computed:{
         addExperienceTitle(){
             if(this.lang === 'pl'){
-                return "Dodatkowa Aktywność";
+                return "Aktywności Dodatkowe";
             } else {
-                return "Additional Experience";
+                return "Additional Activities";
             }
         }
     },

@@ -184,8 +184,8 @@ export default {
         margin: auto;
     }
     .front-photo img {
-        width: 60vw;
-        height: auto;
+        width: auto;
+        height: 50vh;
     }
     .front-title{
         margin: 1em 0;
@@ -217,7 +217,7 @@ export default {
 
 @media (min-width: 794px) {
     :root{
-        --image-scale: 0.3;
+        --image-scale: 0.32;
         --skill-text-scale: 0.4;
         --text-scale: 0.6;
     }
@@ -229,7 +229,7 @@ export default {
 
 @media (min-width: 992px) {
     :root{
-        --image-scale: 0.35;
+        --image-scale: 0.37;
         --skill-text-scale: 0.5;
         --text-scale: 0.75;
     }
@@ -237,7 +237,7 @@ export default {
 
 @media (min-width: 1068px) {
     :root{
-        --image-scale: 0.4;
+        --image-scale: 0.42;
         --skill-text-scale: 0.6;
         --text-scale: 0.75;
     }
@@ -245,7 +245,7 @@ export default {
 
 @media (min-width: 1200px) {
     :root{
-        --image-scale: 0.45;
+        --image-scale: 0.47;
         --skill-text-scale: 0.8;
         --text-scale: 0.85;
     }
@@ -253,7 +253,7 @@ export default {
 
 @media (min-width: 1400px) {
     :root{
-        --image-scale: 0.5;
+        --image-scale: 0.55;
         --skill-text-scale: 1;
         --text-scale: 1;
     }
