@@ -114,7 +114,7 @@ public static class HardcodedData
             new Education(
                 "Technik Informatyk",
                 "Zespół Szkół Łączności im. Obrońców Poczty Polskiej w Gdańsku w Krakowie",
-                "Tytuł obejmuje umiejętności:<br/></li><li>Korzystania i administrowania systemami operacyjnymi z rodziny <b>Windows</b> oraz <b>Linux (Debian)</b><br/></li><li>Obsługę serwerowych systemów operacyjnych z rodziny <b>Windows Server</b><br/></li><li>Tworzenia stron internetowych w <b>HTML</b>, <b>CSS</b> i <b>JavaScript</b><br/></li><li>Zarządzania bazą <b>MySQL</b> i tworzenia prostych zapytań <b>SQL</b></li></ul>",
+                "Tytuł obejmuje umiejętności:<br/><ul><li>Korzystania i administrowania systemami operacyjnymi z rodziny <b>Windows</b> oraz <b>Linux (Debian)</b><br/></li><li>Obsługę serwerowych systemów operacyjnych z rodziny <b>Windows Server</b><br/></li><li>Tworzenia stron internetowych w <b>HTML</b>, <b>CSS</b> i <b>JavaScript</b><br/></li><li>Zarządzania bazą <b>MySQL</b> i tworzenia prostych zapytań <b>SQL</b></li></ul>",
                 new DateOnly(2014, 9, 1),
                 new DateOnly(2018, 4, 27),
                 "zsl.jpg"
@@ -135,7 +135,7 @@ public static class HardcodedData
             new Education(
                 "IT technician",
                 "ZSŁ Upper Secondary School of Communications in Cracow",
-                "This title includes skills like:<br/></li><li>Using and administering <b>Windows</b> and <b>Linux (Debian)</b> operating systems<br/></li><li>Supporting and managing <b>Windows Server</b> operating systems<br/></li><li>Creating websites with <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b><br/></li><li>Managing a <b>MySQL</b> database and creating simple <b>SQL</b> queries</li></ul>",
+                "This title includes skills like:<br/><ul><li>Using and administering <b>Windows</b> and <b>Linux (Debian)</b> operating systems<br/></li><li>Supporting and managing <b>Windows Server</b> operating systems<br/></li><li>Creating websites with <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b><br/></li><li>Managing a <b>MySQL</b> database and creating simple <b>SQL</b> queries</li></ul>",
                 new DateOnly(2014, 9, 1),
                 new DateOnly(2018, 4, 27),
                 "zsl.jpg"
@@ -146,6 +146,14 @@ public static class HardcodedData
     public static AdditionalExperience[] GetAdditionalExperiencePl()
     {
         return [
+            new AdditionalExperience(
+                "Wolontarian przy evencie Digital Dragons",
+                "Krakowski Park Technologiczny",
+                "<ul><li>Pomoc przy edycjach Digital Dragons w 2018 i 2019 roku</li><li>Obsługa wydarzenia w międzynarodowym środowisku biznesowym</li><li>Kontakt z uczestnikami w <b>języku angielskim</b></li></ul>",
+                new DateOnly(2018, 5, 21),
+                new DateOnly(2019, 5, 27),
+                "digital-dragons.jpg"
+            ),
             new AdditionalExperience(
                 "Nauczyciel w JUNIOR WSEI.NET",
                 "Wyższa Szkoła Ekonomii i Informatyki (WSEI) w Krakowie",
@@ -167,6 +175,14 @@ public static class HardcodedData
     public static AdditionalExperience[] GetAdditionalExperienceEn()
     {
         return [
+            new AdditionalExperience(
+                "Digital Dragons event Volunteer",
+                "Krakow Technology Park",
+                "<ul><li>Participation in Digital Dragons in 2018 and 2019</li><li>Help with organizing business scale event</li><li>Contact with participants in <b>english</b></li></ul>",
+                new DateOnly(2018, 5, 21),
+                new DateOnly(2019, 5, 27),
+                "digital-dragons.jpg"
+            ),
             new AdditionalExperience(
                 "JUNIOR WSEI.NET Teacher",
                 "School of Computer Science and Economics of Kraków (WSEI)",
