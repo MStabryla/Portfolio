@@ -80,3 +80,7 @@ b{
 .row{
   overflow:hidden;
 }
+
+ul{
+  padding-left: 1rem;
+}
