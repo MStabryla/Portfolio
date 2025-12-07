@@ -104,7 +104,7 @@ public static class HardcodedData
     {
         return [
             new Education(
-                "Magister Inżynier </li><li>Informatyka Stosowana",
+                "Magister Inżynier - Informatyka Stosowana",
                 "Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie",
                 "<ul><li>Tytuł uzyskany na Wydziale Inżynierii Metali i Informatyki Przemysłowej WIMIIP<br/></li><li>Projekt inżynierski oraz magisterski polegał na stworzeniu i oprogramowaniu samo jeżdżącego robota na platformie <b>Arduino</b></li></ul>",
                 new DateOnly(2018, 10, 1),
