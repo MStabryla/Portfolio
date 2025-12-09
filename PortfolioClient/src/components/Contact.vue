@@ -66,6 +66,7 @@ export default {
             </a>
         </div>
         <p class="contact-source">{{ this.contactResource }} <a href="https://github.com/MStabryla/Portfolio" target="_blank">MStabryla/Portfolio</a></p>
+        <p>2025 Mateusz Stabryła - All rights reserved</p>
     </footer>
 </template>
 
