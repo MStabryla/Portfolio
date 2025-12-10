@@ -158,4 +158,10 @@ export default {
       margin: 2em auto;
     }
 }
+@media (min-width: 1440px) {
+    .back-icon{
+        width: calc(1.2em * var(--text-scale));
+        height: calc(1.2em * var(--text-scale));
+    }
+}
 </style>
