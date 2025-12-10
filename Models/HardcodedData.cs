@@ -2,12 +2,96 @@
 
 public static class HardcodedData
 {
+    public static string[] Tags
+    {
+        get
+        {
+            return [
+                "C#", "CSharp", "DotNet" ,
+                "ASP.NET Core MVC", "ASP.NET Core", "ASP.NET", 
+                ".NET Core", ".NET",
+                "JavaScript", "TypeScript", "Vue.js", "Node.js", "Next.js",
+                "HTML5", "HTML", "CSS",
+                "Dockerfile", "Docker",
+                "Unity",  
+                "MongoDB", "NoSQL", "SQLite", "SQL",
+                "REST API", "Entity Framework Core", "Entity Framework",
+                "Angular 2", "Angular.js"
+            ];
+        }
+    }
+    public static Dictionary<string, string[]> TagMap
+    {
+        get
+        {
+            return new Dictionary<string, string[]>
+            {
+                { "CSharp", 
+                    ["CSharp","C#",".NET Core",".NET"] 
+                },
+                { "C#", 
+                    ["CSharp","C#",".NET Core",".NET"]
+                },
+                { ".NET", 
+                    ["CSharp","C#",".NET Core",".NET"]
+                },
+                { ".NET Core", 
+                    ["CSharp","C#",".NET Core",".NET"] 
+                },
+                { "ASP.NET", 
+                    ["ASP.NET","ASP.NET Core","ASP.NET Core MVC"] 
+                },
+                { "JS", 
+                    ["JavaScript","TypeScript","Vue.js","Node.js","Angular.js","Angular 2"]
+                },
+                { "JavaScript", 
+                    ["JavaScript","TypeScript","Vue.js","Node.js","Angular.js","Angular 2"]
+                },
+                { "Vue.js", 
+                    ["JavaScript","TypeScript","Vue.js","Node.js"]
+                },
+                { "Vue", 
+                    ["JavaScript","TypeScript","Vue","Vue.js","Node.js"]
+                },
+                { "HTML", 
+                    ["HTML5","HTML","CSS"]
+                },
+                { "Unity", 
+                    ["Unity","C#",".NET"]
+                },
+                { "SQL", 
+                    ["MS SQL","SQL","SQLite",]
+                },
+                { "NoSQL", 
+                    ["NoSQL","MongoDB"]
+                },
+                { "MongoDB", 
+                    ["NoSQL","MongoDB"]
+                },
+                { "REST API", 
+                    ["REST","REST API"]
+                },
+                { "Entity Framework", 
+                    ["EF","Entity Framework","Entity Framework Core"]
+                },
+                { "Angular", 
+                    ["Angular.js","Angular 2"]
+                },
+                { "Windows", 
+                    ["Windows Server","Windows"]
+                },
+                { "Linux", 
+                    ["Linux","Debian"]
+                },
+            };
+        }
+    }
     public static WorkExperience[] GetWorkExperienceEn()
     {
         return 
         [
             new WorkExperience(
-                "Junior SysOps / .NET Programmer", "Webedia Polska S.A.", "<ul><li>Developing and maintaining the gry-online.pl website and subpages written in <b>.NET</b> technologies (<b>ASP</b>, <b>Visual Basic</b>)<br/></li><li>Developing web applications using <b>JavaScript</b> and the <b>Vue.js</b> platform for internal and editorial use<br/></li><li>Creating and implementing a tool using <b>C#</b>, <b>Windows Forms</b> and <b>ASP.NET Core</b> with access to the <b>REST API</b> to communicate with external clients<br/></li><li>Creating complex <b>SQL</b> queries within few applications. Managing and maintaining an <b>MS SQL</b> database<br/></li><li>Implementation of SysOps and DevOps tools such as <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b>, and <b>DeployHQ</b><br/></li><li>Administration of development and production environments based on <b>Windows Server</b></li></ul>",
+                "Junior SysOps / .NET Programmer", "Webedia Polska S.A.", "<ul><li>Developing and maintaining the gry-online.pl website and subpages written in <b>.NET</b> technologies (<b>ASP</b>, <b>Visual Basic</b>)<br/></li><li>Developing web applications using <b>JavaScript</b> and the <b>Vue.js</b> platform for internal and editorial use<br/></li><li>Creating and implementing a tool using <b>C#</b>, <b>Windows Forms</b> and <b>ASP.NET Core</b> with access to the <b>REST API</b> to communicate with external clients<br/></li><li>Creating complex <b>SQL</b> queries within few applications. Managing and maintaining an <b>MS SQL</b> database<br/></li><li>Implementation of SysOps and DevOps tools such as <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b>, and <b>DeployHQ</b><br/></li><li>Administration of development and production environments based on <b>Windows Server</b> and <b>Linux</b></li></ul>",
                 new DateOnly(2021, 9, 1), 
                 new DateOnly(2025, 6, 30),
                 "gol.jpg",
@@ -55,7 +139,7 @@ public static class HardcodedData
         return 
         [
             new WorkExperience(
-                "Junior SysOps / Programista .NET", "Webedia Polska S.A.", "<ul><li>Implementacja narzędzi SysOps oraz DevOps, takich jak <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b> i <b>DeployHQ</b>.<br/></li><li>Administracja środowiskiem testowym i produkcyjnym opartymna systemie z rodziny <b>Windows Server</b>.<br/></li><li>Tworzenie złożonych zapytań <b>SQL</b> wykorzystywanych przezaplikacje. Zarządzanie i utrzymanie bazy <b>MS SQL</b>.<br/></li><li>Rozwijanie i utrzymywanie strony internetowej gry-online.pl oraz podstron napisanych w technologiach <b>.NET</b> (<b>ASP</b>, <b>Visual Basic</b>)<br/></li><li>Rozwijanie aplikacji webowych z użyciem <b>JavaScript</b> i platformy <b>Vue.js</b> na potrzeby redakcyjne<br/></li><li>Tworzenie i implementacja narzędzi wewnętrznych z wykorzystaniem <b>C#</b>, <b>Windows Forms</b> i <b>ASP.NET Core</b> w konwencji <b>REST API</b></li></ul>",
+                "Junior SysOps / Programista .NET", "Webedia Polska S.A.", "<ul><li>Implementacja narzędzi SysOps oraz DevOps, takich jak <b>PRTG</b>, <b>Bitbucket</b>, <b>Git</b> i <b>DeployHQ</b>.<br/></li><li>Administracja środowiskiem testowym i produkcyjnym opartymna systemie z rodziny <b>Windows Server</b> i <b>Linux</b>.<br/></li><li>Tworzenie złożonych zapytań <b>SQL</b> wykorzystywanych przezaplikacje. Zarządzanie i utrzymanie bazy <b>MS SQL</b>.<br/></li><li>Rozwijanie i utrzymywanie strony internetowej gry-online.pl oraz podstron napisanych w technologiach <b>.NET</b> (<b>ASP</b>, <b>Visual Basic</b>)<br/></li><li>Rozwijanie aplikacji webowych z użyciem <b>JavaScript</b> i platformy <b>Vue.js</b> na potrzeby redakcyjne<br/></li><li>Tworzenie i implementacja narzędzi wewnętrznych z wykorzystaniem <b>C#</b>, <b>Windows Forms</b> i <b>ASP.NET Core</b> w konwencji <b>REST API</b></li></ul>",
                 new DateOnly(2021, 9, 1), 
                 new DateOnly(2025, 6, 30), 
                 "gol.jpg",
@@ -106,7 +190,7 @@ public static class HardcodedData
             new Education(
                 "Magister Inżynier - Informatyka Stosowana",
                 "Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie",
-                "<ul><li>Tytuł uzyskany na Wydziale Inżynierii Metali i Informatyki Przemysłowej WIMIIP<br/></li><li>Projekt inżynierski oraz magisterski polegał na stworzeniu i oprogramowaniu samo jeżdżącego robota na platformie <b>Arduino</b></li></ul>",
+                "<ul><li>Tytuł uzyskany na Wydziale Inżynierii Metali i Informatyki Przemysłowej WIMIIP<br/></li><li>Projekty na studiach były w większości realizowane w języku <b>C#</b></li><li>Projekt inżynierski oraz magisterski polegał na stworzeniu i oprogramowaniu samo jeżdżącego robota na platformie <b>Arduino</b></li></ul>",
                 new DateOnly(2018, 10, 1),
                 new DateOnly(2023, 10, 23),
                 "agh.jpg"
@@ -127,7 +211,7 @@ public static class HardcodedData
             new Education(
                 "Master Engineer Degree of Computer Science",
                 "AGH University of Science and Technology",
-                "<ul><li>Degree earned at the Faculty of Metals Engineering and Industrial Computer Science, WIMIIP<br/></li><li>The engineering and master's project involved creating and programming a self-driving robot using the <b>Arduino</b> platform</li></ul>",
+                "<ul><li>Degree earned at the Faculty of Metals Engineering and Industrial Computer Science, WIMIIP<br/></li><li>Most of the students project were created in <b>C#</b> language</li><li>The engineering and master's project involved creating and programming a self-driving robot using the <b>Arduino</b> platform</li></ul>",
                 new DateOnly(2018, 10, 1),
                 new DateOnly(2023, 10, 23),
                 "agh.jpg"

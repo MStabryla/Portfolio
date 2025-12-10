@@ -1,0 +1,26 @@
+@Portfolio_HostAddress = https://localhost:4001
+
+### Search .NET tag
+GET {{Portfolio_HostAddress}}/api/search?search_tag=.NET
+
+### Search JS tag
+GET {{Portfolio_HostAddress}}/api/search?search_tag=JS
+
+### Search SQL tag
+GET {{Portfolio_HostAddress}}/api/search?search_tag=SQL
+
+### Search Linux tag
+GET {{Portfolio_HostAddress}}/api/search?search_tag=Linux
+
+
+### Search .NET tag
+GET {{Portfolio_HostAddress}}/api/search/en?search_tag=.NET
+
+### Search JS tag
+GET {{Portfolio_HostAddress}}/api/search/en?search_tag=JS
+
+### Search SQL tag
+GET {{Portfolio_HostAddress}}/api/search/en?search_tag=SQL
+
+### Search Linux tag
+GET {{Portfolio_HostAddress}}/api/search/en?search_tag=Linux
