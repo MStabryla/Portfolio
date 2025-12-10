@@ -161,10 +161,10 @@ export default {
     max-width: var(--experience-image-size-width);
     max-height: var(--experience-image-size-height);
 }
-.skill-name{
+.repo-tags .skill-name{
     font-size: calc(1.2em * var(--text-scale));
 }
-.skill{
+.repo-tags .skill{
     padding: 0.3em 0.8em;
     margin: 0.2em;
 }
@@ -195,11 +195,5 @@ export default {
         width:100%;
         text-align: center;
     }
-}
-@media (min-width: 768px) {
-
-}
-@media (min-width: 992px) {
-
 }
 </style>
