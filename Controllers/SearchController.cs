@@ -180,10 +180,13 @@ namespace Portfolio
                 {
                     if(line.Contains(tag))
                     {
-                        importantLines.Add(line.Replace(tag, $"<b class='search_tag'>{tag}</b>"));
+                        importantLines.Add(line);
                     }
                 }
             }
+            importantLines = [.. importantLines.Distinct()];
+            foreach (var tag in tags)
+                importantLines = [.. importantLines.Select(x => x.Replace(tag, $"<b class='search_tag'>{tag}</b>"))];
             return string.Join("</br>", importantLines);
         }
     }

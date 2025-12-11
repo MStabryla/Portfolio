@@ -19,7 +19,6 @@ export default {
     methods:{
       async fetchRepos(){
             const tempRepos = await axios.get(repo_api_url + (this.lang == 'en' ? '/en' : ''));
-            console.log(tempRepos,repo_api_url + (this.lang == 'en' ? '/en' : ''));
             this.repos = tempRepos.data.map(repo => new RepoData(repo));
             this.loaded = true;
         }
