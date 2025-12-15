@@ -91,6 +91,7 @@ namespace Portfolio
         [Route("en")]
         public async Task<IActionResult> GetSearchResultEn(string search_tag)
         {
+            Console.WriteLine(search_tag);
             if(!HardcodedData.TagMap.ContainsKey(search_tag))
             {
                 return BadRequest("Error: Tag not found");

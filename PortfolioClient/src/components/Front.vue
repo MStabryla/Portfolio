@@ -16,7 +16,7 @@ export default {
     },
     data(){
         return {
-            skills: ['.NET Developer', 'C#', 'ASP.NET Developer', 'SQL', 'Windows Server', 'MS SQL', 'JavaScript', 'Vue.js', 'Linux' ],
+            skills: [{ name:'.NET'}, { name:'C#', tag:".NET" }, { name:'ASP.NET'}, { name:'SQL'}, { name:'Windows Server'}, { name: 'MS SQL'}, { name: 'JavaScript'}, { name: 'Vue.js'}, { name: 'Linux' }],
             width: window.innerWidth,
             frontDisplayMode: 1,
             switchToMobileWidth: 794,
@@ -68,7 +68,7 @@ export default {
                         <h1>Mateusz Stabryła</h1>
                     </div>
                     <div class="front-skills">
-                        <Skill v-for="skill in skills" v-bind:skillname="skill"></Skill>
+                        <Skill v-for="skill in skills" v-bind:skill="skill"></Skill>
                     </div>
                     <div class="front-desc">
                         <p v-html="desc"></p>
@@ -88,7 +88,7 @@ export default {
                 </div>
                 <div class="col">
                     <div class="front-skills">
-                        <Skill v-for="skill in skills" v-bind:skillname="skill"></Skill>
+                        <Skill v-for="skill in skills" v-bind:skill="skill"></Skill>
                     </div>
                     <div class="front-desc">
                         <p v-html="desc"></p>
@@ -107,7 +107,7 @@ export default {
                     <h1>Mateusz Stabryła</h1>
                 </div>
                 <div class="front-skills">
-                    <Skill v-for="skill in skills" v-bind:skillname="skill"></Skill>
+                    <Skill v-for="skill in skills" v-bind:skill="skill"></Skill>
                 </div>
                 <div class="front-desc">
                     <p v-html="desc"></p>

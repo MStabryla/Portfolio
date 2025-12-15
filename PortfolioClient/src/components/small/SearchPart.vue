@@ -116,7 +116,7 @@ export default {
         <h2 class="search-name">{{ this.search.Name }}</h2>
         
         <div class="search-second-data">
-            <h5 class="search-link">
+            <h5 class="search-type">
                 <div class="search-icon search-icon-git" v-if="this.icon == 1"></div>
                 <div class="search-icon search-icon-wexp" v-else-if="this.icon == 2"></div>
                 <div class="search-icon search-icon-edu" v-else-if="this.icon == 3"></div>
@@ -172,10 +172,11 @@ export default {
     display: flex;
     justify-content: space-between;
 }
-.search-link{
+.search-type{
     text-align: left;
+    margin-bottom: 1em;
 }
-.search-link a{
+.search-type a{
     color: var(--bs-link-color-rgb);
 }
 .search-icon{
@@ -206,8 +207,7 @@ export default {
 .search-company a:hover{
     font-weight: 600;
 }
-.search-link, .search-update-date{
-    width:50%;
+.search-type, .search-update-date{
     display:inline-flex;
 }
 .search-update-date{
@@ -217,7 +217,7 @@ export default {
     flex-wrap: nowrap;
     justify-content: flex-end;
 }
-.search-update-date, .search-link{
+.search-update-date, .search-type{
     font-size: calc(1.5em * var(--text-scale));
 }
 .search-tags{
@@ -254,6 +254,9 @@ export default {
 .exp-desc p{
     overflow: hidden
 }
+.exp-desc ul{
+    padding-left: 2rem;
+}
 .exp-desc summary{
     display:block;
 }
@@ -265,7 +268,7 @@ export default {
         margin-bottom: 0.5em;
         font-size: calc(2.5em * var(--text-scale));
     }
-    .search-update-date, .search-link{
+    .search-update-date, .search-type{
         width:100%;
         margin-bottom: 1em;
     }

@@ -2,24 +2,44 @@
 export default {
     name: 'Skill',
     props: {
-        skillname: {
-            type: String,
+        skill: {
+            type: Object,
             required: true
-        },
+        }
     },
     data(){
         return {
             
+        }
+    },
+    computed:{
+        fixSkillNameToUrl(){
+            if(this.skill.tag == undefined)
+            {
+                let skillurl = this.skill.name
+                skillurl = skillurl.replaceAll("#","%23");
+                return "search?t=" + skillurl
+            }
+            else
+                return "search?t=" + this.skill.tag
+        }
+    },
+    methods:{
+        
+        toSkill(){
+            if(this.lang !== 'pl')
+                this.$router.push("/en/" + this.fixSkillNameToUrl);
+            else
+                this.$router.push("/" + this.fixSkillNameToUrl);
         }
     }
 }
 </script>
 
 <template>
-    <div class="skill-con">
+    <div class="skill-con" v-on:click="toSkill">
         <div class="skill">
-        <span class="skill-name">{{ skillname }}</span>
-        
+            <span class="skill-name">{{ skill.name }}</span>
         </div>
         <div class="skill-shadow"></div>
     </div>
@@ -37,6 +57,7 @@ export default {
 .skill-con {
     display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 .skill {
     position:relative;

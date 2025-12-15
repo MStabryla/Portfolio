@@ -29,7 +29,7 @@ public static class HardcodedData
                 { "CSharp", 
                     ["CSharp","C#",".NET Core",".NET"] 
                 },
-                { "C#", 
+                { "C%23", 
                     ["CSharp","C#",".NET Core",".NET"]
                 },
                 { ".NET", 
@@ -62,6 +62,9 @@ public static class HardcodedData
                 { "SQL", 
                     ["MySQL", "MS SQL", "SQL", "SQLite"]
                 },
+                { "MS SQL", 
+                    ["MS SQL", "SQL"]
+                },
                 { "NoSQL", 
                     ["NoSQL","MongoDB"]
                 },
@@ -78,6 +81,9 @@ public static class HardcodedData
                     ["Angular.js","Angular 2"]
                 },
                 { "Windows", 
+                    ["Windows Server","Windows"]
+                },
+                { "Windows Server", 
                     ["Windows Server","Windows"]
                 },
                 { "Linux", 

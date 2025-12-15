@@ -61,7 +61,7 @@ public class SearchRecord
         {
             Name = experience.ExperienceName,
             Type = "AddExperience",
-            Description = experience.ExperienceName,
+            Description = experience.ExperienceDesc,
             ImgPath = experience.Photo,
             Date = experience.EndDate
         };
