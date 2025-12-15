@@ -60,7 +60,7 @@ public static class HardcodedData
                     ["Unity","C#",".NET"]
                 },
                 { "SQL", 
-                    ["MS SQL","SQL","SQLite",]
+                    ["MySQL", "MS SQL", "SQL", "SQLite"]
                 },
                 { "NoSQL", 
                     ["NoSQL","MongoDB"]
@@ -69,7 +69,7 @@ public static class HardcodedData
                     ["NoSQL","MongoDB"]
                 },
                 { "REST API", 
-                    ["REST","REST API"]
+                    ["REST API", "REST"]
                 },
                 { "Entity Framework", 
                     ["EF","Entity Framework","Entity Framework Core"]

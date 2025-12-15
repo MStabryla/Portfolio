@@ -4,4 +4,4 @@ Portfolio jest projektem strony internetowej napisanej w technologii webowej Vue
 
 # EN - Portfolio
 
-Portfolio is a web site project created in Vue.js framework and hosted on ASP.NET webapp.
+Portfolio is a web site project created in Vue 3 framework and hosted on ASP.NET webapp.

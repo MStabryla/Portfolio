@@ -23,7 +23,6 @@ export default {
             const searchResult = await axios.get(encodeURI(searchUrl));
             this.searchData = searchResult.data.map(search => new SearchResult(search));
             this.loaded = true;
-            console.log(this.searchData);
         }
     },
     watch:{
@@ -82,6 +81,10 @@ export default {
     color: var(--secondary-blue-bg-color);
     text-align: center;
 
+}
+.search-container .row{
+    display:flex;
+    margin:2em auto;
 }
 .left{
     flex-direction: row;

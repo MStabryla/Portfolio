@@ -8,6 +8,7 @@ export default {
     name: 'SearchPart',
     components: {
         'motion.div' : motion.div,
+        'motion.p': motion.p,
         Skill
     },
     props: {
@@ -27,6 +28,12 @@ export default {
             else
                 return'offScreenRight'
         },
+        searchImgPath(){
+            if(this.search.Type != "Repository")
+                return new URL("../../assets/photos/" + this.search.ImgPath, import.meta.url).href;
+            else
+                return this.search.ImgPath;
+        },
         icon(){
             switch(this.search.Type){
                 case 'Repository':
@@ -40,17 +47,6 @@ export default {
                 default:
                     return 0
             }
-
-                // case 'Repository':
-                //     return new URL("../../assets/icons/github.svg", import.meta.url).href;
-                // case 'WorkExperience':
-                //     return new URL("../../assets/icons/work-experience.svg", import.meta.url).href;
-                // case 'Education':
-                //     return new URL("../../assets/icons/education.svg", import.meta.url).href;
-                // case 'AddExperience':
-                //     return new URL("../../assets/icons/add-experience.svg", import.meta.url).href;
-                // default:
-                //     return "../../assets/icons/github.svg";
         },
         iconType(){
             switch(this.search.Type){
@@ -75,6 +71,7 @@ export default {
     data(){
         return {
             visible: false,
+            expanded: false,
             imgVariants:{
                 onScreen:{
                     opacity: 1,
@@ -89,14 +86,27 @@ export default {
                     x: -100
                 },
             },
-            imgTraintition: {
+            imgTransition: {
                 type: 'ease',
                 duration: 0.5
+            },
+            descTransition:{
+                type: 'ease',
+                duration: 1.0
+            },
+            descVariants: {
+                expanded:{
+                    maxHeight: '500px',
+                    display: 'block'
+                },
+                notExpanded: {
+                    maxHeight: '0px',
+                    display: 'none'
+                }
             }
         }
     },
     mounted(){
-        console.log(this.icon);
     }
 }
 </script>
@@ -114,17 +124,34 @@ export default {
                 {{ this.iconType }}
             </h5>
         </div>
+        <!-- <p>...</p>
         <p class="exp-desc" v-html="this.search.impDesc"></p>
+        <p>...</p> -->
+        <details class="exp-desc">
+            <summary @click="() => { this.expanded = !this.expanded; }" :style="{ display: this.expanded ? 'none' : 'default' }">
+                ...<br/>
+                <span v-html="this.search.impDesc"></span>
+                <br/>...
+            </summary>
+            <motion.p 
+                :variants="this.descVariants"
+                :animate="this.expanded ? 'expanded' : 'notExpanded'"
+                :transition="this.descTransition"
+                v-html="this.search.Desc"
+                layout>
+
+            </motion.p>
+        </details>
     </div>
-    <!-- <motion.div
+    <motion.div
         :initial="this.offSetMode"
         whileInView="onScreen"
-        class="repo-photo"
+        class="search-photo"
         :variants="this.imgVariants"
-        :transition="this.imgTraintition"
+        :transition="this.imgTransition"
         >
-        <img :src="this.repo.Img_url" alt="main.png"/>
-    </motion.div> -->
+        <img :src="this.searchImgPath" :alt="this.searchImgPath"/>
+    </motion.div>
     
     
 </template>
@@ -222,6 +249,13 @@ export default {
 .big-b{
     margin: 0.2em 0;
     display: inline-block;
+}
+
+.exp-desc p{
+    overflow: hidden
+}
+.exp-desc summary{
+    display:block;
 }
 @media (max-width: 794px) {
     .search, .search-photo, .search-photo img{

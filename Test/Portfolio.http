@@ -19,6 +19,9 @@ GET {{Portfolio_HostAddress}}/api/search/en?search_tag=.NET
 ### Search JS tag
 GET {{Portfolio_HostAddress}}/api/search/en?search_tag=JS
 
+### Search Vue tag
+GET {{Portfolio_HostAddress}}/api/search/en?search_tag=Vue
+
 ### Search SQL tag
 GET {{Portfolio_HostAddress}}/api/search/en?search_tag=SQL
 
