@@ -16,7 +16,7 @@ export default {
     },
     data(){
         return {
-            skills: ['.NET Developer', 'C#', 'ASP.NET Developer', 'SQL', 'Windows Server', 'MS SQL', 'JavaScript', 'Vue.js', 'Linux' ],
+            skills: [{ name:'.NET'}, { name:'C#', tag:".NET" }, { name:'ASP.NET'}, { name:'SQL'}, { name:'Windows Server'}, { name: 'MS SQL'}, { name: 'JavaScript'}, { name: 'Vue.js'}, { name: 'Linux' }],
             width: window.innerWidth,
             frontDisplayMode: 1,
             switchToMobileWidth: 794,
@@ -47,6 +47,39 @@ export default {
     computed:{
         desc() {
             return this.lang === 'pl' ? DescPL : DescEN;
+        },
+        subtitle(){
+            return this.lang === 'pl' ?
+                "Twój Programista (nie tylko) .NET" :
+                "Your (not only) .NET Developer"
+        },
+        aboutMeTitle(){
+            return this.lang === 'pl' ? 
+                "O mnie" :
+                "About me"
+        },
+        skillTitle(){
+            return this.lang === 'pl' ? "Umiejętności" : "Skills";
+        },
+        workExperienceTitle(){
+            return this.lang === 'pl' ?
+                "Doświadczenie zawodowe" :
+                "Work Experience";
+        },
+        repoTitle(){
+            return this.lang === 'pl' ?
+                "Repozytoria GitHub" :
+                "GitHub Repositories"
+        },
+        educationTitle(){
+            return this.lang === 'pl' ?
+                "Wykształcenie" :
+                "Education";
+        },
+        addExperienceTitle(){
+            return this.lang === 'pl' ?
+                "Aktywności Dodatkowe" :
+                "Additional Activities";
         }
     },
     beforeMount() { 
@@ -66,12 +99,16 @@ export default {
                 <div class="col">
                     <div class="front-title">
                         <h1>Mateusz Stabryła</h1>
+                        <h3 class="front-subtitle">{{ this.subtitle }}</h3>
                     </div>
-                    <div class="front-skills">
-                        <Skill v-for="skill in skills" v-bind:skillname="skill"></Skill>
-                    </div>
-                    <div class="front-desc">
-                        <p v-html="desc"></p>
+                    
+                    <div class="front-menu">
+                        <a href="#about-me"><div class="front-icon front-icon-aexp"></div>{{ this.aboutMeTitle }}</a>
+                        <a href="#skills"><div class="front-icon front-icon-skills"></div>{{ this.skillTitle }}</a>
+                        <a href="#work-experience"><div class="front-icon front-icon-wexp"></div>{{ this.workExperienceTitle }}</a>
+                        <a href="#education"><div class="front-icon front-icon-edu"></div>{{ this.educationTitle }}</a>
+                        <a href="#add-experience"><div class="front-icon front-icon-aexp"></div>{{ this.addExperienceTitle }}</a>
+                        <a :href="this.lang === 'pl' ? 'repos' : '/en/repos'"><div class="front-icon front-icon-git"></div>{{ this.repoTitle }}</a>
                     </div>
                     
                 </div>
@@ -82,18 +119,20 @@ export default {
             <div class="row">
                 <div class="front-title col-12">
                     <h1>Mateusz Stabryła</h1>
+                    <h3 class="front-subtitle">{{ this.subtitle }}</h3>
                 </div>
                 <div class="front-photo col-4">
                     <img src="../assets/main-photo.jpg" alt="My Photo" />
                 </div>
-                <div class="col">
-                    <div class="front-skills">
-                        <Skill v-for="skill in skills" v-bind:skillname="skill"></Skill>
+                <div class="col" style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="front-menu">
+                        <a href="#about-me"><div class="front-icon front-icon-aexp"></div>{{ this.aboutMeTitle }}</a>
+                        <a href="#skills"><div class="front-icon front-icon-skills"></div>{{ this.skillTitle }}</a>
+                        <a href="#work-experience"><div class="front-icon front-icon-wexp"></div>{{ this.workExperienceTitle }}</a>
+                        <a href="#education"><div class="front-icon front-icon-edu"></div>{{ this.educationTitle }}</a>
+                        <a href="#add-experience"><div class="front-icon front-icon-aexp"></div>{{ this.addExperienceTitle }}</a>
+                        <a :href="this.lang === 'pl' ? 'repos' : '/en/repos'"><div class="front-icon front-icon-git"></div>{{ this.repoTitle }}</a>
                     </div>
-                    <div class="front-desc">
-                        <p v-html="desc"></p>
-                    </div>
-                    
                 </div>
                 
             </div>
@@ -105,14 +144,16 @@ export default {
             <div class="row">
                 <div class="front-title">
                     <h1>Mateusz Stabryła</h1>
+                    <h3 class="front-subtitle">{{ this.subtitle }}</h3>
                 </div>
-                <div class="front-skills">
-                    <Skill v-for="skill in skills" v-bind:skillname="skill"></Skill>
+                <div class="front-menu">
+                    <a href="#about-me"><div class="front-icon front-icon-aexp"></div>{{ this.aboutMeTitle }}</a>
+                    <a href="#skills"><div class="front-icon front-icon-skills"></div>{{ this.skillTitle }}</a>
+                    <a href="#work-experience"><div class="front-icon front-icon-wexp"></div>{{ this.workExperienceTitle }}</a>
+                    <a href="#education"><div class="front-icon front-icon-edu"></div>{{ this.educationTitle }}</a>
+                    <a href="#add-experience"><div class="front-icon front-icon-aexp"></div>{{ this.addExperienceTitle }}</a>
+                    <a :href="this.lang === 'pl' ? 'repos' : '/en/repos'"><div class="front-icon front-icon-git"></div>{{ this.repoTitle }}</a>
                 </div>
-                <div class="front-desc">
-                    <p v-html="desc"></p>
-                </div>
-                
             </div>
         </div>
     </header>
@@ -130,40 +171,71 @@ export default {
 }
 .front-photo {
     margin:1em;
+    justify-content: center;
 }
 .front-photo img {
     width: calc(var(--image-scale)*var(--image-size-width));
     height: calc(var(--image-scale)*var(--image-size-height));
 }
 
-.front-title{
+.front-title {
     margin:1em;
+    text-wrap-mode: nowrap;
 }
 .front-title h1{
     color: var(--secondary-front-text-color);
     font-family: var(--primary-font-family);
     font-weight: 200;
-    font-size: calc(5.5em * var(--text-scale));
+    font-size: calc(5em * var(--text-scale));
     text-align: center;
 }
-.front-desc{
-    margin:1em;
+.front-subtitle{
     color: var(--secondary-front-text-color);
-    font-family: var(--secondary-font-family);
-    font-size: calc(1.5em * var(--text-scale));
-    font-style: italic;
-    font-weight: 120;
-    text-align: justify;
+    font-family: var(--primary-font-family);
+    font-weight: 200;
+    font-size: calc(2em * var(--text-scale));
+    text-align: center;
 }
-.front-desc b{
-    color: var(--secondary-blue-bg-color);
-}
-.front-skills{
-    margin-top: 2em;
+.front-menu{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
 }
+.front-menu a{
+    display: flex;
+    font-size: calc(1.8em * var(--text-scale));
+    margin: 0.4em auto;
+}
+.front-icon{
+    mask-size: 100%;
+    background-color: var(--link-text-color);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: calc(1.8em * var(--text-scale));
+    height: calc(1.8em * var(--text-scale));
+    margin-right: 0.3em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.front-icon-git{
+    mask-image: url(../assets/icons/github.svg);
+}
+.front-icon-skills{
+    mask-image: url(../assets/icons/skills.svg);
+}
+.front-icon-wexp{
+    mask-image: url(../assets/icons/work-experience.svg);
+}
+.front-icon-edu{
+    mask-image: url(../assets/icons/education.svg);
+}
+.front-icon-aexp{
+    mask-image: url(../assets/icons/add-experience.svg);
+}   
+
+
 .section-title{
     width:100%;
     display: flex;
@@ -194,15 +266,11 @@ export default {
         text-align: center;
         margin-bottom: 0;
         max-width: calc(100vw - var(--bs-gutter-x));
-        font-size: calc(3em * var(--text-scale));
+        font-size: calc(4em * var(--text-scale));
         min-width: unset;
     }
-    .front-skills{
-        margin-top: 0;
-        max-width: calc(100vw - var(--bs-gutter-x));
-    }
-    .front-desc{
-        max-width: calc(100vw - 1em - var(--bs-gutter-x));
+    .front-subtitle{
+        margin-top:0.5em;
     }
     :root{
         --text-scale: 0.7;
@@ -219,19 +287,21 @@ export default {
     :root{
         --image-scale: 0.32;
         --skill-text-scale: 0.4;
-        --text-scale: 0.6;
+        --text-scale: 0.75;
     }
-    .front-title h1{
-        font-size: calc(5em * var(--text-scale));
+    .front-menu{
+        margin-top: 1em;
     }
-
 }
 
 @media (min-width: 992px) {
     :root{
-        --image-scale: 0.37;
+        --image-scale: 0.4;
         --skill-text-scale: 0.5;
         --text-scale: 0.75;
+    }
+    .front-menu{
+        margin-top:3em;
     }
 }
 

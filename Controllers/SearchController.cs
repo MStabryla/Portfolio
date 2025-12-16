@@ -81,6 +81,7 @@ namespace Portfolio
             foreach (var record in searchRecords)
             {
                 record.ImportantDescription = FetchImportantDescription(tagMap, record);
+                record.Description = FetchDescription(tagMap, record);
             }
             searchRecords = [.. searchRecords.OrderByDescending(x => x.Date)];
             return Ok(searchRecords ?? []);
@@ -137,6 +138,7 @@ namespace Portfolio
             foreach (var record in searchRecords)
             {
                 record.ImportantDescription = FetchImportantDescription(tagMap, record);
+                record.Description = FetchDescription(tagMap, record);
             }
             searchRecords = [.. searchRecords.OrderByDescending(x => x.Date)];
             return Ok(searchRecords ?? []);
@@ -180,11 +182,23 @@ namespace Portfolio
                 {
                     if(line.Contains(tag))
                     {
-                        importantLines.Add(line.Replace(tag, $"<b class='search_tag'>{tag}</b>"));
+                        importantLines.Add(line);
                     }
                 }
             }
+            importantLines = [.. importantLines.Distinct()];
+            foreach (var tag in tags)
+                importantLines = [.. importantLines.Select(x => x.Replace(tag, $"<b class='search_tag'>{tag}</b>"))];
             return string.Join("</br>", importantLines);
+        }
+
+        private string FetchDescription(string[] tags, SearchRecord record)
+        {
+            var desc = record.Description;
+
+            foreach (var tag in tags)
+                desc = desc.Replace(tag, $"<b class='search_tag'>{tag}</b>");
+            return desc;
         }
     }
 }

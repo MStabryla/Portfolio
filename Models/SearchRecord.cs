@@ -8,6 +8,7 @@ public class SearchRecord
     public string Type { get; set; }
     public string Description { get; set; }
     public string ImportantDescription { get; set; }
+    public string ImgPath { get; set; }
     public DateOnly Date { get; set; }
     public SearchRecord()
     {
@@ -15,6 +16,7 @@ public class SearchRecord
         Type = "";
         Description = "";
         ImportantDescription = "";
+        ImgPath = "";
         Date = new DateOnly();
     }
 
@@ -25,6 +27,7 @@ public class SearchRecord
             Name = repo.Name,
             Type = "Repository",
             Description = repo.Readme,
+            ImgPath = repo.ImgUrl,
             Date = DateOnly.FromDateTime(repo.CreatedAt)
         };
     }
@@ -36,6 +39,7 @@ public class SearchRecord
             Name = experience.ExperienceName,
             Type = "WorkExperience",
             Description = experience.ExperienceDesc,
+            ImgPath = experience.Photo,
             Date = experience.EndDate
         };
     }
@@ -46,6 +50,7 @@ public class SearchRecord
             Name = education.EducationTitle,
             Type = "Education",
             Description = education.EducationDesc,
+            ImgPath = education.Photo,
             Date = education.EndDate
         };
     }
@@ -56,7 +61,8 @@ public class SearchRecord
         {
             Name = experience.ExperienceName,
             Type = "AddExperience",
-            Description = experience.ExperienceName,
+            Description = experience.ExperienceDesc,
+            ImgPath = experience.Photo,
             Date = experience.EndDate
         };
     }

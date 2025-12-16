@@ -26,6 +26,9 @@ export default {
                 return 'offScreenLeft'
             else
                 return'offScreenRight'
+        },
+        repoTags(){
+            return this.repo.Tags.map(x => { return { name: x, tag: x } })
         }
     },
     methods:{
@@ -57,6 +60,7 @@ export default {
         }
     },
     mounted(){
+        
     }
 }
 </script>
@@ -70,7 +74,7 @@ export default {
             <span class="repo-update-date">{{ this.repo.Created_at }}</span>
         </div>
         <div class="repo-tags">
-            <Skill v-for="(tag, i) in this.repo.Tags" :key="i" v-bind:skillname="tag" />
+            <Skill v-for="(tag, i) in this.repo.Tags" :key="i" v-bind:skill="tag" />
         </div>
         <p class="exp-desc" v-html="this.repo.desc"></p>
     </div>

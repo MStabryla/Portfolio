@@ -16,6 +16,7 @@ main.mixin({
     watch: {
         '$route'() {
             this.lang = this.$route.meta.lang ?? 'pl';
+            window.scrollTo(0,0);
         }
     },
     computed:{
