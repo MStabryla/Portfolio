@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-    <section class="block main-block">
+    <section class="block main-block" id="work-experience">
         <div class="container work-experience-block">
             <h1 class="section-title"><div src="../assets/icons/work-experience.svg" class="work-experience-icon"/>{{this.workExperienceTitle}}</h1>
             <div class="row" :class="{ 'left': i % 2 == 0, 'right': i % 2 !=  0 }" v-for="(experience,i) in this.templateExperience" :key="i">

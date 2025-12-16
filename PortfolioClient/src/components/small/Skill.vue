@@ -28,9 +28,9 @@ export default {
         
         toSkill(){
             if(this.lang !== 'pl')
-                this.$router.push("/en/" + this.fixSkillNameToUrl);
+                this.$router.push("/en/" + this.fixSkillNameToUrl + "#search-title");
             else
-                this.$router.push("/" + this.fixSkillNameToUrl);
+                this.$router.push("/" + this.fixSkillNameToUrl + "#search-title");
         }
     }
 }

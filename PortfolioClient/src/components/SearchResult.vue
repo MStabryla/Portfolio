@@ -53,9 +53,9 @@ export default {
     <section class="search-result">
         <div class="header-back">
             <section class="container">
-                <a :href=" '/' + (this.lang == 'en' ? 'en' : '')"><div class="back-icon"></div>{{ this.back }}</a>
-                <span class="search-title">{{this.searchTitle}} <b>{{ this.searchTag }}</b></span>
-        </section>
+                    <a :href=" '/' + (this.lang == 'en' ? 'en' : '')"><div class="back-icon"></div>{{ this.back }}</a>
+                    <span class="search-title" id="search-title">{{this.searchTitle}} <b>{{ this.searchTag }}</b></span>
+            </section>
         </div>
     </section>
     <div class="search-container container">
